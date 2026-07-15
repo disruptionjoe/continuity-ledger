@@ -9,6 +9,7 @@ PACKET_DIR = ROOT / "packets" / "cl-001"
 SOURCE_INTAKE = ROOT / "evidence" / "cl-001-source-intake.md"
 SOURCE_DOSSIER_TEMPLATE = ROOT / "evidence" / "cl-001-source-dossier-template.md"
 SOURCE_DOSSIER_MANIFEST = ROOT / "evidence" / "cl-001-source-dossier-manifest.md"
+SOURCE_DOSSIER_DIR = ROOT / "evidence" / "cl-001-dossiers"
 
 REQUIRED_FRONT_MATTER = (
     "packet_id",
@@ -97,6 +98,30 @@ REQUIRED_DOSSIER_MANIFEST_SECTIONS = (
     "## Packet Coverage",
     "## Dossier Queue",
     "## Symmetry Checks",
+    "## No Claim Promotion",
+)
+
+REQUIRED_DOSSIER_FRONT_MATTER = (
+    "source_id",
+    "source_type",
+    "applies_to_packets",
+    "evidence_lanes",
+    "provenance",
+    "extracted_by",
+    "extracted_on",
+    "status",
+    "claim_status",
+    "verdict",
+)
+
+REQUIRED_DOSSIER_FILE_SECTIONS = (
+    "## Source Boundary",
+    "### Scoped Extraction",
+    "### Typed Quantities",
+    "### Losses And Imports",
+    "### Agency And Feedback Burden",
+    "### What This Source Does Not Establish",
+    "### Falsifiers And Reopen Conditions",
     "## No Claim Promotion",
 )
 
@@ -282,6 +307,52 @@ def validate_source_dossier_manifest(packet_paths: list[Path]) -> list[str]:
     return errors
 
 
+def validate_source_dossiers(packet_paths: list[Path]) -> list[str]:
+    errors: list[str] = []
+    if not SOURCE_DOSSIER_DIR.exists():
+        return errors
+
+    packet_ids = {
+        front_matter(path.read_text(encoding="utf-8")).get("packet_id", "")
+        for path in packet_paths
+    }
+    for path in sorted(SOURCE_DOSSIER_DIR.glob("*.md")):
+        text = path.read_text(encoding="utf-8")
+        keys = front_matter_keys(text)
+        values = front_matter(text)
+
+        for key in REQUIRED_DOSSIER_FRONT_MATTER:
+            if key not in keys:
+                errors.append(f"{path.relative_to(ROOT)} missing front matter key {key}")
+
+        for section in REQUIRED_DOSSIER_FILE_SECTIONS:
+            if section not in text:
+                errors.append(f"{path.relative_to(ROOT)} missing {section}")
+
+        applies_to = values.get("applies_to_packets", "")
+        if applies_to and applies_to not in packet_ids:
+            errors.append(
+                f"{path.relative_to(ROOT)} applies to unknown packet {applies_to}"
+            )
+
+        if "claim_status: none" not in text:
+            errors.append(f"{path.relative_to(ROOT)} can move claim status")
+
+        if "verdict: none" not in text:
+            errors.append(f"{path.relative_to(ROOT)} can move verdict status")
+
+        required_phrases = (
+            "does not populate",
+            "does not score any gate",
+            "cannot promote a CL-001 packet",
+        )
+        for phrase in required_phrases:
+            if phrase not in text:
+                errors.append(f"{path.relative_to(ROOT)} missing phrase {phrase}")
+
+    return errors
+
+
 def main() -> int:
     if not PACKET_DIR.exists():
         print(f"Missing packet directory: {PACKET_DIR.relative_to(ROOT)}")
@@ -300,6 +371,7 @@ def main() -> int:
     errors.extend(validate_source_intake(packet_paths))
     errors.extend(validate_source_dossier_template())
     errors.extend(validate_source_dossier_manifest(packet_paths))
+    errors.extend(validate_source_dossiers(packet_paths))
 
     if errors:
         for error in errors:
@@ -308,7 +380,8 @@ def main() -> int:
 
     print(
         f"Validated {len(packet_paths)} CL-001 packet files, "
-        "source intake, source dossier template, and source dossier manifest."
+        "source intake, source dossier template, source dossier manifest, "
+        "and source dossiers."
     )
     return 0
 

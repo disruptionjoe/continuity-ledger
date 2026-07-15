@@ -10,5 +10,5 @@ Current checks:
   CLTP field set, ten charter gates, and explicit no-claim-promotion status
   before any packet is scored. It also verifies that the CL-001 source-intake
   contract names every packet and required evidence lane, and that the
-  source-dossier template and manifest preserve the minimum extraction queue
-  shape.
+  source-dossier template, manifest, and draft dossier files preserve the
+  minimum extraction queue shape.
