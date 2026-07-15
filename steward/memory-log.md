@@ -12,3 +12,8 @@
   coordination source for the pre-repo continuity-ledger and agency-transduction
   artifacts until Joe explicitly transfers or links them under this repo's
   future governance.
+- Joe authorized activation. The Continuity Ledger name, public posture,
+  charter, and `AGENTS.md` were ratified; the 29-file WI-069 corpus transferred
+  as checksum-verified exploration history; CL-001 became the first
+  falsification run; and routine GitHub versioning plus the standard repository
+  steward package were approved. No source-repository claim or verdict moved.

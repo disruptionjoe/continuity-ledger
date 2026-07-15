@@ -1,42 +1,47 @@
 # Continuity Ledger Steward Context
 
-Status: provisional setup context only. The repository charter and
-`AGENTS.md` are intentionally pending Joe's review.
+Status: active steward context. Joe ratified the repository name, charter, and
+`AGENTS.md` on 2026-07-14.
 
-Load this file only for skeleton maintenance, mailbox routing, or charter
-preparation. It is not authority to begin research, accept claims, activate
-automations, or interpret cross-repo evidence.
+Load this file for stewardship and routing context. `AGENTS.md` and
+`governance/CHARTER.md` remain the governing instruction and charter surfaces.
 
-## Candidate Research Object
+## Research Object
 
-Not ratified. The current setup candidate is continuity-ledger agency
-transduction:
+Continuity-ledger agency transduction:
 
 > how open-ended systems preserve accountable agency-enabling potential across
 > substrate and measurement transitions, thereby creating new agent classes and
 > possibility spaces that can escape prior local minima or class-relative
 > no-goes; and when those transactions instead dissipate, externalize, capture,
-> or collapse.
+> fragment, or collapse.
 
 ## North Star
 
-Intentionally unset until charter ratification.
+Force or falsify whether open-ended systems preserve accountable continuity
+across regime changes that generate new agency classes capable of searching
+beyond prior class-relative limits, and classify how that capacity compounds,
+dissipates, fragments, or is captured.
 
 ## Long-Term Objectives
 
-Intentionally unset until charter ratification.
+- Establish or kill a typed continuity-ledger formalism.
+- Distinguish agency generation from ordinary conversion and observer readout.
+- Build class-relative no-go/escape and composition tests.
+- Test the agentic cross-domain discovery method itself.
+- Preserve negative results and domain boundaries.
 
 ## Measures And Countermeasures
 
-Temporary setup measures:
+Current measures:
 
-- WI-069 remains the JoeOps coordination source for the pre-repo artifacts;
-- source-repo truth and verdicts remain sovereign;
-- automation enrollment remains connected/off;
-- no `AGENTS.md`, claim ledger, canon, or accepted hypothesis appears before
-  charter ratification.
+- the WI-069 founding corpus is frozen with provenance and checksums;
+- source-repository truth and verdicts remain sovereign;
+- the standard automation package remains boundary-conformant;
+- no claim ledger, canon, or accepted hypothesis appears before a ratified
+  promotion workflow.
 
-Temporary countermeasures:
+Countermeasures:
 
 - do not turn every analogy into a ledger;
 - do not treat continuity as conservation of value, energy, legitimacy, or
@@ -44,16 +49,9 @@ Temporary countermeasures:
 - do not call something invariant before representation tests exist;
 - do not absorb Possibility to Capability's hierarchy or GU/TI/TaF joint-seam
   packets;
-- do not use JoeOps coordination artifacts as research evidence without an
-  explicit transfer and provenance decision.
+- do not use JoeOps coordination artifacts as research evidence.
 
 ## What This Repo Owns
-
-Ownership is intentionally not finalized. The setup boundary permits only the
-local skeleton, provisional steward context, and future research surfaces
-described in `README.md`.
-
-Candidate ownership for charter review:
 
 - continuity-ledger transaction schemas;
 - agency-generating transduction packets;
@@ -69,7 +67,7 @@ Candidate ownership for charter review:
 - GU Formalization mathematics, physics, claims, or verdicts.
 - Temporal Issuance hypotheses, completion verdicts, or claim status.
 - Time as Finality capability results, claim status, or canon.
-- WI-069 JoeOps coordination state unless Joe explicitly transfers artifacts.
+- WI-069 JoeOps coordination state; only frozen exploration copies transferred.
 - CapacityOS architecture, Kernel/RCCM machinery, or mailbox proposals as
   accepted truth.
 
@@ -83,11 +81,12 @@ Candidate ownership for charter review:
 - Cross-repo actions route through mailboxes.
 - No source-repo file may be edited from a run mounted here.
 - No non-GitHub external action is authorized.
-- No GitHub remote exists yet; creating one requires a later explicit Joe step.
+- GitHub routine versioning uses
+  `https://github.com/disruptionjoe/continuity-ledger`.
 
 ## Routing
 
-- Repo-owned future research stays here only after charter ratification.
+- Repo-owned research stays here.
 - Source-repo questions route to the source repository.
 - Joe-facing sequencing and program decisions route to JoeOps.
 - CapacityOS architecture and automation questions route to CapacityOS.
@@ -95,21 +94,17 @@ Candidate ownership for charter review:
 
 ## Candidate Decisions
 
-- Final repository name and slug.
-- Final visibility posture.
-- Joe's charter review.
-- First deliverable and first falsification run.
-- Whether any WI-069 artifacts transfer, link, or remain only as JoeOps
-  coordination evidence.
-- Whether and when to create a public GitHub remote.
-- Whether and when to activate a standard automation package.
+- Establish the repo-owned claim-status and promotion workflow after CL-001.
+- Revise or kill packet v0.1 based on the founding contrasts.
 
 ## Durable Decisions
 
-- Provisional local slug: `continuity-ledger`.
-- Provisional local path: `repos/public/continuity-ledger`.
-- Mailbox Processing, Repo Progress, Repo Stewardship, and Repo Discovery are
-  connected/off.
+- Name: Continuity Ledger (`continuity-ledger`).
+- Visibility: public.
+- Charter, founding experiment, and `AGENTS.md` ratified.
+- WI-069 corpus transferred as frozen exploration history from JoeOps revision
+  `eacbf78`; JoeOps retains coordination truth.
+- Standard repository steward package active.
 
 ## Principles
 
@@ -120,19 +115,23 @@ Candidate ownership for charter review:
 - Ownership must remain lower than coordination whenever a source repo can own
   the truth correctly.
 
-## Memory Log
+## Memory And Runs
 
-Chronological setup and future steward memory lives at `steward/memory-log.md`.
+Chronological steward memory lives at `steward/memory-log.md`. Automation run
+plans and receipts live under `steward/runs/`; that directory is ignored by
+default, with major setup receipts force-added when durable.
 
 ## Automation Hooks
 
-CapacityOS registration, mailbox, and System-overlay sockets are present, but
-Mailbox Processing, Progress, Stewardship, and Discovery remain connected/off.
-No live trigger is armed for this repository.
+CapacityOS registration, mailbox, and System-overlay sockets are present.
+Mailbox Processing, Progress, Stewardship, and Discovery are active through the
+standard repository steward package. No repo-specific trigger is needed.
 
 ## Local Source References
 
 - `README.md`
-- `packets/README.md`
-- `interfaces/README.md`
-- `governance/README.md`
+- `governance/CHARTER.md`
+- `AGENTS.md`
+- `interfaces/continuity-ledger-transaction-v0.1.md`
+- `hypotheses/FOUNDING-HYPOTHESES.md`
+- `experiments/CL-001-bitcoin-photosynthesis-pair-and-null.md`

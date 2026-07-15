@@ -1,4 +1,7 @@
 # Explorations
 
-This directory is reserved for explicitly provisional research notes. Material
-here is not canon, not a promoted claim, and not an accepted synthesis.
+This directory contains honestly labeled working research. Exploration is not
+evidence, accepted synthesis, or canon.
+
+`founding-corpus/` contains frozen copies of the 29 WI-069 pre-repo artifacts
+that led to this repository. See its provenance record before using them.
