@@ -31,3 +31,6 @@
 - Added a CL-001 source-dossier template and validator coverage so future
   source passes have an auditable extraction record between source reading and
   packet-field population.
+- Added a CL-001 source-dossier manifest and validator coverage so the four
+  packet-specific exact-source passes are queued without moving source
+  evidence, packet fields, gates, verdicts, or claim status.

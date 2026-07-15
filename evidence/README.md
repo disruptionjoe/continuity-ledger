@@ -11,3 +11,5 @@ Current construction contracts:
   can be populated.
 - `cl-001-source-dossier-template.md` defines the extraction-record shape that
   must sit between source reading and any later CL-001 packet population.
+- `cl-001-source-dossier-manifest.md` queues the packet-specific dossier passes
+  needed before exact sources can populate CL-001 packet fields.

@@ -53,5 +53,7 @@ the run alone.
   later packet population.
 - `evidence/cl-001-source-dossier-template.md` defines the source extraction
   record that future source passes must fill before packet fields move.
+- `evidence/cl-001-source-dossier-manifest.md` binds the dossier queue to the
+  four packet ids while all exact source selections remain pending.
 - `tests/validate_cltp_packets.py` checks that each packet keeps the full
-  field, gate, and source-intake shape before scoring.
+  field, gate, source-intake, and dossier-manifest shape before scoring.
