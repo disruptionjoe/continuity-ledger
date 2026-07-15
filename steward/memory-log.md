@@ -46,3 +46,7 @@
   inert-matter null, scoped to the repo-owned null burden while leaving exact
   heat-transfer sources, passive-material loss evidence, no-surface
   demonstration, packet fields, gates, verdicts, and claim status open.
+- Added a CL-001 draft source dossier for the Bitcoin participant-surface lane,
+  scoped to design-level node, client, relay, incentive, and resource-burden
+  documentation while leaving current economics, actual participant motivation,
+  packet fields, gates, verdicts, and claim status open.
