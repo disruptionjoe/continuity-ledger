@@ -29,3 +29,7 @@ Current draft dossiers:
   the construction burden for the matched hash-without-surface null. It leaves
   exact hash-computation sources, energy/loss evidence, no-surface
   demonstration, packet fields, gates, and verdicts open.
+- `cl-001-dossiers/null-solar-heating-inert-matter-construction.md` records
+  the construction burden for the matched solar-heating inert-matter null. It
+  leaves exact heat-transfer sources, passive-material loss evidence,
+  no-surface demonstration, packet fields, gates, and verdicts open.

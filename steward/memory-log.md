@@ -42,3 +42,7 @@
   hash-without-agency-surface null, scoped to the repo-owned null burden while
   leaving exact hash-computation sources, energy/loss evidence, no-surface
   demonstration, packet fields, gates, verdicts, and claim status open.
+- Added a CL-001 draft construction dossier for the matched solar-heating
+  inert-matter null, scoped to the repo-owned null burden while leaving exact
+  heat-transfer sources, passive-material loss evidence, no-surface
+  demonstration, packet fields, gates, verdicts, and claim status open.
