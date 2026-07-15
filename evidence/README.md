@@ -22,3 +22,6 @@ Current draft dossiers:
 - `cl-001-dossiers/bitcoin-protocol-mechanism.md` records protocol-mechanism
   extraction for the Bitcoin proof-of-work packet. It leaves participant
   surfaces, loss/import accounting, packet fields, gates, and verdicts open.
+- `cl-001-dossiers/photosynthesis-mechanism.md` records mechanism extraction
+  for the oxygenic photosynthesis packet. It leaves carbon fixation, biomass,
+  ecological agency surfaces, packet fields, gates, and verdicts open.

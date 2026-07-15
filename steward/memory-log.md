@@ -34,3 +34,7 @@
 - Added a CL-001 source-dossier manifest and validator coverage so the four
   packet-specific exact-source passes are queued without moving source
   evidence, packet fields, gates, verdicts, or claim status.
+- Added a CL-001 draft source dossier for the oxygenic photosynthesis mechanism
+  lane, scoped to PSII water oxidation and typed biochemical quantities while
+  leaving carbon fixation, biomass, ecological agency, packet fields, gates,
+  verdicts, and claim status open.
