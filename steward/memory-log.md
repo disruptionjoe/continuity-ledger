@@ -25,3 +25,6 @@
   validator for packet field/gate shape. No packet gate was scored, no verdict
   was issued, and the frozen WI-069 corpus remained origin history rather than
   evidence.
+- Added a CL-001 source-intake contract and validator coverage so later packet
+  population must preserve primary-source burden, null symmetry, open-field
+  status, and no-claim-promotion boundaries before scoring.

@@ -6,6 +6,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKET_DIR = ROOT / "packets" / "cl-001"
+SOURCE_INTAKE = ROOT / "evidence" / "cl-001-source-intake.md"
 
 REQUIRED_FRONT_MATTER = (
     "packet_id",
@@ -53,18 +54,35 @@ REQUIRED_GATES = (
     "Neutrality gate",
 )
 
+REQUIRED_SOURCE_INTAKE_LANES = (
+    "Mechanism and transition boundary",
+    "Regime and class definition",
+    "Typed measurement family",
+    "Loss and import accounting",
+    "Agency surface and action space",
+    "Class-relative no-go or constraint",
+    "Feedback and recurrence",
+    "Absorber and null pressure",
+    "Falsifiers and open fields",
+)
 
-def front_matter_keys(text: str) -> set[str]:
+
+def front_matter(text: str) -> dict[str, str]:
     if not text.startswith("---\n"):
-        return set()
+        return {}
     end = text.find("\n---\n", 4)
     if end == -1:
-        return set()
-    keys: set[str] = set()
+        return {}
+    values: dict[str, str] = {}
     for line in text[4:end].splitlines():
         if ":" in line:
-            keys.add(line.split(":", 1)[0].strip())
-    return keys
+            key, value = line.split(":", 1)
+            values[key.strip()] = value.strip()
+    return values
+
+
+def front_matter_keys(text: str) -> set[str]:
+    return set(front_matter(text))
 
 
 def validate_packet(path: Path) -> list[str]:
@@ -99,6 +117,40 @@ def validate_packet(path: Path) -> list[str]:
     return errors
 
 
+def validate_source_intake(packet_paths: list[Path]) -> list[str]:
+    errors: list[str] = []
+    if not SOURCE_INTAKE.exists():
+        return [f"Missing source intake contract: {SOURCE_INTAKE.relative_to(ROOT)}"]
+
+    text = SOURCE_INTAKE.read_text(encoding="utf-8")
+    for path in packet_paths:
+        packet_text = path.read_text(encoding="utf-8")
+        packet_id = front_matter(packet_text).get("packet_id", "")
+        if not packet_id:
+            errors.append(f"{path.relative_to(ROOT)} missing packet_id for intake check")
+            continue
+        if packet_id not in text:
+            errors.append(
+                f"{SOURCE_INTAKE.relative_to(ROOT)} missing packet id {packet_id}"
+            )
+
+    for lane in REQUIRED_SOURCE_INTAKE_LANES:
+        if lane not in text:
+            errors.append(f"{SOURCE_INTAKE.relative_to(ROOT)} missing lane {lane}")
+
+    required_phrases = (
+        "not evidence",
+        "score any gate",
+        "No Claim Promotion",
+        "Pending exact source pass.",
+    )
+    for phrase in required_phrases:
+        if phrase not in text:
+            errors.append(f"{SOURCE_INTAKE.relative_to(ROOT)} missing phrase {phrase}")
+
+    return errors
+
+
 def main() -> int:
     if not PACKET_DIR.exists():
         print(f"Missing packet directory: {PACKET_DIR.relative_to(ROOT)}")
@@ -114,13 +166,14 @@ def main() -> int:
     errors: list[str] = []
     for path in packet_paths:
         errors.extend(validate_packet(path))
+    errors.extend(validate_source_intake(packet_paths))
 
     if errors:
         for error in errors:
             print(error)
         return 1
 
-    print(f"Validated {len(packet_paths)} CL-001 packet files.")
+    print(f"Validated {len(packet_paths)} CL-001 packet files and source intake.")
     return 0
 
 

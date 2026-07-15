@@ -49,5 +49,7 @@ the run alone.
 
 - `packets/cl-001/` holds the four CL-001 target and matched-null packet
   construction files.
+- `evidence/cl-001-source-intake.md` defines the source-intake burden for
+  later packet population.
 - `tests/validate_cltp_packets.py` checks that each packet keeps the full
-  field and gate shape before scoring.
+  field, gate, and source-intake shape before scoring.

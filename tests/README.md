@@ -8,4 +8,5 @@ Current checks:
 
 - `validate_cltp_packets.py` verifies that CL-001 packet files retain the full
   CLTP field set, ten charter gates, and explicit no-claim-promotion status
-  before any packet is scored.
+  before any packet is scored. It also verifies that the CL-001 source-intake
+  contract names every packet and required evidence lane.
