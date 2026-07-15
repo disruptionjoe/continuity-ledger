@@ -25,3 +25,7 @@ Current draft dossiers:
 - `cl-001-dossiers/photosynthesis-mechanism.md` records mechanism extraction
   for the oxygenic photosynthesis packet. It leaves carbon fixation, biomass,
   ecological agency surfaces, packet fields, gates, and verdicts open.
+- `cl-001-dossiers/null-hash-without-agency-surface-construction.md` records
+  the construction burden for the matched hash-without-surface null. It leaves
+  exact hash-computation sources, energy/loss evidence, no-surface
+  demonstration, packet fields, gates, and verdicts open.
