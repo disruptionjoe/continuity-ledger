@@ -17,3 +17,11 @@
   as checksum-verified exploration history; CL-001 became the first
   falsification run; and routine GitHub versioning plus the standard repository
   steward package were approved. No source-repository claim or verdict moved.
+
+## 2026-07-15
+
+- Added the CL-001 packet workspace with scaffolded Bitcoin proof-of-work,
+  oxygenic photosynthesis, and matched-null packet files, plus a deterministic
+  validator for packet field/gate shape. No packet gate was scored, no verdict
+  was issued, and the frozen WI-069 corpus remained origin history rather than
+  evidence.

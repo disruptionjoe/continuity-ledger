@@ -44,3 +44,10 @@ photosynthesis while rejecting matched conversion-only nulls.
 Four frozen case packets, a field-by-field contrast matrix, absorber analysis,
 gate receipts, and one explicit verdict. No claim promotion is authorized by
 the run alone.
+
+## Current Construction Artifacts
+
+- `packets/cl-001/` holds the four CL-001 target and matched-null packet
+  construction files.
+- `tests/validate_cltp_packets.py` checks that each packet keeps the full
+  field and gate shape before scoring.
