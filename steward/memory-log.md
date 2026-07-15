@@ -28,3 +28,6 @@
 - Added a CL-001 source-intake contract and validator coverage so later packet
   population must preserve primary-source burden, null symmetry, open-field
   status, and no-claim-promotion boundaries before scoring.
+- Added a CL-001 source-dossier template and validator coverage so future
+  source passes have an auditable extraction record between source reading and
+  packet-field population.

@@ -9,3 +9,5 @@ Current construction contracts:
 - `cl-001-source-intake.md` defines the primary-source and construction-note
   burden that CL-001 packets must meet before packet fields, gates, or verdicts
   can be populated.
+- `cl-001-source-dossier-template.md` defines the extraction-record shape that
+  must sit between source reading and any later CL-001 packet population.

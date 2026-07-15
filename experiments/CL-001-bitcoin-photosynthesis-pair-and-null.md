@@ -51,5 +51,7 @@ the run alone.
   construction files.
 - `evidence/cl-001-source-intake.md` defines the source-intake burden for
   later packet population.
+- `evidence/cl-001-source-dossier-template.md` defines the source extraction
+  record that future source passes must fill before packet fields move.
 - `tests/validate_cltp_packets.py` checks that each packet keeps the full
   field, gate, and source-intake shape before scoring.
