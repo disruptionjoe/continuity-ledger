@@ -11,6 +11,14 @@ Status: frozen exploration history, not accepted research evidence.
 - Transfer action: exact copy; source files retained in JoeOps
 - File count: 29
 
+## Closed Work Card
+
+- [WI-069 coordination record at its closing revision](https://github.com/disruptionjoe/joeops/blob/b7aecfafecc889b6fce6e9fb06011d3f31e19811/records/work-items.yaml#L1360)
+- [WI-069 artifact index and handoff receipt](https://github.com/disruptionjoe/joeops/blob/b7aecfafecc889b6fce6e9fb06011d3f31e19811/programs/tri-repo-research/wi-069-emergence-collapse-artifact-index-2026-07-12.md)
+
+JoeOps owns the closed coordination record. Continuity Ledger owns subsequent
+research under its charter.
+
 Joe explicitly authorized Continuity Ledger activation after the provisional
 skeleton had recorded artifact transfer as a governance stop. This copy is the
 resulting provenance-bearing transfer decision.
