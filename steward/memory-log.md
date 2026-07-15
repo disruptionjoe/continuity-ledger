@@ -50,3 +50,8 @@
   scoped to design-level node, client, relay, incentive, and resource-burden
   documentation while leaving current economics, actual participant motivation,
   packet fields, gates, verdicts, and claim status open.
+- Added a CL-001 draft source dossier for the oxygenic photosynthesis
+  agency-surface lane, scoped to primary production, standing biomass, trophic
+  support, and biogeochemical-feedback evidence while leaving biochemical
+  carbon-fixation source selection, organism-specific agency, packet fields,
+  gates, verdicts, and claim status open.
