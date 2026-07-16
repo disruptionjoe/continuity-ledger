@@ -167,8 +167,28 @@ lanes:
       - the owner's declared users
       - authorized downstream consumers
     admission:
-      posture: governed
+      posture: gated
       authority_ref: AGENTS.md
+      gate_reason: >-
+        AGENTS.md: "Do not generalize from the memorable pair before the
+        controls pass." Atlas construction requires a corpus of resolved
+        transductions. CL-001 is the first and is unresolved, so generalizing
+        work has no admissible input yet. This gate encodes existing ratified
+        canon; it does not narrow the lane's purpose.
+      admissible_before_release:
+        - exploration-grade candidate gathering
+        - null candidates and absorber inventories
+        - negative, non-composable, and domain-specific results
+        - open-field registers naming what evidence would close them
+      inadmissible_before_release:
+        - shared-structure or cross-case generalization claims
+        - atlas synthesis or comparative-pattern extraction
+        - promotion of any candidate to repo-owned structure
+      release_condition: >-
+        CL-001 returns SHARED_STRUCTURE, NARROWER_STRUCTURE, or KILL. The
+        verdict also re-decides this lane's scope; KILL does not automatically
+        retire the lane, but its purpose returns to Joe for a governed
+        decision.
     execution_posture: automation_eligible
     health_profile: run_observed
     directed_flow: null

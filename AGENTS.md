@@ -144,8 +144,15 @@ derived health, automation cadence, or a duplicate backlog.
 
 - Lane 1: Continuity through transduction. The North Star.
 - Lane 2: Evolutionary function and agency escape.
-- Lane 3: Transduction atlas.
+- Lane 3: Transduction atlas. Admission-gated on the CL-001 verdict.
 - Lane A: Continuity Ledger stewardship.
+
+Lane 3 is gated because this repository already forbids generalizing from the
+memorable pair before the controls pass, and CL-001 is unresolved. Before the
+gate releases, Lane 3 admits exploration-grade candidate gathering, null and
+absorber candidates, and negative results. It does not admit cross-case
+generalization, atlas synthesis, or promotion of a candidate to repo-owned
+structure. The gate releases when CL-001 returns a verdict.
 
 Numbered lanes are Progress; the lettered lane is Stewardship. Progress selects
 a numbered lane, Stewardship normally selects Lane A, and Discovery selects no
