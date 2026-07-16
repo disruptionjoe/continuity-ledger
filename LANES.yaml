@@ -15,7 +15,7 @@
 # unrelated and must not be reconciled with one another.
 
 lane_contract_version: "1.0"
-manifest_revision: 1
+manifest_revision: 2
 
 owner:
   owner_id: continuity-ledger
@@ -25,28 +25,45 @@ owner:
   governance_refs:
     - AGENTS.md
 
-  # The charter sits above the lane structure. No lane is identical to the
-  # Audacious North Star, and marking one `north_star: true` does not make it so.
-  charter_north_star: >-
-    Develop and force-or-falsify a theory of evolutionary agency escape
-    (governance/CHARTER.md, "Audacious North Star"). The charter calls this the
-    highest-ceiling target, not a premise, so it is not directly workable as a
-    lane. Lane 1 is its primary operational expression by way of the charter's
-    Nearer Guiding Hypothesis, which is the falsifiable object and which
-    explicitly bundles continuity witnesses, generated agency, class-relative
-    no-goes, escape moves, and recursive feedback into one hypothesis tested by
-    one ten-gate experiment. Any lane boundary drawn between continuity and
-    escape cuts that experiment in half and must be treated as a defect.
+  # The charter sits above the lane structure. This block is a POINTER to
+  # governance/CHARTER.md, never a source. Where the two differ, the charter is
+  # right by construction and this file is corrected against it (Canon precedence
+  # rule, CHARTER.md > Source Sovereignty > Provenance Correction).
+  #
+  # The North Star is ONE statement with two components. The blockbuster
+  # component is what Lane 1 forces or falsifies. The agent-capability component
+  # is not a lane, never commissions an experiment, and only explains the choice
+  # of target and constrains method.
+  charter_north_star_blockbuster: >-
+    Agents escape class-relative limits by constructing new binding constraints
+    rather than by removing old ones, and the enforcement substrate determines
+    which constraints can be made binding. The reachable capability space of a
+    system is therefore set by its enforcement physics, not by its intentions.
+    (governance/CHARTER.md, "North Star" > "Blockbuster component".) Lane 1 is
+    its primary operational expression by way of the Nearer Guiding Hypothesis,
+    which is the falsifiable form and which adds the load-bearing clause: the
+    binding constraint class varies with S0 at fixed evaluator, and does not vary
+    with the evaluator at fixed S0.
 
-  # CL-H6 is charter-owned and is not exported. It is a lens on how the work is
-  # done, never a substitute for what the work must produce.
-  agent_capability_lens: >-
-    CL-H6 Agentic Discovery Advantage (hypotheses/FOUNDING-HYPOTHESES.md). The
-    charter owns this claim in three places: "Agentic Research Claim", "What
-    This Repository Owns", and "Success Standard". It is the agent-capability
-    evaluation lens for this repository. It is not a lane, not a replacement
-    North Star, and not ai-epistemology's. Its own stated null is that more text
-    and persona variety create only synthetic novelty.
+  charter_north_star_agent_capability: >-
+    Whether research agents can hold a declared frame fixed while exactly one
+    field sweeps, and route a recognized defect out of the local run.
+    (governance/CHARTER.md, "North Star" > "Agent-capability component".) This is
+    NOT a lane and may not commission work. It does two things: it explains why
+    this repository chases this blockbuster (the claim quantifies over S0, a
+    declared field, so it is uniquely fakeable by re-choosing the substrate), and
+    it constrains how every Lane 1 experiment runs (CHARTER.md, "Frame
+    Discipline"). Neither component is evidence for the other; an artifact that
+    couples them fails the typing gate. Present evidence is against the
+    capability: four independent runs recognized CL-001's fatal defect, four
+    recorded it correctly, zero escalated.
+
+  charter_horizon: >-
+    Evolutionary agency escape, the prior North Star, is preserved verbatim in
+    hypotheses/HORIZON.md and reclassified horizon. Demoted 2026-07-16 for naming
+    no mechanism, not for difficulty. The blockbuster component is that claim with
+    the mechanism supplied. It may not be restored on the grounds that it is
+    important.
   authoritative_state_refs:
     - README.md
     - hypotheses/FOUNDING-HYPOTHESES.md
@@ -60,25 +77,32 @@ lanes:
     label: "Lane 1"
     ordinal: 1
     kind: progress
-    title: Ledger force-or-falsify
-    slug: LEDGER-FORCE-OR-FALSIFY
+    title: Constraint-bought capability, substrate-bounded
+    slug: CONSTRAINT-BOUGHT-CAPABILITY
     north_star: true
     purpose: >-
-      Force or falsify the charter's Nearer Guiding Hypothesis: that a
-      nontrivial family of cross-domain systems admits a typed continuity
-      ledger distinguishing agency-generating transduction from ordinary
-      conversion, fixed-family disclosure, and observer-side relabeling, by
-      explicitly tracking source and target regimes, continuity witnesses,
-      losses, boundary imports, generated agency, class-relative no-goes,
-      escape moves, and recursive feedback. This is one hypothesis and one
-      ten-gate experiment; it is not divisible into a continuity half and an
-      escape half.
+      Force or falsify the charter's blockbuster component, by way of its Nearer
+      Guiding Hypothesis: that at a declared frame a typed continuity ledger
+      distinguishes a constructed binding constraint from ordinary conversion,
+      fixed-family disclosure, and observer-side relabeling, and that the class of
+      constraints it finds binding varies with S0 at fixed evaluator and does not
+      vary with the evaluator at fixed S0. Capability is bought with constraint;
+      the substrate sets which constraints are purchasable. This is one hypothesis
+      and one ten-gate experiment; it is not divisible into a continuity half and
+      an escape half.
     purpose_type: north_star
     relation_to_lane_1: primary_operational_expression
+    method_constraints_ref: governance/CHARTER.md#frame-discipline
+    method_constraints_note: >-
+      Frame Discipline is binding on every run in this lane and is derived from
+      the North Star's agent-capability component, not from a lane of its own.
+      A run that violates it is inadmissible regardless of its result.
     falsification_refs:
       - governance/CHARTER.md#nearer-guiding-hypothesis
     research_sequence:
-      - CL-001 pair and null
+      - CL-001 the interval sweep (dollar / Bitcoin at one declared frame, T the
+        only free field, evaluator index swept; two preregistered outcomes, both
+        lethal, no third branch)
       - CL-002 transfer and composition
       - CL-003 no-go escape accounting
     environment: >-
@@ -116,14 +140,17 @@ lanes:
     control:
       state: active
       in_flight_policy: continue_current
-      control_revision: 1
+      control_revision: 2
       scheduling_preference: normal
       changed_at: "2026-07-16T00:00:00-05:00"
       changed_by: "Joe direct chat, 2026-07-16"
-      authority_ref: Joe-approved WI-078 fleet target map
-      reason: Initial first-class Lane ratification
+      authority_ref: "Joe direct chat, 2026-07-16 North Star amendment"
+      reason: >-
+        Lane 1 re-pointed at the amended blockbuster component. The prior purpose
+        operationalized a Nearer Guiding Hypothesis whose North Star named no
+        mechanism and whose case pair had no common frame.
     provenance:
-      revision: 1
+      revision: 2
       approved_at: "2026-07-16T00:00:00-05:00"
       approved_by: "Joe direct chat, 2026-07-16"
 
@@ -308,7 +335,6 @@ lanes:
       - README.md
       - governance/CHARTER.md
       - AGENTS.md
-      - steward/README.md
     durable_outputs:
       - >-
         Governance corrections, reconciliations, integrity records, adaptation
