@@ -121,3 +121,28 @@
   Nearer-Guiding-Hypothesis falsifier "matched null controls satisfy the same
   gates as the target examples". Repairing it is a charter amendment and is
   queued as the next decision.
+- Amended the charter's Matched Nulls (Joe direct chat, 2026-07-16). Both
+  ratified nulls were specified by stipulated absence of what the agency gate
+  tests, so neither could fail for a non-definitional reason. This made the
+  preregistered `SHARED_STRUCTURE` branch unreachable and disabled the charter's
+  own Nearer-Guiding-Hypothesis falsifier "matched null controls satisfy the
+  same gates as the target examples", since a null that cannot pass can never
+  fire it. CL-001 could neither confirm nor be falsified on that axis. The
+  repository had already recorded the definitional-exclusion risk in six places
+  across both null packets, the intake contract, and both null dossiers; no run
+  ever escalated it. The amendment is additive: both original nulls are retained
+  and reclassified as zero-weight floor nulls, and positively specified
+  near-miss nulls are added to carry the load. Bitcoin testnet or regtest is the
+  near-miss for the Bitcoin target; Rayleigh-Benard convection or a solar pond
+  for photosynthesis. A near-miss null may never be selected for lacking an
+  agency surface, which would relocate the stipulation from specification time
+  to selection time. If no admissible near-miss null exists for a target, the
+  verdict is `KILL` on uncontrollability, which is a successful result. No
+  target, gate, verdict, or hypothesis changed. Amended before any packet field
+  was populated or any gate scored, so nothing is retrofitted; the window for a
+  clean amendment was open precisely because the lane had produced nothing.
+- Recorded in `experiments/CL-001-...md` that the near-miss null packets,
+  manifest entries, and source dossiers do not yet exist. The dossier manifest
+  still queues only the two floor nulls. Constructing the near-miss nulls is now
+  the load-bearing remaining work in CL-001; until it exists the run can reject
+  the trivial case and nothing more.

@@ -2,6 +2,21 @@
 
 Status: ratified by Joe on 2026-07-14.
 
+## Amendments
+
+- **2026-07-16, Joe direct chat — Matched Nulls.** The two ratified matched
+  nulls were each specified by stipulated absence of what the agency gate
+  tests, so neither could fail for a non-definitional reason. This made the
+  preregistered `SHARED_STRUCTURE` branch unreachable and, more seriously,
+  disabled this charter's own Nearer-Guiding-Hypothesis falsifier "matched null
+  controls satisfy the same gates as the target examples" — a null that cannot
+  pass can never fire it. CL-001 could therefore neither confirm nor be
+  falsified on that axis. The amendment is additive: both original nulls are
+  retained and reclassified as zero-weight floor nulls, and positively
+  specified near-miss nulls are added to carry the evidentiary load. No target,
+  gate, verdict, or hypothesis was changed. Amended before any packet field was
+  populated or any gate scored, so no result is retrofitted.
+
 ## Repository Identity
 
 Name: **Continuity Ledger**
@@ -185,10 +200,38 @@ Transaction Packet v0.1 and a hostile paired-contrast result.
 
 ### Matched Nulls
 
+Nulls carry two different evidentiary weights and must not be confused.
+
+**Floor nulls** confirm that the packet rejects the trivial case. They are
+specified by stipulated absence of an agency surface, so their failure at the
+agency gate follows from the specification rather than from evidence. They
+carry **zero weight** toward any positive verdict:
+
 - energy-consuming hash computation with no persistent consensus, settlement,
   or participant policy surface;
 - solar heating of inert matter without a self-maintaining biochemical or
   ecological agency loop.
+
+**Near-miss nulls** are the load-bearing controls. Each must be a named real
+system, specified positively by what it *is*, described without reference to
+the target's success criterion, and selected because it might genuinely pass.
+Its gate verdicts are then findings rather than tautologies:
+
+- Bitcoin testnet or a regtest chain: full consensus, settlement, issuance,
+  participant ecology, and proof-of-work, with economically worthless coins.
+- Rayleigh-Benard convection or a solar pond: real dissipative structure,
+  self-organization, and far-from-equilibrium ordering, with no metabolism and
+  no heredity.
+
+A near-miss null may never be selected on the grounds that it lacks an agency
+surface. Selecting for absence relocates the stipulation from specification
+time to selection time and reproduces the defect this distinction exists to
+remove. If a candidate is admissible only by stipulating an absence, it is a
+floor null. If it turns out to carry a durable recognition surface, that is a
+finding about the target's discriminator, not grounds for discarding the null.
+
+If no admissible near-miss null can be constructed for a target, the correct
+verdict is `KILL` on grounds of uncontrollability. That is a successful result.
 
 ### Required Gates
 
