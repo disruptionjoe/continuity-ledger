@@ -182,3 +182,41 @@
   controlled intervention on one variable). Quorum-sensing-under-flow is the
   best-shaped near-miss null surfaced so far and is a candidate to replace
   Rayleigh-Benard as Null B.
+- Ran CL-001 C-field kind probe (`explorations/2026-07-16-c-field-kind-probe.md`).
+  Two agents derived `C` independently, each reading only its own target's
+  dossiers, blinded to the other target, to each other, and to the probe author's
+  preregistered prediction. Blinding was deliberate: the author had publicly
+  predicted an outcome and would otherwise have scored it.
+- The prediction failed. It held that `C` would come back kind-heterogeneous
+  (Bitcoin a threshold certificate over a counterfactual, photosynthesis physical
+  transport) and that CL-001 would die at the continuity gate. Both parts were
+  wrong. The candidate kinds converge rather than diverge: Bitcoin as provenance
+  with secondary constraint, photosynthesis as constraint with causal dependence
+  as runner-up. And the comparison could not run at all, because `C` is OPEN on
+  both targets. The prediction presumed a determinable field on both sides; that
+  presumption is what the evidence refuses.
+- Both derivations converged on two blockers neither was prompted toward. First,
+  no witness spans the transduction: Bitcoin's protocol sources do not quantify
+  energy, so only one endpoint is typed; photosynthesis's mechanism dossier
+  disclaims carbon fixation and biomass while the agency dossier supplies no
+  positive `C` candidate, so the two sides do not touch. Second, covariance is
+  unstated for both, which the charter makes mandatory and which is independently
+  sufficient to hold the field OPEN.
+- The probe's real finding is about `R0`, not `C`. `C`'s determinability depends
+  on an analyst-chosen regime boundary, and the choice that makes `C`
+  determinable is the choice that makes the case trivial. Narrow `R0` to the
+  computational regime and Bitcoin's `C` is determinable as provenance in hash
+  units, but the transduction becomes hashing to record-of-hashing, which is the
+  hash-without-surface null. Narrow photosynthesis to the water-oxidation
+  boundary and the Kok constraint spans it, but the packet becomes much narrower
+  and owes an account of why that boundary is the interesting one. Nothing in the
+  packet, interface, or charter individuates `R0`. The analyst picks and the pick
+  decides the answer.
+- `C` remains "Open pending primary-source pass" on both packets. No field was
+  populated, no gate scored, no verdict implied. Recorded as leads only, carrying
+  no weight: the unprovenanced Lane 2 audit's report that `X` collapses because
+  `K0` is analyst-chosen, and the unprovenanced Lane 3 material's report that
+  many cases are regime-plus-boundary-dependent judgments rather than
+  object-level transductions. If those were ever established, three independent
+  derivations over disjoint corpora would agree the boundary choice does the
+  work. That is a hypothesis about the CLTP, not a result.
