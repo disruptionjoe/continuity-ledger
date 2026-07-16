@@ -11,4 +11,8 @@ Current checks:
   before any packet is scored. It also verifies that the CL-001 source-intake
   contract names every packet and required evidence lane, and that the
   source-dossier template, manifest, and draft dossier files preserve the
-  minimum extraction queue shape.
+  minimum extraction queue shape. The dossier checks also require manifest
+  references to resolve to files, every draft dossier to remain manifest-listed,
+  dossier `source_id` values to stay unique, dossier evidence lanes to match the
+  intake contract, and dossier status, claim status, and verdict fields to stay
+  non-promotional.

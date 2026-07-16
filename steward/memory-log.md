@@ -55,3 +55,8 @@
   support, and biogeochemical-feedback evidence while leaving biochemical
   carbon-fixation source selection, organism-specific agency, packet fields,
   gates, verdicts, and claim status open.
+- Hardened the CL-001 validator so the source-dossier manifest and draft
+  dossier queue cannot silently drift: manifest paths must resolve, all draft
+  dossiers must remain listed, `source_id` values must stay unique, evidence
+  lanes must match the intake contract, and dossier status, claim status, and
+  verdict fields must remain non-promotional.

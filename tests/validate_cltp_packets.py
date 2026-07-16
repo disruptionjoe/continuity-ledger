@@ -1,6 +1,7 @@
 """Validate the structural shape of CL-001 packet files."""
 
 from pathlib import Path
+import re
 import sys
 
 
@@ -125,6 +126,8 @@ REQUIRED_DOSSIER_FILE_SECTIONS = (
     "## No Claim Promotion",
 )
 
+MANIFEST_DOSSIER_PATH_RE = re.compile(r"`(evidence/cl-001-dossiers/[^`]+\.md)`")
+
 
 def front_matter(text: str) -> dict[str, str]:
     if not text.startswith("---\n"):
@@ -142,6 +145,14 @@ def front_matter(text: str) -> dict[str, str]:
 
 def front_matter_keys(text: str) -> set[str]:
     return set(front_matter(text))
+
+
+def split_front_matter_list(value: str) -> list[str]:
+    return [
+        item.strip()
+        for item in re.split(r"[;,]", value)
+        if item.strip()
+    ]
 
 
 def validate_packet(path: Path) -> list[str]:
@@ -304,6 +315,33 @@ def validate_source_dossier_manifest(packet_paths: list[Path]) -> list[str]:
                 f"{SOURCE_DOSSIER_MANIFEST.relative_to(ROOT)} missing phrase {phrase}"
             )
 
+    manifest_dossier_paths = {
+        (ROOT / raw_path).resolve()
+        for raw_path in MANIFEST_DOSSIER_PATH_RE.findall(text)
+    }
+    dossier_paths = {
+        path.resolve() for path in SOURCE_DOSSIER_DIR.glob("*.md")
+    } if SOURCE_DOSSIER_DIR.exists() else set()
+
+    if not manifest_dossier_paths:
+        errors.append(
+            f"{SOURCE_DOSSIER_MANIFEST.relative_to(ROOT)} "
+            "does not reference any draft dossier files"
+        )
+
+    for path in sorted(manifest_dossier_paths):
+        if not path.exists():
+            errors.append(
+                f"{SOURCE_DOSSIER_MANIFEST.relative_to(ROOT)} references missing "
+                f"dossier {path.relative_to(ROOT)}"
+            )
+
+    for path in sorted(dossier_paths - manifest_dossier_paths):
+        errors.append(
+            f"{path.relative_to(ROOT)} is not referenced by "
+            f"{SOURCE_DOSSIER_MANIFEST.relative_to(ROOT)}"
+        )
+
     return errors
 
 
@@ -316,6 +354,9 @@ def validate_source_dossiers(packet_paths: list[Path]) -> list[str]:
         front_matter(path.read_text(encoding="utf-8")).get("packet_id", "")
         for path in packet_paths
     }
+    source_ids: dict[str, Path] = {}
+    allowed_lanes = {lane.lower() for lane in REQUIRED_SOURCE_INTAKE_LANES}
+
     for path in sorted(SOURCE_DOSSIER_DIR.glob("*.md")):
         text = path.read_text(encoding="utf-8")
         keys = front_matter_keys(text)
@@ -330,16 +371,41 @@ def validate_source_dossiers(packet_paths: list[Path]) -> list[str]:
                 errors.append(f"{path.relative_to(ROOT)} missing {section}")
 
         applies_to = values.get("applies_to_packets", "")
-        if applies_to and applies_to not in packet_ids:
-            errors.append(
-                f"{path.relative_to(ROOT)} applies to unknown packet {applies_to}"
-            )
+        applies_to_packets = split_front_matter_list(applies_to)
+        if not applies_to_packets:
+            errors.append(f"{path.relative_to(ROOT)} does not name a packet")
+        for packet_id in applies_to_packets:
+            if packet_id not in packet_ids:
+                errors.append(
+                    f"{path.relative_to(ROOT)} applies to unknown packet {packet_id}"
+                )
 
-        if "claim_status: none" not in text:
+        source_id = values.get("source_id", "")
+        if source_id in source_ids:
+            errors.append(
+                f"{path.relative_to(ROOT)} duplicates source_id {source_id} "
+                f"from {source_ids[source_id].relative_to(ROOT)}"
+            )
+        elif source_id:
+            source_ids[source_id] = path
+
+        if values.get("status") != "draft":
+            errors.append(f"{path.relative_to(ROOT)} is not status: draft")
+
+        if values.get("claim_status") != "none":
             errors.append(f"{path.relative_to(ROOT)} can move claim status")
 
-        if "verdict: none" not in text:
+        if values.get("verdict") != "none":
             errors.append(f"{path.relative_to(ROOT)} can move verdict status")
+
+        lanes = split_front_matter_list(values.get("evidence_lanes", ""))
+        if not lanes:
+            errors.append(f"{path.relative_to(ROOT)} does not name evidence lanes")
+        for lane in lanes:
+            if lane.lower() not in allowed_lanes:
+                errors.append(
+                    f"{path.relative_to(ROOT)} uses unknown evidence lane {lane}"
+                )
 
         required_phrases = (
             "does not populate",
