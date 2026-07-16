@@ -181,7 +181,12 @@ def validate_packet(path: Path) -> list[str]:
     if "## No Claim Promotion" not in text:
         errors.append(f"{path.relative_to(ROOT)} missing No Claim Promotion section")
 
-    if "verdict: unscored" not in text:
+    # Scope this to parsed front matter, not a whole-file substring scan. A
+    # scan passes whenever the literal appears anywhere -- prose, a table cell,
+    # a fenced block -- so a packet could carry `verdict: SHARED_STRUCTURE` in
+    # its front matter and still validate. This is the guard on a source
+    # verdict, so it has to read the field it claims to read.
+    if front_matter(text).get("verdict") != "unscored":
         errors.append(f"{path.relative_to(ROOT)} is not explicitly unscored")
 
     return errors

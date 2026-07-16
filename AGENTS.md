@@ -142,10 +142,23 @@ repository's durable execution containers. It holds lane definitions, owner
 control state, and pointers to authoritative work. It never holds run history,
 derived health, automation cadence, or a duplicate backlog.
 
-- Lane 1: Continuity through transduction. The North Star.
-- Lane 2: Evolutionary function and agency escape.
+- Lane 1: Ledger force-or-falsify (`LEDGER-FORCE-OR-FALSIFY`).
+- Lane 2: Ledger hardening (`LEDGER-HARDENING`). Supports Lane 1; lease required
+  to lead scheduling.
 - Lane 3: Transduction atlas. Admission-gated on the CL-001 verdict.
 - Lane A: Continuity Ledger stewardship.
+
+The charter's Audacious North Star is a theory of evolutionary agency escape.
+The charter calls it the highest-ceiling target, **not a premise**, and it sits
+above the lane structure. No lane is it. Lane 1 is its primary operational
+expression by way of the charter's Nearer Guiding Hypothesis, which is the
+falsifiable object.
+
+Lane 1 carries that hypothesis whole. It bundles continuity witnesses,
+generated agency, class-relative no-goes, escape moves, and recursive feedback
+into one hypothesis tested by one ten-gate experiment. Do not split it into a
+continuity lane and an escape lane; an earlier revision of the manifest did
+exactly that and cut CL-001 in half.
 
 Lane 3 is gated because this repository already forbids generalizing from the
 memorable pair before the controls pass, and CL-001 is unresolved. Before the
@@ -160,8 +173,13 @@ lane and names its subject, read scope, output, recipient, deduplication rule,
 escalation rule, and completion condition in its Run Plan.
 
 Lane 1's purpose may change only through Joe direct chat plus a governance
-change. Learning about agent method routes to ai-epistemology and never becomes
-a fourth lane here.
+change.
+
+Generic agent-method learning routes to ai-epistemology. CL-H6 Agentic
+Discovery Advantage does not: this charter owns it in three places, and it is
+this repository's agent-capability evaluation lens. It is a lens on how the work
+is done, never a substitute for what the work must produce, and never a fourth
+lane.
 
 The word "lane" also appears in this repository's CL-001 research contract as
 `evidence_lanes` and source-intake lanes. Those are packet evidence categories,
