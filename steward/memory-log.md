@@ -220,3 +220,75 @@
   object-level transductions. If those were ever established, three independent
   derivations over disjoint corpora would agree the boundary choice does the
   work. That is a hypothesis about the CLTP, not a result.
+- Ran R0 individuation probe (bar preregistered at `c05676f`; result in
+  `explorations/2026-07-16-r0-individuation-RESULT.md`). The bar was written and
+  committed before any candidate was generated, because the author's C-PROBE-01
+  prediction had just been refuted for presuming its own frame. Three agents
+  worked independently, none shown the bar, so candidates were built to be strong
+  rather than to pass.
+- Result: NO ADMISSIBLE RULE. Both constructors killed their own rules unprompted,
+  failing conditions they were never shown. The type-fault rule fails scope
+  circularity: its inputs are dossier-given, and each dossier's Source Boundary is
+  itself an R0 choice, so the rule relocates the analyst's choice upstream and
+  returns it as a domain-derived discovery. The mechanism rule passes
+  non-circularity on the named fields, and that is what kills it: its output is
+  computed entirely from the typed register, so R0 carries no information not
+  already in M0/M1. It also fails neutrality, favouring literatures that type by
+  ontology over literatures that type by data format, and would report
+  "photosynthesis crosses regimes, Bitcoin does not" as a fact about the world
+  rather than about two house styles.
+- The scoped claim: no AUTONOMOUS R0 rule is charter-admissible, by relocation
+  rather than elimination. Every candidate has a non-empty presupposition set, so
+  every candidate is a function on packets rather than cases; it constrains the
+  packet and cannot ground it. Two charter-internal amplifiers: the transduction
+  definition is teleological ("through which downstream action becomes possible"),
+  so R0 <- T <- Omega and the source regime is fixed by the agency already
+  credited; and the invariance test is K0-indexed while K0 is indexed to R0, so
+  the repository contains no apparatus capable of validating an R0 rule.
+- The author's second prediction of the day was refuted. Preregistered outcome 3
+  read: no admissible rule means the regime boundary is free and the instrument
+  cannot discriminate, a KILL on the instrument. The first clause holds; the
+  second does not follow. R0 is a gauge choice. Verdicts are gauge-dependent, but
+  discrimination is a difference between two packets, and a difference can be
+  computed in a fixed gauge without the gauge being canonical. A declared-boundary
+  packet can discriminate a target from its matched null if and only if the null
+  is evaluated at the same declared boundary. Absolute individuation is dead;
+  relative individuation survives and is stronger than what the repo had.
+- Live defect: the charter's null-matching criterion, including today's own
+  Matched Nulls amendment, never mentions R0 matching. "Matched" currently means
+  matched-in-subject-matter, not matched-in-frame. Neither current branch
+  discriminates: at the computational R0 the Bitcoin target and its null nearly
+  coincide; at the participant R0 the hash null has no counterpart R0 and the
+  packets are incommensurable rather than comparable.
+- The amendment's near-miss nulls are right for a reason the amendment failed to
+  state: testnet/regtest shares mainnet's R0, K0, S0, M0, T, and B and differs
+  only in economic R1. R0's arbitrariness is neutralized by pairing, not by
+  individuation; the free parameter becomes a shared parameter and the gate
+  difference becomes evidence. This is an independent reason floor nulls carry
+  zero weight: they cannot be populated at their target's frame at all. Technical
+  correction on the record: testnet3's difficulty rules differ from mainnet's, so
+  regtest is the cleaner frame-match; the amendment named both without
+  distinguishing them.
+- Proposed and NOT enacted, each requiring Joe's authorization: R0-matching as a
+  null-admissibility condition; regtest over testnet3 as near-miss Null A; and a
+  frame sweep, a test the repo does not have, in which a discriminator must be
+  shown robust across the R0 dial rather than merely to exist at one setting. If
+  the pass/fail pattern inverts anywhere in the sweep, the discriminator is a
+  frame artifact. What would be fatal: no frame at which a target passes and its
+  frame-matched near-miss null fails. Untested, because CL-001 has never held a
+  frame fixed across a target/null pair.
+- PROVENANCE DEFECT in the evidence layer, verified, independent of any rule. The
+  dossiers' "Non-comparable with" column is repo-authored, not source-derived, and
+  sits inside a section whose surrounding discipline signals extraction. Proof:
+  `photosynthesis-agency-surface.md:64` sources Net primary production to Field et
+  al. (Science 1998) and declares it non-comparable with "Bitcoin chainwork";
+  `photosynthesis-mechanism.md:63` does the same for photon absorption. Bitcoin's
+  whitepaper is 2008; a 1998 paper did not name Bitcoin chainwork. The cause is
+  structural: the template's table is Quantity / Type or unit / Source context /
+  Non-comparable with, where "Source context" carries provenance for the quantity
+  and the non-comparability column has no attribution column or requirement. The
+  graph therefore encodes CL-001's comparison rather than photosynthesis's type
+  structure, written by an agent that already knew which cases the charter paired.
+  Proposed, not enacted: require source attribution per declaration, or rename the
+  column to mark it repo-authored analysis. Both are contract changes affecting six
+  dossiers.
