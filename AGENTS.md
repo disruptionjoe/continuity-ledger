@@ -135,13 +135,40 @@ workflow:
   `resolved`, `universal`, or externally established; and
 - source-repository claim status never moves here.
 
+## Lanes
+
+`LANES.yaml` at this repo root is the authoritative declaration of this
+repository's durable execution containers. It holds lane definitions, owner
+control state, and pointers to authoritative work. It never holds run history,
+derived health, automation cadence, or a duplicate backlog.
+
+- Lane 1: Continuity through transduction. The North Star.
+- Lane 2: Evolutionary function and agency escape.
+- Lane 3: Transduction atlas.
+- Lane A: Continuity Ledger stewardship.
+
+Numbered lanes are Progress; the lettered lane is Stewardship. Progress selects
+a numbered lane, Stewardship normally selects Lane A, and Discovery selects no
+lane and names its subject, read scope, output, recipient, deduplication rule,
+escalation rule, and completion condition in its Run Plan.
+
+Lane 1's purpose may change only through Joe direct chat plus a governance
+change. Learning about agent method routes to ai-epistemology and never becomes
+a fourth lane here.
+
+The word "lane" also appears in this repository's CL-001 research contract as
+`evidence_lanes` and source-intake lanes. Those are packet evidence categories,
+not execution containers. The two senses are unrelated and must never be
+renamed, merged, or validated against one another.
+
 ## Automation Modes
 
 ### Repo Progress
 
 Advance the highest-value unresolved repo-owned work, beginning with the first
-research sequence. One child run owns one writable repository. Cross-repo
-requests route through the receiving mailbox.
+research sequence. Select the numbered lane in `LANES.yaml` that owns the work.
+One child run owns one writable repository. Cross-repo requests route through
+the receiving mailbox.
 
 ### Mailbox Processing
 
