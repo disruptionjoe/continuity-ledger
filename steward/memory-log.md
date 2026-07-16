@@ -146,3 +146,39 @@
   still queues only the two floor nulls. Constructing the near-miss nulls is now
   the load-bearing remaining work in CL-001; until it exists the run can reject
   the trivial case and nothing more.
+- Admitted `explorations/candidate-transduction-atlas-seeds.md` as Lane 3
+  pre-release exploration material, flagged `provenance_status: broken` and
+  `evidence_grade: lead_only`. Joe added it from an external research agent. It
+  is gate-compliant: `claim_status: none`, Bitcoin and photosynthesis excluded,
+  and every cross-case statement it makes is disconfirming (non-composition,
+  fragmentation, witness heterogeneity) rather than a shared-structure claim.
+  Its strongest content is the case against the atlas: continuity witnesses are
+  heterogeneous across its thirteen cases (provenance in CRISPR, constraint in
+  SI and Hamming, entitlement in Torrens and Fedwire, causal dependence in lac,
+  quorum sensing, TCP, and LTEE citrate), and imports may carry the explanatory
+  load, making "transduction" possibly just a name for cases where someone else
+  already paid the setup cost.
+- The document's provenance is unusable as delivered. Its 151 citation anchors
+  are Unicode Private Use Area tokens (U+E200-U+E202) from the research agent's
+  internal citation system, never resolved into references; the file contains
+  zero URLs, zero DOIs, and zero links. The charter's Provenance gate requires
+  material claims to trace to primary domain evidence, so nothing here may
+  populate a packet field or support a gate verdict. The named sources are real
+  and hand-checkable, so the work is recoverable by resolving each to a citable
+  reference and re-grading the claim it supports.
+- Recorded a contamination warning in the document itself. Rayleigh-Benard
+  convection is CL-001's near-miss Null B under today's Matched Nulls amendment,
+  and this document argues Rayleigh-Benard fails. A Lane 1 run scoring that
+  control with this file in view would score it against a standard derived from
+  the intuition CL-001 exists to check. The Lane 3 discovery pass predicted this
+  closed-loop channel; it arrived within hours, and by our own hand: the charter
+  named Rayleigh-Benard before this document existed. Score it from sources.
+- Noted that the document's nulls are self-described as "deliberate failures",
+  i.e. selected as failures, which is the selection-time stipulation the charter
+  now forbids for near-miss nulls. Two are exceptions: the Belgian cadastral map
+  (law explicitly denies the maintained record boundary force, a sourced fact)
+  and quorum sensing under strong flow (the same system, positive under
+  quiescent conditions and null under flow via autoinducer washout, which is a
+  controlled intervention on one variable). Quorum-sensing-under-flow is the
+  best-shaped near-miss null surfaced so far and is a candidate to replace
+  Rayleigh-Benard as Null B.
