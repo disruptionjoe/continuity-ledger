@@ -44,3 +44,16 @@ photosynthesis while rejecting matched conversion-only nulls.
 Four frozen case packets, a field-by-field contrast matrix, absorber analysis,
 gate receipts, and one explicit verdict. No claim promotion is authorized by
 the run alone.
+
+## Current Construction Artifacts
+
+- `packets/cl-001/` holds the four CL-001 target and matched-null packet
+  construction files.
+- `evidence/cl-001-source-intake.md` defines the source-intake burden for
+  later packet population.
+- `evidence/cl-001-source-dossier-template.md` defines the source extraction
+  record that future source passes must fill before packet fields move.
+- `evidence/cl-001-source-dossier-manifest.md` binds the dossier queue to the
+  four packet ids while all exact source selections remain pending.
+- `tests/validate_cltp_packets.py` checks that each packet keeps the full
+  field, gate, source-intake, and dossier-manifest shape before scoring.

@@ -3,7 +3,7 @@
 Status: active public research repository. Joe ratified the name, charter, and
 `AGENTS.md` on 2026-07-14.
 
-This directory is the proposed public research home for continuity-ledger
+This directory is the public research home for continuity-ledger
 agency transduction: how agency-enabling quantities move across substrates,
 accounting units, measurement regimes, and interfaces; what is preserved,
 dissipated, externalized, or captured; and when those transitions create stable
@@ -18,12 +18,12 @@ Read `governance/CHARTER.md` and `AGENTS.md` before research work.
 
 ## Research Surfaces
 
-- `steward/` - provisional local steward context and run records.
-- `packets/` - future frozen packets, continuity-ledger packets, and provenance
+- `steward/` - local steward context and run records.
+- `packets/` - frozen packets, continuity-ledger packets, and provenance
   receipts.
-- `interfaces/` - future ledger, transduction, no-go, escape, and absorber
+- `interfaces/` - ledger, transduction, no-go, escape, and absorber
   contracts.
-- `hypotheses/` - future falsifiable hypotheses after charter ratification.
+- `hypotheses/` - falsifiable hypotheses and their status.
 - `evidence/` - repo-owned evidence about repo-independent claims.
 - `experiments/` - bounded tests, paired contrasts, and preregistrations.
 - `explorations/` - honestly labeled working research.
@@ -43,6 +43,15 @@ shared structure, a narrower structure, or a clean kill.
 The 29 WI-069 pre-repo artifacts are preserved unchanged under
 `explorations/founding-corpus/` with source revision and checksums. They are
 exploration history, not accepted evidence or inherited claims.
+
+## Origin
+
+This repository grew out of the now-closed
+[JoeOps WI-069 coordination card](https://github.com/disruptionjoe/joeops/blob/b7aecfafecc889b6fce6e9fb06011d3f31e19811/records/work-items.yaml#L1360).
+The accompanying
+[pre-repo artifact index](https://github.com/disruptionjoe/joeops/blob/b7aecfafecc889b6fce6e9fb06011d3f31e19811/programs/tri-repo-research/wi-069-emergence-collapse-artifact-index-2026-07-12.md)
+records the original question, exploration sequence, transfer decision, and
+closure. Those links are pinned to the exact JoeOps closing revision.
 
 ## Boundary
 
