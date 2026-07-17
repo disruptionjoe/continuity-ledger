@@ -59,3 +59,13 @@ This repository owns continuity-ledger and agency-transduction research. It
 does not own source-domain truth, Possibility to Capability's explanatory
 hierarchy, JoeOps coordination, or CapacityOS architecture. Cross-repository
 claims enter only through frozen, provenance-bearing packets.
+
+## First-Class Lanes
+
+Load root `LANES.yaml` after this repository's governance and before selecting
+work. It is the owner-authoritative source for durable Lane definitions,
+admission, and normal control state; authoritative work remains at the paths it
+references. Numbered Lanes are Progress, lettered Lanes are Stewardship, and
+Discovery is Lane-less. A direct mount uses these local surfaces without
+CapacityOS. System observations, health, schedules, and execution history are
+not Lane truth.
