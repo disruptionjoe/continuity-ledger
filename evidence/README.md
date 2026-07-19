@@ -44,6 +44,10 @@ Current active Interval Sweep draft dossiers:
   arm-symmetry and blinding process burdens, including the current absence of a
   blinded material-field receipt. It leaves packet fields, gate 10, and verdicts
   open.
+- `cl-001-interval-sweep-dossiers/blinded-material-field-package-t-01.md`
+  selects `T` as the first material field for blind handling and records the
+  package and receipt conditions. It does not create a blind source bundle,
+  populate `T`, score gate 10, or issue a verdict.
 
 Retired construction contracts:
 

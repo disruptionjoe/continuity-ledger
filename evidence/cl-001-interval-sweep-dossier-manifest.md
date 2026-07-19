@@ -40,6 +40,7 @@ feedback burden, open fields, falsifiers, and the no-claim-promotion boundary.
 | Bitcoin Salvadoran retail evaluator dossier | Bitcoin evaluator sweep | primary, statistical, protocol-operational, or construction-supported | Evaluator sweep and population boundary; Constraint class and exit-cost interval; Typed measurement family. | Draft dossier: `evidence/cl-001-interval-sweep-dossiers/bitcoin-evaluator-sweep-us-salvador-retail.md`. |
 | Near-miss/control admission dossier | Near-miss/control admission | absorber/control or construction | Absorber, near-miss null, and arm-symmetry pressure; Settlement regime and class definition; Frame adherence and declared-field guard. | Draft dossier: `evidence/cl-001-interval-sweep-dossiers/near-miss-control-admission.md`. |
 | Arm-symmetry and blinding receipt dossier | Arm-symmetry and blinding receipts | process receipt | Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing. | Draft dossier: `evidence/cl-001-interval-sweep-dossiers/arm-symmetry-blinding-receipt.md`. |
+| Blinded material-field package | First active material-field selection | process package | Mechanism and transition boundary; Frame adherence and declared-field guard; Falsifiers, open fields, and routing. | Draft package: `evidence/cl-001-interval-sweep-dossiers/blinded-material-field-package-t-01.md`. |
 
 ## Symmetry Checks
 
@@ -65,18 +66,20 @@ feedback burden, open fields, falsifiers, and the no-claim-promotion boundary.
 | `evidence/cl-001-interval-sweep-dossiers/bitcoin-evaluator-sweep-us-salvador-retail.md` | Bitcoin US and Salvadoran retail evaluator dossiers | Draft evaluator source dossier. | Does not populate active Bitcoin packet fields or establish fixed-`S0` evaluator movement. |
 | `evidence/cl-001-interval-sweep-dossiers/near-miss-control-admission.md` | Near-miss/control admission dossier | Draft control-admission construction dossier. | Does not admit a control, populate active packet fields, score absorber pressure, or establish that any control shares the frame. |
 | `evidence/cl-001-interval-sweep-dossiers/arm-symmetry-blinding-receipt.md` | Arm-symmetry and blinding receipt dossier | Draft process receipt dossier. | Records that blinding remains unsatisfied; it does not satisfy the blinded-field requirement, score gate 10, or issue a verdict. |
+| `evidence/cl-001-interval-sweep-dossiers/blinded-material-field-package-t-01.md` | Blinded material-field package | Draft process package selecting `T` as the first blind-handled material field. | Does not populate `T`, create a blind source bundle, complete a blind receipt, score gate 10, or issue a verdict. |
 
 ## Completion Boundary
 
 This manifest now has a shared-frame audit dossier, first exact source dossiers
 for the dollar and Bitcoin enforcement-mechanism surfaces, evaluator-population
 source dossiers for the dollar and Bitcoin arms, a near-miss/control admission
-dossier, and an arm-symmetry/blinding process dossier. It is not complete enough
-to populate a packet field. Packet population remains blocked until the later
-packet-population run selects exact material fields, preserves the declared
-frame, creates a valid blinding package and receipt, and keeps any remaining
-field-level source need visible as `Pending exact source selection.` rather
-than silently filling it.
+dossier, an arm-symmetry/blinding process dossier, and a draft package selecting
+`T` as the first blind-handled material field. It is not complete enough to
+populate a packet field. Packet population remains blocked until a later
+packet-population run creates a redacted blind source bundle, obtains a blind
+author receipt, preserves the declared frame, and keeps any remaining field-level
+source need visible as `Pending exact source selection.` rather than silently
+filling it.
 
 ## No Claim Promotion
 

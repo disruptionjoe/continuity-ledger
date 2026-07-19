@@ -1,58 +1,183 @@
-lane_state_version: "1.0"
+schema_version: "2.0"
 owner_id: continuity-ledger
-evaluated_at: "2026-07-19T15:46:16-05:00"
-run_ref: RUN-20260719-543-repository-work-cycle-cai-hourly
+group: church-of-ai
 rule_ref: system/runtime/flows/derive-lane-health.md
+updated_at: "2026-07-19T16:41:22-05:00"
+run_ref: RUN-20260719-545-repository-work-cycle-cai-hourly
+bottom_line: "CL-001 selected T for blind handling; next run needs a redacted blind bundle and receipt, or an inferability stop."
+decision_default: "Run CL001-BLIND-T-01 before any active packet field population."
+needs_joe: false
 lanes:
   - lane_id: "1"
     work_status: moving
-    last_movement: Added evaluator, control-admission, and arm-symmetry/blinding draft dossiers for the active CL-001 Interval Sweep.
-    movement_ref: evidence/cl-001-interval-sweep-dossier-manifest.md
+    last_movement: "Selected T as the first blind-handled CL-001 material field and added the package contract."
+    movement_ref: evidence/cl-001-interval-sweep-dossiers/blinded-material-field-package-t-01.md
     steering_attention: watch
-    steering_prompt: Prepare first active dollar/Bitcoin packet-field selection only through a valid blinded material-field package; keep any unsourced field pending.
-    steering_ref: evidence/cl-001-interval-sweep-dossier-manifest.md
+    steering_prompt: "Run the redacted T-field blind bundle; stop if the blind author can infer the arm."
+    steering_ref: evidence/cl-001-interval-sweep-dossiers/blinded-material-field-package-t-01.md
     light: green
-    reason_code: active_prepopulation_dossier_set_extended
+    reason_code: blind_t_package_contract_prepared
     evidence_ref: evidence/cl-001-interval-sweep-dossier-manifest.md
-    summary: CL-001 now has draft evaluator, control, and blinding/process dossiers, with packet fields still closed.
-    evaluated_at: "2026-07-19T15:46:16-05:00"
-    run_ref: RUN-20260719-543-repository-work-cycle-cai-hourly
+    summary: "CL-001 has T selected for blind handling; active packet fields remain closed."
+    evaluated_at: "2026-07-19T16:41:22-05:00"
+    run_ref: RUN-20260719-545-repository-work-cycle-cai-hourly
+    objective: "Force or falsify substrate-bounded constraint-bought capability through CL-001."
+    progress_delta: "Added CL001-BLIND-T-01, selecting T for blind treatment and defining receipt/stop conditions."
+    scope_position: "CL-001 pre-population: frame and dossiers exist; first blind-field package contract exists; no active packet fields populated."
+    trend_24h: up
+    confidence: med
+    recommendation: "Run the blind T package next."
+    findings:
+      - "T is the correct first blind material field because it is the declared frame's only free field."
+      - "The package treats arm inferability as a stop condition, not permission for unblinded population."
+      - "Final control admission and absorber scoring remain blocked."
+    options:
+      - id: A
+        label: "Run blind T package"
+        recommended: true
+        description: "Create a redacted source bundle, get the blind author receipt, then unblind after return."
+      - id: B
+        label: "Control admission"
+        recommended: false
+        description: "Finish same-frame control admission before absorber scoring, without packet population."
+      - id: C
+        label: "Source narrow"
+        recommended: false
+        description: "Tighten exact source selections where current dossiers leave material fields open."
+      - id: D
+        label: "Defer"
+        recommended: false
+        description: "Leave CL-001 packet population closed for a later focused run."
+    decision_default: "Run CL001-BLIND-T-01 before active packet field population."
+    needs_joe: false
   - lane_id: "2"
     work_status: thin
-    last_movement: No current hardening lease or independent hardening movement found.
+    last_movement: "No current hardening lease or independent hardening movement found."
     movement_ref: LANES.yaml
     steering_attention: none
-    steering_prompt: none
+    steering_prompt: "none"
     steering_ref: LANES.yaml
     light: yellow
     reason_code: lease_required_no_current_lead
     evidence_ref: LANES.yaml
-    summary: Hardening remains subordinate to Lane 1 and needs a lease to lead.
-    evaluated_at: "2026-07-19T15:46:16-05:00"
-    run_ref: RUN-20260719-543-repository-work-cycle-cai-hourly
+    summary: "Hardening remains subordinate to Lane 1 and needs a lease to lead."
+    evaluated_at: "2026-07-19T16:41:22-05:00"
+    run_ref: RUN-20260719-545-repository-work-cycle-cai-hourly
+    objective: "Harden what Lane 1 establishes without outrunning evidence."
+    progress_delta: "No Lane 2 movement this run; work stayed on Lane 1 CL-001 pre-population."
+    scope_position: "No current hardening lease."
+    trend_24h: flat
+    confidence: high
+    recommendation: "Keep subordinate."
+    findings:
+      - "No lease was found or created for hardening to lead."
+      - "Current CL-001 evidence does not justify independent hardening priority."
+    options:
+      - id: A
+        label: "Keep subordinate"
+        recommended: true
+        description: "Let Lane 1 continue until a result or lease justifies hardening work."
+      - id: B
+        label: "Request lease"
+        recommended: false
+        description: "Ask Joe only if hardening must lead before CL-001 advances."
+      - id: C
+        label: "Audit artifacts"
+        recommended: false
+        description: "Run a later integrity pass if evidence surfaces drift."
+      - id: D
+        label: "Defer"
+        recommended: false
+        description: "No Lane 2 action is needed now."
+    decision_default: "Keep Lane 2 subordinate to Lane 1."
+    needs_joe: false
   - lane_id: "3"
     work_status: blocked
-    last_movement: Gate remains closed until CL-001 returns a verdict.
+    last_movement: "Gate remains closed until CL-001 returns a verdict."
     movement_ref: LANES.yaml
     steering_attention: none
-    steering_prompt: none
+    steering_prompt: "none"
     steering_ref: LANES.yaml
     light: not_applicable
     reason_code: admission_gated_on_cl001
     evidence_ref: LANES.yaml
-    summary: Atlas synthesis remains gated on the unresolved CL-001 verdict.
-    evaluated_at: "2026-07-19T15:46:16-05:00"
-    run_ref: RUN-20260719-543-repository-work-cycle-cai-hourly
+    summary: "Atlas synthesis remains gated on the unresolved CL-001 verdict."
+    evaluated_at: "2026-07-19T16:41:22-05:00"
+    run_ref: RUN-20260719-545-repository-work-cycle-cai-hourly
+    objective: "Map transductions after CL-001 supplies an admissible verdict or returns for decision."
+    progress_delta: "No Lane 3 movement; the CL-001 gate remains closed."
+    scope_position: "Admission gate closed pending CL-001 verdict."
+    trend_24h: flat
+    confidence: high
+    recommendation: "Keep gated."
+    findings:
+      - "No atlas synthesis or cross-case generalization is admissible before CL-001 returns a verdict."
+      - "Candidate gathering remains possible, but this run did not select discovery."
+    options:
+      - id: A
+        label: "Keep gated"
+        recommended: true
+        description: "Do not generalize from the memorable pair before CL-001 controls pass."
+      - id: B
+        label: "Gather candidates"
+        recommended: false
+        description: "Use only lane-less discovery for candidate or null gathering."
+      - id: C
+        label: "Review gate"
+        recommended: false
+        description: "Return to Joe only after CL-001 verdict changes this lane's basis."
+      - id: D
+        label: "Defer"
+        recommended: false
+        description: "No Lane 3 action is needed now."
+    decision_default: "Keep Lane 3 gated pending CL-001."
+    needs_joe: false
   - lane_id: A
     work_status: moving
-    last_movement: Active Interval Sweep dossier manifest remains validator-covered after adding evaluator, control, and blinding/process dossiers.
-    movement_ref: tests/validate_cltp_packets.py
+    last_movement: "Closeout refreshed Lane state to schema 2.0 after adding the blind T package."
+    movement_ref: LANE-STATE.yaml
     steering_attention: none
-    steering_prompt: none
-    steering_ref: tests/validate_cltp_packets.py
+    steering_prompt: "none"
+    steering_ref: AGENTS.md; LANES.yaml; tests/validate_cltp_packets.py
     light: green
-    reason_code: active_dossier_contract_validated
-    evidence_ref: tests/validate_cltp_packets.py
-    summary: Active dossier files remain manifest-linked, non-promotional, and covered by the local validator.
-    evaluated_at: "2026-07-19T15:46:16-05:00"
-    run_ref: RUN-20260719-543-repository-work-cycle-cai-hourly
+    reason_code: lane_state_schema2_refreshed
+    evidence_ref: AGENTS.md; LANES.yaml; evidence/cl-001-interval-sweep-dossier-manifest.md; tests/validate_cltp_packets.py
+    summary: "Stewardship state now renders schema 2.0; CL-001 validator still passes."
+    evaluated_at: "2026-07-19T16:41:22-05:00"
+    run_ref: RUN-20260719-545-repository-work-cycle-cai-hourly
+    objective: "Keep Continuity Ledger viable and trustworthy through integrated stewardship."
+    progress_delta: "Converted the lane-state summary to schema 2.0 and kept mailbox, lock, and validator checks clean."
+    trend_24h: up
+    confidence: high
+    recommendation: "Continue Lane 1."
+    findings:
+      - "No substantive unarchived mailbox payload required disposition."
+      - "No writer lock existed before work."
+      - "Validator passed before and after the evidence-package change."
+    options:
+      - id: A
+        label: "Continue Lane 1"
+        recommended: true
+        description: "Proceed with the blind T package under the live CAI-directed grant."
+      - id: B
+        label: "Stewardship audit"
+        recommended: false
+        description: "Run only if dossier/manifest or lane-state drift appears."
+      - id: C
+        label: "Parent signal"
+        recommended: false
+        description: "Let the parent update System signal memory from this child payload."
+      - id: D
+        label: "Defer"
+        recommended: false
+        description: "No Joe-facing stewardship decision is needed."
+    decision_default: "Continue Lane 1 blind-package path."
+    needs_joe: false
+    drift_verdict: clean
+    action_counts:
+      mail: 0
+      reconciled: 1
+      integrity_repairs: 0
+      seeds_routed: 0
+      escalations: 0
+    attention_pointer: "nothing needs you"

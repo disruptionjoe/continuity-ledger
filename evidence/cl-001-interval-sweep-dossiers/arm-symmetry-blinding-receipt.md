@@ -36,11 +36,12 @@ Repo-local surfaces used:
 - `evidence/cl-001-interval-sweep-dossiers/dollar-evaluator-sweep-us-argentina-retail.md`.
 - `evidence/cl-001-interval-sweep-dossiers/bitcoin-evaluator-sweep-us-salvador-retail.md`.
 - `evidence/cl-001-interval-sweep-dossiers/near-miss-control-admission.md`.
+- `evidence/cl-001-interval-sweep-dossiers/blinded-material-field-package-t-01.md`.
 
 This run was not blind: it read both arm labels and source-dossier context. This
-dossier therefore records the blinding requirement and the absence of a blinding
-receipt. It does not populate any packet field, does not score any gate, and
-does not satisfy the charter's blinded-field requirement.
+dossier therefore records the blinding requirement and the absence of a
+completed blinding receipt. It does not populate any packet field, does not
+score any gate, and does not satisfy the charter's blinded-field requirement.
 
 ### Scoped Extraction
 
@@ -67,7 +68,7 @@ does not satisfy the charter's blinded-field requirement.
 | Loss or import | Applies to field | Source support | Open burden |
 |---|---|---|---|
 | Open-label work imports arm-name priors and known repository context. | `V`, `Z` | This run's source order and active dossier set. | Later material field population must isolate at least one field from arm identity. |
-| A blinding receipt imports task packaging, redacted prompt or source bundle, blind author identity, field identifier, and unblinding/checksum record. | `V` | Charter rule 6 and active intake contract. | No such receipt exists yet. |
+| A blinding receipt imports task packaging, redacted prompt or source bundle, blind author identity, field identifier, and unblinding/checksum record. | `V` | Charter rule 6 and active intake contract. | A `T`-field package contract now exists, but no completed blind author receipt exists yet. |
 | Label-swap invariance imports an argument-form check that must remove dollar/Bitcoin arm names as load-bearing terms. | `Z`, `V` | Charter Neutrality gate. | Later packet work must include an explicit label-swap receipt before verdict. |
 | No same-run founding-corpus contamination imports a read-scope control. | `V` | Charter Neutrality gate. | This run did not inspect the frozen founding corpus for verdict work, but it also did not issue a verdict. |
 
@@ -75,7 +76,7 @@ does not satisfy the charter's blinded-field requirement.
 
 | Candidate surface or feedback | Source support | Missing burden | Null pressure |
 |---|---|---|---|
-| Blinded packet-field population as a process surface. | Charter and active intake contract require it. | No material field has been assigned, redacted, populated, or unblinded. | Ordinary process hygiene can absorb this unless it catches a frame presumption or prevents arm-name loading. |
+| Blinded packet-field population as a process surface. | Charter and active intake contract require it. | `T` has been selected for blind handling, but no material field has been redacted, populated, or unblinded. | Ordinary process hygiene can absorb this unless it catches a frame presumption or prevents arm-name loading. |
 | Label-swap invariance as a neutrality pressure. | Charter names it as a gate-10 requirement. | No argument exists yet to swap because packet fields are unpopulated. | A future argument may fail because arm names carry normative or explanatory weight. |
 | Routing recognized defects out of the local run. | Charter rule 7 names routing as a methodological burden. | No recognized defect requiring escalation is found here. | A later run that records but does not route a frame defect fails this method claim. |
 
@@ -88,6 +89,7 @@ charter's blinded-field requirement.
 It does not establish:
 
 - that a blinded field has been populated;
+- that the `T`-field package is a completed blind source bundle;
 - that label-swap invariance holds;
 - that no merit ordering is present in a later packet;
 - that a later verdict author avoided founding-corpus contamination;
