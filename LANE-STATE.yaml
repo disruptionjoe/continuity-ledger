@@ -2,53 +2,54 @@ schema_version: "2.0"
 owner_id: continuity-ledger
 group: church-of-ai
 rule_ref: system/runtime/flows/derive-lane-health.md
-updated_at: "2026-07-19T17:43:28-05:00"
-run_ref: RUN-20260719-547-repository-work-cycle-cai-hourly
-bottom_line: "CL-001 now has a redacted T-field bundle; next run should use a separate blind author and stop if X/Y is inferable."
-decision_default: "Run the blind author on the redacted CL001-BLIND-T-01 bundle before packet population."
+updated_at: "2026-07-19T18:52:33-05:00"
+run_ref: RUN-20260719-548-repository-work-cycle-cai-hourly
+bottom_line: "CL-001 now has an inferability preflight: the current redacted T bundle is useful, but likely not blind-author-ready."
+decision_default: "Revise the CL001-BLIND-T-01 coded bundle or hand it to a truly isolated blind author expecting an inferability stop."
 needs_joe: false
 lanes:
   - lane_id: "1"
     work_status: moving
-    last_movement: "Prepared the redacted CL001-BLIND-T-01 source bundle without an unblinding key."
-    movement_ref: evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-redacted-source-bundle.md
+    last_movement: "Recorded a non-blind inferability preflight for the prepared CL001-BLIND-T-01 coded bundle."
+    movement_ref: evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-inferability-preflight.md
     steering_attention: watch
-    steering_prompt: "Run a separate blind author on the coded bundle only; stop on arm inferability."
-    steering_ref: evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-redacted-source-bundle.md
+    steering_prompt: "Do not treat the current bundle as ready; revise it or use a truly isolated blind author and accept blind_failed_inferable."
+    steering_ref: evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-inferability-preflight.md
     light: green
-    reason_code: redacted_blind_t_bundle_prepared
+    reason_code: blind_t_bundle_inferability_preflight
     evidence_ref: evidence/cl-001-interval-sweep-dossier-manifest.md
-    summary: "CL-001 has a coded T bundle; active packet fields remain closed."
-    evaluated_at: "2026-07-19T17:43:28-05:00"
-    run_ref: RUN-20260719-547-repository-work-cycle-cai-hourly
+    summary: "The coded T bundle has a stop record; active packet fields remain closed."
+    evaluated_at: "2026-07-19T18:52:33-05:00"
+    run_ref: RUN-20260719-548-repository-work-cycle-cai-hourly
     objective: "Force or falsify substrate-bounded constraint-bought capability through CL-001."
-    progress_delta: "Added the redacted coded source bundle for the selected blind T-field attempt."
-    scope_position: "CL-001 pre-population: frame, dossiers, package, and coded source bundle exist; no active packet fields populated."
+    progress_delta: "Added a non-blind preflight showing the current coded source bundle is likely inferable before extraction."
+    scope_position: "CL-001 pre-population: frame, dossiers, package, coded source bundle, and inferability stop record exist; no active packet fields populated."
     trend_24h: up
     confidence: med
-    recommendation: "Run separate blind author."
+    recommendation: "Revise or intentionally test inferability."
     findings:
-      - "The coded bundle removes direct arm labels, source names, and URLs but may still be inferable."
-      - "No unblinding key is stored in the public repo."
+      - "Bundle Y contains distinctive protocol-language cues likely to identify the arm class before extraction."
+      - "Bundle X has weaker but live inferability pressure from public-obligation and administrative-review language."
+      - "No unblinding key is stored in the public repo and no active packet field was populated."
       - "Active packet fields, gates, and verdicts remain closed."
     options:
       - id: A
-        label: "Run blind author"
+        label: "Revise bundle"
         recommended: true
-        description: "Give only the coded source bundle to a separate blind author and stop if inferable."
+        description: "Prepare a less-inferable coded bundle with a new checksum while preserving material sufficiency."
       - id: B
+        label: "Test inferability"
+        recommended: false
+        description: "Give the current bundle to a truly isolated blind author and accept blind_failed_inferable if recognized."
+      - id: C
         label: "Control admission"
         recommended: false
-        description: "Finish same-frame control admission before absorber scoring, without packet population."
-      - id: C
-        label: "Source narrow"
-        recommended: false
-        description: "Tighten exact source selections where current dossiers leave material fields open."
+        description: "Continue same-frame control admission without packet population."
       - id: D
         label: "Defer"
         recommended: false
         description: "Leave CL-001 packet population closed for a later focused run."
-    decision_default: "Run the blind author on the redacted CL001-BLIND-T-01 bundle before packet population."
+    decision_default: "Revise the CL001-BLIND-T-01 coded bundle or intentionally test inferability with a truly isolated blind author."
     needs_joe: false
   - lane_id: "2"
     work_status: thin
@@ -134,31 +135,31 @@ lanes:
     needs_joe: false
   - lane_id: A
     work_status: moving
-    last_movement: "Closeout refreshed Lane state after adding the redacted blind T source bundle."
+    last_movement: "Closeout refreshed Lane state after adding the blind-bundle inferability preflight."
     movement_ref: LANE-STATE.yaml
     steering_attention: none
     steering_prompt: "none"
     steering_ref: AGENTS.md; LANES.yaml; tests/validate_cltp_packets.py
     light: green
-    reason_code: lane_state_refreshed_after_blind_bundle
+    reason_code: lane_state_refreshed_after_inferability_preflight
     evidence_ref: AGENTS.md; LANES.yaml; evidence/cl-001-interval-sweep-dossier-manifest.md; tests/validate_cltp_packets.py
-    summary: "Stewardship state refreshed; CL-001 validator still passes."
-    evaluated_at: "2026-07-19T17:43:28-05:00"
-    run_ref: RUN-20260719-547-repository-work-cycle-cai-hourly
+    summary: "Stewardship state refreshed; CL-001 packet fields remain closed."
+    evaluated_at: "2026-07-19T18:52:33-05:00"
+    run_ref: RUN-20260719-548-repository-work-cycle-cai-hourly
     objective: "Keep Continuity Ledger viable and trustworthy through integrated stewardship."
-    progress_delta: "Refreshed state after repo-local blind-bundle progress; mailbox, lock, and validator checks stayed clean."
+    progress_delta: "Refreshed state after repo-local inferability preflight; mailbox and writer-lock checks stayed clean."
     trend_24h: up
     confidence: high
     recommendation: "Continue Lane 1."
     findings:
       - "No substantive unarchived mailbox payload required disposition."
       - "No writer lock existed before work."
-      - "Validator passed after the redacted source-bundle change."
+      - "The current coded bundle should not be treated as blind-author-ready without accepting an inferability stop or revision."
     options:
       - id: A
         label: "Continue Lane 1"
         recommended: true
-        description: "Proceed with the separate blind-author receipt under the live CAI-directed grant."
+        description: "Proceed with revised or deliberately inferability-tested blind-bundle work under the live CAI-directed grant."
       - id: B
         label: "Stewardship audit"
         recommended: false

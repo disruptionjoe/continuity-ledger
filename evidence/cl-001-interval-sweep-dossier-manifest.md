@@ -41,6 +41,7 @@ feedback burden, open fields, falsifiers, and the no-claim-promotion boundary.
 | Near-miss/control admission dossier | Near-miss/control admission | absorber/control or construction | Absorber, near-miss null, and arm-symmetry pressure; Settlement regime and class definition; Frame adherence and declared-field guard. | Draft dossier: `evidence/cl-001-interval-sweep-dossiers/near-miss-control-admission.md`. |
 | Arm-symmetry and blinding receipt dossier | Arm-symmetry and blinding receipts | process receipt | Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing. | Draft dossier: `evidence/cl-001-interval-sweep-dossiers/arm-symmetry-blinding-receipt.md`. |
 | Blinded material-field package | First active material-field selection | process package and coded input | Mechanism and transition boundary; Frame adherence and declared-field guard; Falsifiers, open fields, and routing. | Draft package: `evidence/cl-001-interval-sweep-dossiers/blinded-material-field-package-t-01.md`; prepared redacted source bundle: `evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-redacted-source-bundle.md`. |
+| Blind bundle inferability preflight | Prepared `CL001-BLIND-T-01` coded input | process-control stop record | Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing. | Stop record: `evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-inferability-preflight.md`. |
 
 ## Symmetry Checks
 
@@ -68,6 +69,7 @@ feedback burden, open fields, falsifiers, and the no-claim-promotion boundary.
 | `evidence/cl-001-interval-sweep-dossiers/arm-symmetry-blinding-receipt.md` | Arm-symmetry and blinding receipt dossier | Draft process receipt dossier. | Records that blinding remains unsatisfied; it does not satisfy the blinded-field requirement, score gate 10, or issue a verdict. |
 | `evidence/cl-001-interval-sweep-dossiers/blinded-material-field-package-t-01.md` | Blinded material-field package | Draft process package selecting `T` as the first blind-handled material field. | Does not populate `T`, contain the blind author's read surface, complete a blind receipt, score gate 10, or issue a verdict. |
 | `evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-redacted-source-bundle.md` | Blinded material-field package | Prepared redacted coded source bundle for a later blind author. | Contains no unblinding key, does not populate `T`, does not complete a blind receipt, does not score gate 10, and does not issue a verdict. |
+| `evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-inferability-preflight.md` | Blind bundle inferability preflight | Stop record for the prepared coded bundle. | Records that the current bundle is likely inferable before extraction; it is not a blind-author receipt and does not populate `T`. |
 
 ## Completion Boundary
 
@@ -76,12 +78,14 @@ for the dollar and Bitcoin enforcement-mechanism surfaces, evaluator-population
 source dossiers for the dollar and Bitcoin arms, a near-miss/control admission
 dossier, an arm-symmetry/blinding process dossier, a draft package selecting
 `T` as the first blind-handled material field, and a prepared redacted coded
-source bundle for the later blind author. It is not complete enough to populate
-a packet field. Packet population remains blocked until a later packet-
-population run obtains a blind author receipt, preserves the declared frame,
-records the unblinding event outside the blind author's read scope, and keeps
-any remaining field-level source need visible as `Pending exact source
-selection.` rather than silently filling it.
+source bundle for the later blind author, and a non-blind inferability preflight
+for that bundle. It is not complete enough to populate a packet field. Packet
+population remains blocked until a later packet-population run either accepts an
+inferability stop on the current coded bundle or prepares a revised bundle with a
+new checksum, obtains a blind author receipt, preserves the declared frame,
+records the unblinding event outside the blind author's read scope, and keeps any
+remaining field-level source need visible as `Pending exact source selection.`
+rather than silently filling it.
 
 ## No Claim Promotion
 

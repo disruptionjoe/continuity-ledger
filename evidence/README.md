@@ -52,6 +52,10 @@ Current active Interval Sweep draft dossiers:
   is the coded input for a later blind author. It contains no unblinding key,
   does not complete the blind receipt, and leaves inferability as a stop
   condition.
+- `cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-inferability-preflight.md`
+  records a non-blind preflight finding that the current coded bundle is likely
+  inferable before extraction. It is a process-control stop record, not a
+  blind-author receipt, packet field, gate score, or verdict.
 
 Retired construction contracts:
 
