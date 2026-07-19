@@ -1,6 +1,6 @@
 ---
 artifact_type: evidence_dossier_manifest
-status: active_construction_manifest
+status: retired_construction_manifest
 experiment: CL-001
 claim_status: none
 verdict: none
@@ -10,14 +10,13 @@ verdict: none
 
 ## Purpose
 
-This manifest binds the CL-001 source-dossier template to the four CL-001
-packet construction files. It is not evidence, does not select exact sources,
-does not fill extraction tables, and does not score any gate.
+This manifest binds the CL-001 source-dossier template to the four retired
+CL-001 packet construction files. It is not evidence, does not select exact
+sources, does not fill extraction tables, and does not score any gate. Current
+CL-001 Interval Sweep work requires a new manifest after the frame is declared.
 
-Use this manifest as the queue for later exact-source passes. A queued dossier
-can support packet population only after a later run creates the dossier,
-records provenance, extracts source-supported points, and leaves unsupported
-fields open.
+Use this manifest only as the queue that preserves the retired scaffold. It
+cannot support active Interval Sweep packet population.
 
 ## Packet Coverage
 

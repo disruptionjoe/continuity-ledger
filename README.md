@@ -35,10 +35,11 @@ Read `governance/CHARTER.md` and `AGENTS.md` before research work.
 
 ## First Research Sequence
 
-The founding test is deliberately hostile: build one typed transaction packet
-for Bitcoin proof-of-work and oxygenic photosynthesis, then require matched
-energy-conversion nulls to fail for explicit reasons. The allowed outcome is a
-shared structure, a narrower structure, or a clean kill.
+The founding test is deliberately hostile: declare a shared frame for dollar and
+Bitcoin settlement, populate both arms with `T` as the only free field, and then
+sweep evaluator populations to test whether the binding constraint class follows
+substrate or preference. The allowed outcome is a shared structure, a narrower
+structure, or a clean kill.
 
 The 29 WI-069 pre-repo artifacts are preserved unchanged under
 `explorations/founding-corpus/` with source revision and checksums. They are
@@ -57,8 +58,8 @@ closure. Those links are pinned to the exact JoeOps closing revision.
 
 This repository owns continuity-ledger and agency-transduction research. It
 does not own source-domain truth, Possibility to Capability's explanatory
-hierarchy, JoeOps coordination, or CapacityOS architecture. Cross-repository
-claims enter only through frozen, provenance-bearing packets.
+hierarchy, JoeOps's Joe-facing coordination records, or CapacityOS architecture.
+Cross-repository claims enter only through frozen, provenance-bearing packets.
 
 ## First-Class Lanes
 

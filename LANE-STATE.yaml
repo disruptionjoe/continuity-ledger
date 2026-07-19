@@ -1,0 +1,58 @@
+lane_state_version: "1.0"
+owner_id: continuity-ledger
+evaluated_at: "2026-07-19T08:40:54-05:00"
+run_ref: RUN-20260719-526-repository-work-cycle-cai-hourly
+rule_ref: system/runtime/flows/derive-lane-health.md
+lanes:
+  - lane_id: "1"
+    work_status: moving
+    last_movement: Active CL-001 scaffold aligned to the Interval Sweep.
+    movement_ref: experiments/CL-001-interval-sweep.md
+    steering_attention: watch
+    steering_prompt: Declare Phi before any active packet population.
+    steering_ref: governance/CHARTER.md#frame-discipline
+    light: green
+    reason_code: cl001_active_scaffold_reconciled
+    evidence_ref: experiments/CL-001-interval-sweep.md
+    summary: CL-001 active surface now points to the dollar/Bitcoin Interval Sweep.
+    evaluated_at: "2026-07-19T08:40:54-05:00"
+    run_ref: RUN-20260719-526-repository-work-cycle-cai-hourly
+  - lane_id: "2"
+    work_status: thin
+    last_movement: No current hardening lease or independent hardening movement found.
+    movement_ref: LANES.yaml
+    steering_attention: none
+    steering_prompt: none
+    steering_ref: LANES.yaml
+    light: yellow
+    reason_code: lease_required_no_current_lead
+    evidence_ref: LANES.yaml
+    summary: Hardening remains subordinate to Lane 1 and needs a lease to lead.
+    evaluated_at: "2026-07-19T08:40:54-05:00"
+    run_ref: RUN-20260719-526-repository-work-cycle-cai-hourly
+  - lane_id: "3"
+    work_status: blocked
+    last_movement: Gate remains closed until CL-001 returns a verdict.
+    movement_ref: LANES.yaml
+    steering_attention: none
+    steering_prompt: none
+    steering_ref: LANES.yaml
+    light: not_applicable
+    reason_code: admission_gated_on_cl001
+    evidence_ref: LANES.yaml
+    summary: Atlas synthesis remains gated on the unresolved CL-001 verdict.
+    evaluated_at: "2026-07-19T08:40:54-05:00"
+    run_ref: RUN-20260719-526-repository-work-cycle-cai-hourly
+  - lane_id: A
+    work_status: moving
+    last_movement: Stewardship reconciled CL-001 surfaces and JoeOps boundary wording.
+    movement_ref: AGENTS.md
+    steering_attention: none
+    steering_prompt: none
+    steering_ref: AGENTS.md
+    light: green
+    reason_code: mailbox_stewardship_disposition
+    evidence_ref: AGENTS.md
+    summary: Mailbox proposal was dispositioned through local stewardship corrections.
+    evaluated_at: "2026-07-19T08:40:54-05:00"
+    run_ref: RUN-20260719-526-repository-work-cycle-cai-hourly

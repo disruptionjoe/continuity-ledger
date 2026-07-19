@@ -1,6 +1,6 @@
 ---
 artifact_type: evidence_intake_contract
-status: active_construction_contract
+status: retired_construction_contract
 experiment: CL-001
 claim_status: none
 verdict: none
@@ -10,13 +10,13 @@ verdict: none
 
 ## Purpose
 
-This file defines the evidence burden for populating the four CL-001 packet
-files. It is not evidence, does not accept any source-domain claim, and does
-not score any gate.
+This file defines the evidence burden that was used for the four retired CL-001
+packet files. It is not evidence, does not accept any source-domain claim, and
+does not score any gate. Current CL-001 Interval Sweep work requires a new
+source-intake contract after the frame is declared.
 
-CL-001 packet fields remain open until the relevant row below names exact
-primary, protocol-level, or construction evidence with enough provenance for a
-later reader to audit the claim.
+These retired packet fields remain open. They may not be populated for the
+active CL-001 Interval Sweep.
 
 ## Boundary Rules
 

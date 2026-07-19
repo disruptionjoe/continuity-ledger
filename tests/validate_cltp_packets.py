@@ -11,6 +11,10 @@ SOURCE_INTAKE = ROOT / "evidence" / "cl-001-source-intake.md"
 SOURCE_DOSSIER_TEMPLATE = ROOT / "evidence" / "cl-001-source-dossier-template.md"
 SOURCE_DOSSIER_MANIFEST = ROOT / "evidence" / "cl-001-source-dossier-manifest.md"
 SOURCE_DOSSIER_DIR = ROOT / "evidence" / "cl-001-dossiers"
+ACTIVE_CL001_EXPERIMENT = ROOT / "experiments" / "CL-001-interval-sweep.md"
+RETIRED_CL001_EXPERIMENT = (
+    ROOT / "experiments" / "CL-001-bitcoin-photosynthesis-pair-and-null.md"
+)
 
 REQUIRED_FRONT_MATTER = (
     "packet_id",
@@ -424,6 +428,53 @@ def validate_source_dossiers(packet_paths: list[Path]) -> list[str]:
     return errors
 
 
+def validate_cl001_experiment_state() -> list[str]:
+    errors: list[str] = []
+    if not ACTIVE_CL001_EXPERIMENT.exists():
+        return [
+            "Missing active CL-001 scaffold: "
+            f"{ACTIVE_CL001_EXPERIMENT.relative_to(ROOT)}"
+        ]
+
+    active_text = ACTIVE_CL001_EXPERIMENT.read_text(encoding="utf-8")
+    active_required = (
+        "status: active_scaffold",
+        "# CL-001: Interval Sweep",
+        "dollar",
+        "Bitcoin",
+        "`T` as the only free field",
+        "## No Claim Promotion",
+        "cannot populate a CL-001 packet",
+    )
+    for phrase in active_required:
+        if phrase not in active_text:
+            errors.append(
+                f"{ACTIVE_CL001_EXPERIMENT.relative_to(ROOT)} missing phrase {phrase}"
+            )
+
+    if not RETIRED_CL001_EXPERIMENT.exists():
+        errors.append(
+            "Missing retired CL-001 scaffold: "
+            f"{RETIRED_CL001_EXPERIMENT.relative_to(ROOT)}"
+        )
+        return errors
+
+    retired_text = RETIRED_CL001_EXPERIMENT.read_text(encoding="utf-8")
+    retired_required = (
+        "Status: retired founding experiment.",
+        "not the active CL-001 experiment",
+        "experiments/CL-001-interval-sweep.md",
+    )
+    for phrase in retired_required:
+        if phrase not in retired_text:
+            errors.append(
+                f"{RETIRED_CL001_EXPERIMENT.relative_to(ROOT)} "
+                f"missing phrase {phrase}"
+            )
+
+    return errors
+
+
 def main() -> int:
     if not PACKET_DIR.exists():
         print(f"Missing packet directory: {PACKET_DIR.relative_to(ROOT)}")
@@ -443,6 +494,7 @@ def main() -> int:
     errors.extend(validate_source_dossier_template())
     errors.extend(validate_source_dossier_manifest(packet_paths))
     errors.extend(validate_source_dossiers(packet_paths))
+    errors.extend(validate_cl001_experiment_state())
 
     if errors:
         for error in errors:
@@ -452,7 +504,7 @@ def main() -> int:
     print(
         f"Validated {len(packet_paths)} CL-001 packet files, "
         "source intake, source dossier template, source dossier manifest, "
-        "and source dossiers."
+        "source dossiers, and experiment state."
     )
     return 0
 

@@ -11,8 +11,9 @@ without identifying unlike quantities.
 **Model class:** Material, biological, computational, economic, and
 institutional transductions with observable source and target regimes.
 
-**Positive witness:** One schema classifies Bitcoin proof-of-work,
-photosynthesis, and matched nulls while preserving domain-specific types.
+**Positive witness:** Not yet constructed. The prior Bitcoin proof-of-work /
+photosynthesis witness was retired with the prior CL-001. The active candidate
+witness must come from the dollar / Bitcoin Interval Sweep at a declared frame.
 
 **Strongest null:** Ordinary causal process description with no additional
 discrimination.

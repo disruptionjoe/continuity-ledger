@@ -71,7 +71,8 @@ authorization. Never send email.
   nulls and absorbers fail for stated reasons.
 - Preserve negative, split, null, non-composable, and domain-specific outcomes
   as first-class results.
-- CapacityOS owns architecture and automation. JoeOps owns sequencing and
+- CapacityOS owns architecture and automation. JoeOps owns Joe-facing sequencing,
+  commitments, attention allocation, and attention-dependent cross-repo
   coordination. This repository owns neither.
 - Scratch, caches, temporary renders, and intermediate outputs belong in
   `_local/`.
@@ -109,13 +110,13 @@ The repositories are sibling interfaces.
 
 The initial Progress sequence is mandatory:
 
-1. specify Continuity Ledger Transaction Packet v0.1;
-2. construct independent Bitcoin proof-of-work and photosynthesis packets,
-   preserving their incompatible physical and institutional types;
-3. construct matched null controls for energy conversion without a durable
-   agency-generating surface;
-4. run all packets through typing, provenance, continuity, loss/import,
-   agency, no-go/escape, feedback, absorber, and neutrality gates; and
+1. declare and commit the CL-001 frame before any arm is populated;
+2. construct dollar and Bitcoin arms at that shared frame with `T` as the only
+   free field;
+3. admit only controls that preserve the declared `R0` and `M1`, with floor
+   nulls retained as zero-weight checks rather than positive evidence;
+4. run the typing, provenance, continuity, loss/import, agency, no-go/escape,
+   feedback, absorber, neutrality, evaluator-sweep, and arm-symmetry checks; and
 5. return `SHARED_STRUCTURE`, `NARROWER_STRUCTURE`, or `KILL`, with no preferred
    outcome.
 
@@ -222,7 +223,8 @@ or agency-escape theory exists.
 - Possibility/capability/finality level classification: Possibility to
   Capability or its frozen interface packet.
 - Cross-repo request: the receiving repository's CapacityOS mailbox.
-- Program sequencing and portfolio decisions: JoeOps.
+- Joe-facing sequencing, commitments, attention allocation, and
+  attention-dependent coordination: JoeOps.
 - CapacityOS architecture or automation: CapacityOS System.
 - External publication or outreach: Joe approval.
 

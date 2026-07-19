@@ -1,6 +1,12 @@
-# CL-001: Bitcoin / Photosynthesis Pair And Null
+# Retired CL-001: Bitcoin / Photosynthesis Pair And Null
 
-Status: planned founding experiment.
+Status: retired founding experiment.
+
+Retired: 2026-07-16, Joe direct chat, with the founding case pair and prior
+CL-001. This file is retained as provenance for the scaffold that existed before
+the charter amendment. It is not the active CL-001 experiment, cannot authorize
+packet population, and cannot issue a verdict. Current CL-001 work starts from
+`experiments/CL-001-interval-sweep.md`.
 
 ## Objective
 
