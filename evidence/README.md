@@ -46,8 +46,12 @@ Current active Interval Sweep draft dossiers:
   open.
 - `cl-001-interval-sweep-dossiers/blinded-material-field-package-t-01.md`
   selects `T` as the first material field for blind handling and records the
-  package and receipt conditions. It does not create a blind source bundle,
-  populate `T`, score gate 10, or issue a verdict.
+  package and receipt conditions. It points to the prepared redacted source
+  bundle, but does not populate `T`, score gate 10, or issue a verdict.
+- `cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-redacted-source-bundle.md`
+  is the coded input for a later blind author. It contains no unblinding key,
+  does not complete the blind receipt, and leaves inferability as a stop
+  condition.
 
 Retired construction contracts:
 

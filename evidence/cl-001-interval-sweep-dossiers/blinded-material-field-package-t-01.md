@@ -3,7 +3,7 @@ source_id: active-cl001-blinded-material-field-package-t-01-20260719
 source_type: process package
 applies_to_packets: active-cl001-dollar-arm-pending; active-cl001-bitcoin-arm-pending
 evidence_lanes: Frame adherence and declared-field guard; Mechanism and transition boundary; Settlement regime and class definition; Constraint class and exit-cost interval; Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing
-provenance: governance/CHARTER.md; experiments/CL-001-phi-frame.md; experiments/CL-001-interval-sweep.md; evidence/cl-001-interval-sweep-source-intake.md; evidence/cl-001-interval-sweep-dossier-manifest.md; evidence/cl-001-interval-sweep-dossiers/arm-symmetry-blinding-receipt.md; active mechanism and evaluator dossiers inspected 2026-07-19
+provenance: governance/CHARTER.md; experiments/CL-001-phi-frame.md; experiments/CL-001-interval-sweep.md; evidence/cl-001-interval-sweep-source-intake.md; evidence/cl-001-interval-sweep-dossier-manifest.md; evidence/cl-001-interval-sweep-dossiers/arm-symmetry-blinding-receipt.md; evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-redacted-source-bundle.md; active mechanism and evaluator dossiers inspected 2026-07-19
 extracted_by: Codex child run RUN-20260719-545
 extracted_on: 2026-07-19
 status: draft
@@ -23,12 +23,17 @@ population burden as a field-level selection through a valid blinded package.
 
 Package id: `CL001-BLIND-T-01`.
 
-This file is the public package contract and receipt checklist. It is not the
-blind author's source bundle, because putting the unblinding key or unreduced
-arm-specific source names in the repository would make the package non-blind.
-It does not populate any active CL-001 packet field, does not score any gate,
-does not issue a verdict, and does not establish that blind population can
-succeed.
+This file is the open-label package contract and receipt checklist, not the
+blind author's read surface. The blind-author input is the redacted coded bundle
+at
+`evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-redacted-source-bundle.md`.
+The bundle's current SHA-256 is
+`BD18827FD55556990DB28AE7E1AE599543D704A4BAC04DBBD0085A5E0D1543A5`.
+
+A blind run should receive only that bundle's task capsule and coded bundle
+text, not this open-label package. This package does not populate any active
+CL-001 packet field, does not score any gate, does not issue a verdict, and
+does not establish that blind population can succeed.
 
 Repo-local surfaces used:
 
@@ -39,6 +44,7 @@ Repo-local surfaces used:
 - `evidence/cl-001-interval-sweep-source-intake.md`.
 - `evidence/cl-001-interval-sweep-dossier-manifest.md`.
 - `evidence/cl-001-interval-sweep-dossiers/arm-symmetry-blinding-receipt.md`.
+- `evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-redacted-source-bundle.md`.
 - Current active dollar and Bitcoin mechanism and evaluator dossiers.
 
 ### Scoped Extraction
@@ -47,7 +53,7 @@ Repo-local surfaces used:
 |---|---|---|---|
 | `T` is the first selected material field for blind handling. | `T`, `V` | Mechanism and transition boundary; Falsifiers, open fields, and routing | Selection only; no field value is populated. |
 | The blind task must ask for an enforcement-mechanism or enforcement-posture description while preserving the declared frame. | `T`, `B`, `V` | Frame adherence and declared-field guard; Mechanism and transition boundary | If the blind author needs `R0`, `M1`, `Omega`, or boundary role to vary, the result is a stop record. |
-| The blind source bundle must expose two coded bundles without dollar/Bitcoin arm labels, source names, unique institution names, or source URLs. | `V` | Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing | This public file does not contain that bundle or the unblinding key. |
+| The blind source bundle must expose two coded bundles without dollar/Bitcoin arm labels, source names, unique institution names, or source URLs. | `V` | Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing | A redacted bundle candidate now exists at `evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-redacted-source-bundle.md`; it contains no unblinding key and still leaves inferability as a blind-author stop. |
 | The blind author must return `blind_failed_inferable` if the arm can be identified before extraction. | `V`, `Z` | Absorber, near-miss null, and arm-symmetry pressure | A failed blind is a valid process result, not permission for unblinded packet population. |
 | Any blind output must keep all unsupported field-level claims as `Pending exact source selection.` | `T`, `V` | Falsifiers, open fields, and routing | The package cannot silently fill gaps left open by the source dossiers. |
 
@@ -67,7 +73,7 @@ Repo-local surfaces used:
 |---|---|---|---|
 | This run is not blind and therefore imports arm labels, repository context, and known source identities. | `V` | This run's source order and the active dossier set. | A later blind author must work from a redacted bundle and must not read these open-label dossiers in the same run. |
 | A valid blind package imports a non-blind packager, a redacted prompt, a coded source bundle, an unblinding key, and a return receipt. | `V` | Charter rule 6 and active source-intake contract. | The later receipt must name the blind author/run, source-bundle checksum, inferred-arm status, and unblinding event. |
-| Selecting `T` imports high inferability risk because the current source sets contain unique legal, institutional, protocol, and implementation vocabulary. | `T`, `V`, `Z` | Active mechanism and evaluator dossiers. | The blind bundle must either reduce arm-inferable terms or return `blind_failed_inferable`. |
+| Selecting `T` imports high inferability risk because the current source sets contain unique legal, institutional, protocol, and implementation vocabulary. | `T`, `V`, `Z` | Active mechanism and evaluator dossiers. | The prepared bundle reduces direct names and URLs, but the blind author must still return `blind_failed_inferable` if the coded material identifies an arm. |
 | A redacted source bundle may lose domain detail needed for a real field value. | `T`, `V` | This package contract. | If redaction removes the material basis for extraction, the blind result is `blind_failed_insufficient_material`, not a populated packet. |
 | The package cannot store the unblinding key in this public artifact before blind return. | `V` | Public-repository blinding boundary. | Parent orchestration or a later non-blind packager must preserve the key outside the blind author's read context and commit it only after blind return. |
 
@@ -75,14 +81,16 @@ Repo-local surfaces used:
 
 | Candidate surface or feedback | Source support | Missing burden | Null pressure |
 |---|---|---|---|
-| Blind `T`-field extraction as a process surface. | Charter and source-intake contract require at least one material field to be populated blind. | No blind author has received a redacted bundle or returned a result. | Ordinary review hygiene can absorb this unless the blind attempt catches arm-name or frame presumption. |
+| Blind `T`-field extraction as a process surface. | Charter and source-intake contract require at least one material field to be populated blind. | A redacted source bundle now exists, but no blind author has received it or returned a result. | Ordinary review hygiene can absorb this unless the blind attempt catches arm-name or frame presumption. |
 | Inferability failure as a method finding. | The active arm sources are distinctive enough that inferability is a live risk. | No blind run has tested inferability. | If the author can identify the arm, the package fails as a blind without moving packet fields. |
 | Routing of frame pressure. | Charter rule 7 requires recognized defects to route out. | No frame defect is found by this package; the route is defined for the later blind result. | A later run that records inferability or frame pressure without routing it fails the method claim. |
 
 ### Blind Author Prompt Template
 
-The later blind author should receive only this task capsule plus a coded source
-bundle prepared outside the blind author's read context:
+The later blind author should receive only the task capsule and coded bundle
+text from
+`evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-redacted-source-bundle.md`,
+not this open-label package:
 
 ```text
 You are populating field T for CL001-BLIND-T-01 from two coded source bundles,
@@ -126,8 +134,9 @@ charter's blinded-field requirement, or prove that `T` can be populated blind.
 It does not establish:
 
 - a dollar or Bitcoin `T` value;
-- that a blind source bundle has been created;
 - that a blind author has completed extraction;
+- that the prepared source bundle is sufficiently non-inferable or materially
+  sufficient for extraction;
 - that the arm identity can be hidden from a blind author;
 - that the current source dossiers are sufficient for packet population;
 - label-swap invariance, no merit ordering, or no same-run founding-corpus

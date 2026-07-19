@@ -2,40 +2,40 @@ schema_version: "2.0"
 owner_id: continuity-ledger
 group: church-of-ai
 rule_ref: system/runtime/flows/derive-lane-health.md
-updated_at: "2026-07-19T16:41:22-05:00"
-run_ref: RUN-20260719-545-repository-work-cycle-cai-hourly
-bottom_line: "CL-001 selected T for blind handling; next run needs a redacted blind bundle and receipt, or an inferability stop."
-decision_default: "Run CL001-BLIND-T-01 before any active packet field population."
+updated_at: "2026-07-19T17:43:28-05:00"
+run_ref: RUN-20260719-547-repository-work-cycle-cai-hourly
+bottom_line: "CL-001 now has a redacted T-field bundle; next run should use a separate blind author and stop if X/Y is inferable."
+decision_default: "Run the blind author on the redacted CL001-BLIND-T-01 bundle before packet population."
 needs_joe: false
 lanes:
   - lane_id: "1"
     work_status: moving
-    last_movement: "Selected T as the first blind-handled CL-001 material field and added the package contract."
-    movement_ref: evidence/cl-001-interval-sweep-dossiers/blinded-material-field-package-t-01.md
+    last_movement: "Prepared the redacted CL001-BLIND-T-01 source bundle without an unblinding key."
+    movement_ref: evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-redacted-source-bundle.md
     steering_attention: watch
-    steering_prompt: "Run the redacted T-field blind bundle; stop if the blind author can infer the arm."
-    steering_ref: evidence/cl-001-interval-sweep-dossiers/blinded-material-field-package-t-01.md
+    steering_prompt: "Run a separate blind author on the coded bundle only; stop on arm inferability."
+    steering_ref: evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-redacted-source-bundle.md
     light: green
-    reason_code: blind_t_package_contract_prepared
+    reason_code: redacted_blind_t_bundle_prepared
     evidence_ref: evidence/cl-001-interval-sweep-dossier-manifest.md
-    summary: "CL-001 has T selected for blind handling; active packet fields remain closed."
-    evaluated_at: "2026-07-19T16:41:22-05:00"
-    run_ref: RUN-20260719-545-repository-work-cycle-cai-hourly
+    summary: "CL-001 has a coded T bundle; active packet fields remain closed."
+    evaluated_at: "2026-07-19T17:43:28-05:00"
+    run_ref: RUN-20260719-547-repository-work-cycle-cai-hourly
     objective: "Force or falsify substrate-bounded constraint-bought capability through CL-001."
-    progress_delta: "Added CL001-BLIND-T-01, selecting T for blind treatment and defining receipt/stop conditions."
-    scope_position: "CL-001 pre-population: frame and dossiers exist; first blind-field package contract exists; no active packet fields populated."
+    progress_delta: "Added the redacted coded source bundle for the selected blind T-field attempt."
+    scope_position: "CL-001 pre-population: frame, dossiers, package, and coded source bundle exist; no active packet fields populated."
     trend_24h: up
     confidence: med
-    recommendation: "Run the blind T package next."
+    recommendation: "Run separate blind author."
     findings:
-      - "T is the correct first blind material field because it is the declared frame's only free field."
-      - "The package treats arm inferability as a stop condition, not permission for unblinded population."
-      - "Final control admission and absorber scoring remain blocked."
+      - "The coded bundle removes direct arm labels, source names, and URLs but may still be inferable."
+      - "No unblinding key is stored in the public repo."
+      - "Active packet fields, gates, and verdicts remain closed."
     options:
       - id: A
-        label: "Run blind T package"
+        label: "Run blind author"
         recommended: true
-        description: "Create a redacted source bundle, get the blind author receipt, then unblind after return."
+        description: "Give only the coded source bundle to a separate blind author and stop if inferable."
       - id: B
         label: "Control admission"
         recommended: false
@@ -48,7 +48,7 @@ lanes:
         label: "Defer"
         recommended: false
         description: "Leave CL-001 packet population closed for a later focused run."
-    decision_default: "Run CL001-BLIND-T-01 before active packet field population."
+    decision_default: "Run the blind author on the redacted CL001-BLIND-T-01 bundle before packet population."
     needs_joe: false
   - lane_id: "2"
     work_status: thin
@@ -134,31 +134,31 @@ lanes:
     needs_joe: false
   - lane_id: A
     work_status: moving
-    last_movement: "Closeout refreshed Lane state to schema 2.0 after adding the blind T package."
+    last_movement: "Closeout refreshed Lane state after adding the redacted blind T source bundle."
     movement_ref: LANE-STATE.yaml
     steering_attention: none
     steering_prompt: "none"
     steering_ref: AGENTS.md; LANES.yaml; tests/validate_cltp_packets.py
     light: green
-    reason_code: lane_state_schema2_refreshed
+    reason_code: lane_state_refreshed_after_blind_bundle
     evidence_ref: AGENTS.md; LANES.yaml; evidence/cl-001-interval-sweep-dossier-manifest.md; tests/validate_cltp_packets.py
-    summary: "Stewardship state now renders schema 2.0; CL-001 validator still passes."
-    evaluated_at: "2026-07-19T16:41:22-05:00"
-    run_ref: RUN-20260719-545-repository-work-cycle-cai-hourly
+    summary: "Stewardship state refreshed; CL-001 validator still passes."
+    evaluated_at: "2026-07-19T17:43:28-05:00"
+    run_ref: RUN-20260719-547-repository-work-cycle-cai-hourly
     objective: "Keep Continuity Ledger viable and trustworthy through integrated stewardship."
-    progress_delta: "Converted the lane-state summary to schema 2.0 and kept mailbox, lock, and validator checks clean."
+    progress_delta: "Refreshed state after repo-local blind-bundle progress; mailbox, lock, and validator checks stayed clean."
     trend_24h: up
     confidence: high
     recommendation: "Continue Lane 1."
     findings:
       - "No substantive unarchived mailbox payload required disposition."
       - "No writer lock existed before work."
-      - "Validator passed before and after the evidence-package change."
+      - "Validator passed after the redacted source-bundle change."
     options:
       - id: A
         label: "Continue Lane 1"
         recommended: true
-        description: "Proceed with the blind T package under the live CAI-directed grant."
+        description: "Proceed with the separate blind-author receipt under the live CAI-directed grant."
       - id: B
         label: "Stewardship audit"
         recommended: false
@@ -171,7 +171,7 @@ lanes:
         label: "Defer"
         recommended: false
         description: "No Joe-facing stewardship decision is needed."
-    decision_default: "Continue Lane 1 blind-package path."
+    decision_default: "Continue Lane 1 blind-author path."
     needs_joe: false
     drift_verdict: clean
     action_counts:
