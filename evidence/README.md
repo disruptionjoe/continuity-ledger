@@ -17,6 +17,10 @@ Active CL-001 Interval Sweep contracts:
 
 Current active Interval Sweep draft dossiers:
 
+- `cl-001-interval-sweep-dossiers/shared-frame-audit-provenance.md` records
+  construction/provenance checks for the declared Phi frame and current active
+  dossier queue. It leaves frame adequacy, packet fields, gates, and verdicts
+  open.
 - `cl-001-interval-sweep-dossiers/dollar-enforcement-mechanism-legal-operational.md`
   records legal-operational source extraction for the dollar enforcement
   mechanism queue item. It leaves packet fields, population exit costs, gates,

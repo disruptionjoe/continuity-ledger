@@ -31,7 +31,7 @@ feedback burden, open fields, falsifiers, and the no-claim-promotion boundary.
 
 | Queue item | Applies to active evidence surface | Source type | Evidence lanes to preserve | Current status |
 |---|---|---|---|---|
-| Shared-frame audit dossier | Shared frame audit | construction/provenance | Frame adherence and declared-field guard; Falsifiers, open fields, and routing. | Pending exact source selection. |
+| Shared-frame audit dossier | Shared frame audit | construction/provenance | Frame adherence and declared-field guard; Falsifiers, open fields, and routing. | Draft dossier: `evidence/cl-001-interval-sweep-dossiers/shared-frame-audit-provenance.md`. |
 | Dollar enforcement-mechanism dossier | Dollar enforcement mechanism | primary or institutionally authoritative | Mechanism and transition boundary; Settlement regime and class definition; Loss, import, and access accounting; Constraint class and exit-cost interval; Agency surface and action-space burden. | Draft dossier: `evidence/cl-001-interval-sweep-dossiers/dollar-enforcement-mechanism-legal-operational.md`. |
 | Bitcoin enforcement-mechanism dossier | Bitcoin enforcement mechanism | protocol-level and operational | Mechanism and transition boundary; Settlement regime and class definition; Loss, import, and access accounting; Constraint class and exit-cost interval; Agency surface and action-space burden. | Draft dossier: `evidence/cl-001-interval-sweep-dossiers/bitcoin-enforcement-mechanism-protocol.md`. |
 | Dollar US retail evaluator dossier | Dollar evaluator sweep | primary, statistical, or construction-supported | Evaluator sweep and population boundary; Constraint class and exit-cost interval; Typed measurement family. | Pending exact source selection. |
@@ -58,16 +58,17 @@ feedback burden, open fields, falsifiers, and the no-claim-promotion boundary.
 
 | Dossier | Queue item | Status | Boundary |
 |---|---|---|---|
+| `evidence/cl-001-interval-sweep-dossiers/shared-frame-audit-provenance.md` | Shared-frame audit dossier | Draft construction/provenance dossier. | Does not populate active packet fields, score frame adherence, or establish that the frame will survive later source population. |
 | `evidence/cl-001-interval-sweep-dossiers/dollar-enforcement-mechanism-legal-operational.md` | Dollar enforcement-mechanism dossier | Draft exact source dossier. | Does not populate active dollar packet fields or establish the dollar arm's candidate posture. |
 | `evidence/cl-001-interval-sweep-dossiers/bitcoin-enforcement-mechanism-protocol.md` | Bitcoin enforcement-mechanism dossier | Draft exact source dossier. | Does not populate active Bitcoin packet fields or establish the Bitcoin arm's candidate posture. |
 
 ## Completion Boundary
 
-This manifest now has first exact source dossiers for the dollar and Bitcoin
-enforcement-mechanism surfaces. It is not complete enough to populate a packet
-field. Packet population remains blocked until all relevant dossier lanes exist,
-name their source provenance, preserve the declared frame, and state which
-packet fields remain open.
+This manifest now has a shared-frame audit dossier and first exact source
+dossiers for the dollar and Bitcoin enforcement-mechanism surfaces. It is not
+complete enough to populate a packet field. Packet population remains blocked
+until all relevant dossier lanes exist, name their source provenance, preserve
+the declared frame, and state which packet fields remain open.
 
 ## No Claim Promotion
 
