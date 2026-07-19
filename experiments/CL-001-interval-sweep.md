@@ -24,6 +24,12 @@ oxygenic photosynthesis pair, which is preserved at
 Test whether, at one declared frame, the binding constraint class follows the
 enforcement substrate rather than the evaluator population.
 
+## Declared Frame
+
+Frame `Phi` is declared in `experiments/CL-001-phi-frame.md`. It fixes the
+shared comparison frame for the active dollar/Bitcoin Interval Sweep and leaves
+`T` as the only free field before any current arm packet is populated.
+
 ## Required Frame Discipline
 
 - Declare and commit frame `Phi` before any arm is populated.
@@ -57,7 +63,6 @@ Any non-preregistered result is `KILL` on instrument failure.
 
 ## Current Missing Work
 
-- A committed frame declaration for `Phi`.
 - Current packet files for the dollar and Bitcoin arms.
 - A source-intake and dossier manifest for the Interval Sweep.
 - Near-miss/control admission rules at the same declared `R0` and `M1`.

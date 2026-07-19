@@ -6,6 +6,9 @@ narrow the repo's hypotheses.
 
 Current active scaffold:
 
+- `CL-001-phi-frame.md` declares the active Interval Sweep frame before current
+  dollar/Bitcoin packet population. It cannot populate packets, score gates, or
+  issue a verdict.
 - `CL-001-interval-sweep.md` records the active CL-001 workspace. It cannot
   populate packets, score gates, or issue a verdict.
 

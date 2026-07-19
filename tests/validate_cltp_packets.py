@@ -12,6 +12,7 @@ SOURCE_DOSSIER_TEMPLATE = ROOT / "evidence" / "cl-001-source-dossier-template.md
 SOURCE_DOSSIER_MANIFEST = ROOT / "evidence" / "cl-001-source-dossier-manifest.md"
 SOURCE_DOSSIER_DIR = ROOT / "evidence" / "cl-001-dossiers"
 ACTIVE_CL001_EXPERIMENT = ROOT / "experiments" / "CL-001-interval-sweep.md"
+ACTIVE_CL001_FRAME = ROOT / "experiments" / "CL-001-phi-frame.md"
 RETIRED_CL001_EXPERIMENT = (
     ROOT / "experiments" / "CL-001-bitcoin-photosynthesis-pair-and-null.md"
 )
@@ -443,6 +444,7 @@ def validate_cl001_experiment_state() -> list[str]:
         "dollar",
         "Bitcoin",
         "`T` as the only free field",
+        "experiments/CL-001-phi-frame.md",
         "## No Claim Promotion",
         "cannot populate a CL-001 packet",
     )
@@ -451,6 +453,28 @@ def validate_cl001_experiment_state() -> list[str]:
             errors.append(
                 f"{ACTIVE_CL001_EXPERIMENT.relative_to(ROOT)} missing phrase {phrase}"
             )
+
+    if not ACTIVE_CL001_FRAME.exists():
+        errors.append(
+            "Missing active CL-001 frame declaration: "
+            f"{ACTIVE_CL001_FRAME.relative_to(ROOT)}"
+        )
+    else:
+        frame_text = ACTIVE_CL001_FRAME.read_text(encoding="utf-8")
+        frame_required = (
+            "status: declared_pre_packet",
+            "claim_status: none",
+            "verdict: none",
+            "# CL-001 Phi Frame Declaration",
+            "`T` is the only free field",
+            "No active packet field is populated by this frame",
+            "## No Claim Promotion",
+        )
+        for phrase in frame_required:
+            if phrase not in frame_text:
+                errors.append(
+                    f"{ACTIVE_CL001_FRAME.relative_to(ROOT)} missing phrase {phrase}"
+                )
 
     if not RETIRED_CL001_EXPERIMENT.exists():
         errors.append(

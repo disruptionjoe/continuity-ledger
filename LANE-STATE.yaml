@@ -1,22 +1,22 @@
 lane_state_version: "1.0"
 owner_id: continuity-ledger
-evaluated_at: "2026-07-19T08:40:54-05:00"
-run_ref: RUN-20260719-526-repository-work-cycle-cai-hourly
+evaluated_at: "2026-07-19T09:41:25-05:00"
+run_ref: RUN-20260719-529-repository-work-cycle-cai-hourly
 rule_ref: system/runtime/flows/derive-lane-health.md
 lanes:
   - lane_id: "1"
     work_status: moving
-    last_movement: Active CL-001 scaffold aligned to the Interval Sweep.
-    movement_ref: experiments/CL-001-interval-sweep.md
+    last_movement: Declared CL-001 Phi frame before active packet population.
+    movement_ref: experiments/CL-001-phi-frame.md
     steering_attention: watch
-    steering_prompt: Declare Phi before any active packet population.
-    steering_ref: governance/CHARTER.md#frame-discipline
+    steering_prompt: Create current source-intake before dollar/Bitcoin packet fields.
+    steering_ref: experiments/CL-001-phi-frame.md
     light: green
-    reason_code: cl001_active_scaffold_reconciled
-    evidence_ref: experiments/CL-001-interval-sweep.md
-    summary: CL-001 active surface now points to the dollar/Bitcoin Interval Sweep.
-    evaluated_at: "2026-07-19T08:40:54-05:00"
-    run_ref: RUN-20260719-526-repository-work-cycle-cai-hourly
+    reason_code: cl001_phi_frame_declared
+    evidence_ref: experiments/CL-001-phi-frame.md
+    summary: CL-001 now has a declared pre-packet Phi frame.
+    evaluated_at: "2026-07-19T09:41:25-05:00"
+    run_ref: RUN-20260719-529-repository-work-cycle-cai-hourly
   - lane_id: "2"
     work_status: thin
     last_movement: No current hardening lease or independent hardening movement found.
@@ -28,8 +28,8 @@ lanes:
     reason_code: lease_required_no_current_lead
     evidence_ref: LANES.yaml
     summary: Hardening remains subordinate to Lane 1 and needs a lease to lead.
-    evaluated_at: "2026-07-19T08:40:54-05:00"
-    run_ref: RUN-20260719-526-repository-work-cycle-cai-hourly
+    evaluated_at: "2026-07-19T09:41:25-05:00"
+    run_ref: RUN-20260719-529-repository-work-cycle-cai-hourly
   - lane_id: "3"
     work_status: blocked
     last_movement: Gate remains closed until CL-001 returns a verdict.
@@ -41,18 +41,18 @@ lanes:
     reason_code: admission_gated_on_cl001
     evidence_ref: LANES.yaml
     summary: Atlas synthesis remains gated on the unresolved CL-001 verdict.
-    evaluated_at: "2026-07-19T08:40:54-05:00"
-    run_ref: RUN-20260719-526-repository-work-cycle-cai-hourly
+    evaluated_at: "2026-07-19T09:41:25-05:00"
+    run_ref: RUN-20260719-529-repository-work-cycle-cai-hourly
   - lane_id: A
     work_status: moving
-    last_movement: Stewardship reconciled CL-001 surfaces and JoeOps boundary wording.
-    movement_ref: AGENTS.md
+    last_movement: Validator now guards the active Phi frame declaration.
+    movement_ref: tests/validate_cltp_packets.py
     steering_attention: none
     steering_prompt: none
-    steering_ref: AGENTS.md
+    steering_ref: tests/validate_cltp_packets.py
     light: green
-    reason_code: mailbox_stewardship_disposition
-    evidence_ref: AGENTS.md
-    summary: Mailbox proposal was dispositioned through local stewardship corrections.
-    evaluated_at: "2026-07-19T08:40:54-05:00"
-    run_ref: RUN-20260719-526-repository-work-cycle-cai-hourly
+    reason_code: frame_guardrail_validated
+    evidence_ref: tests/validate_cltp_packets.py
+    summary: Active frame guardrail is now covered by the local validator.
+    evaluated_at: "2026-07-19T09:41:25-05:00"
+    run_ref: RUN-20260719-529-repository-work-cycle-cai-hourly
