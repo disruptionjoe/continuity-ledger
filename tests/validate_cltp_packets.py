@@ -11,6 +11,10 @@ SOURCE_INTAKE = ROOT / "evidence" / "cl-001-source-intake.md"
 SOURCE_DOSSIER_TEMPLATE = ROOT / "evidence" / "cl-001-source-dossier-template.md"
 SOURCE_DOSSIER_MANIFEST = ROOT / "evidence" / "cl-001-source-dossier-manifest.md"
 SOURCE_DOSSIER_DIR = ROOT / "evidence" / "cl-001-dossiers"
+ACTIVE_SOURCE_INTAKE = ROOT / "evidence" / "cl-001-interval-sweep-source-intake.md"
+ACTIVE_DOSSIER_MANIFEST = (
+    ROOT / "evidence" / "cl-001-interval-sweep-dossier-manifest.md"
+)
 ACTIVE_CL001_EXPERIMENT = ROOT / "experiments" / "CL-001-interval-sweep.md"
 ACTIVE_CL001_FRAME = ROOT / "experiments" / "CL-001-phi-frame.md"
 RETIRED_CL001_EXPERIMENT = (
@@ -133,6 +137,37 @@ REQUIRED_DOSSIER_FILE_SECTIONS = (
 
 MANIFEST_DOSSIER_PATH_RE = re.compile(r"`(evidence/cl-001-dossiers/[^`]+\.md)`")
 
+REQUIRED_ACTIVE_SOURCE_INTAKE_LANES = (
+    "Frame adherence and declared-field guard",
+    "Mechanism and transition boundary",
+    "Settlement regime and class definition",
+    "Typed measurement family",
+    "Loss, import, and access accounting",
+    "Constraint class and exit-cost interval",
+    "Agency surface and action-space burden",
+    "Evaluator sweep and population boundary",
+    "Absorber, near-miss null, and arm-symmetry pressure",
+    "Falsifiers, open fields, and routing",
+)
+
+REQUIRED_ACTIVE_SOURCE_INTAKE_SECTIONS = (
+    "## Purpose",
+    "## Boundary Rules",
+    "## Current Evidence Surfaces",
+    "## Evidence Lanes",
+    "## Per-Surface Intake Ledgers",
+    "## Control And Symmetry Burdens",
+    "## No Claim Promotion",
+)
+
+REQUIRED_ACTIVE_DOSSIER_MANIFEST_SECTIONS = (
+    "## Purpose",
+    "## Current Dossier Queue",
+    "## Symmetry Checks",
+    "## Completion Boundary",
+    "## No Claim Promotion",
+)
+
 
 def front_matter(text: str) -> dict[str, str]:
     if not text.startswith("---\n"):
@@ -158,6 +193,10 @@ def split_front_matter_list(value: str) -> list[str]:
         for item in re.split(r"[;,]", value)
         if item.strip()
     ]
+
+
+def has_phrase(text: str, phrase: str) -> bool:
+    return phrase in " ".join(text.split())
 
 
 def validate_packet(path: Path) -> list[str]:
@@ -429,6 +468,141 @@ def validate_source_dossiers(packet_paths: list[Path]) -> list[str]:
     return errors
 
 
+def validate_active_source_intake() -> list[str]:
+    errors: list[str] = []
+    if not ACTIVE_SOURCE_INTAKE.exists():
+        return [
+            "Missing active source intake contract: "
+            f"{ACTIVE_SOURCE_INTAKE.relative_to(ROOT)}"
+        ]
+
+    text = ACTIVE_SOURCE_INTAKE.read_text(encoding="utf-8")
+    values = front_matter(text)
+    for key in (
+        "artifact_type",
+        "status",
+        "experiment",
+        "frame_ref",
+        "claim_status",
+        "verdict",
+    ):
+        if key not in values:
+            errors.append(
+                f"{ACTIVE_SOURCE_INTAKE.relative_to(ROOT)} "
+                f"missing front matter key {key}"
+            )
+
+    expected_values = {
+        "status": "active_interval_sweep_contract",
+        "experiment": "CL-001",
+        "frame_ref": "experiments/CL-001-phi-frame.md",
+        "claim_status": "none",
+        "verdict": "none",
+    }
+    for key, value in expected_values.items():
+        if values.get(key) != value:
+            errors.append(
+                f"{ACTIVE_SOURCE_INTAKE.relative_to(ROOT)} "
+                f"has {key}: {values.get(key)!r}, expected {value!r}"
+            )
+
+    for section in REQUIRED_ACTIVE_SOURCE_INTAKE_SECTIONS:
+        if section not in text:
+            errors.append(f"{ACTIVE_SOURCE_INTAKE.relative_to(ROOT)} missing {section}")
+
+    for lane in REQUIRED_ACTIVE_SOURCE_INTAKE_LANES:
+        if lane not in text:
+            errors.append(
+                f"{ACTIVE_SOURCE_INTAKE.relative_to(ROOT)} missing lane {lane}"
+            )
+
+    required_phrases = (
+        "not evidence",
+        "does not select exact sources",
+        "does not populate packet fields",
+        "does not score any gate",
+        "`T` remains the only free field",
+        "Pending exact source pass.",
+        "cannot promote a CL-001 packet",
+    )
+    for phrase in required_phrases:
+        if not has_phrase(text, phrase):
+            errors.append(
+                f"{ACTIVE_SOURCE_INTAKE.relative_to(ROOT)} missing phrase {phrase}"
+            )
+
+    return errors
+
+
+def validate_active_source_dossier_manifest() -> list[str]:
+    errors: list[str] = []
+    if not ACTIVE_DOSSIER_MANIFEST.exists():
+        return [
+            "Missing active source dossier manifest: "
+            f"{ACTIVE_DOSSIER_MANIFEST.relative_to(ROOT)}"
+        ]
+
+    text = ACTIVE_DOSSIER_MANIFEST.read_text(encoding="utf-8")
+    values = front_matter(text)
+    for key in (
+        "artifact_type",
+        "status",
+        "experiment",
+        "frame_ref",
+        "claim_status",
+        "verdict",
+    ):
+        if key not in values:
+            errors.append(
+                f"{ACTIVE_DOSSIER_MANIFEST.relative_to(ROOT)} "
+                f"missing front matter key {key}"
+            )
+
+    expected_values = {
+        "status": "active_interval_sweep_manifest",
+        "experiment": "CL-001",
+        "frame_ref": "experiments/CL-001-phi-frame.md",
+        "claim_status": "none",
+        "verdict": "none",
+    }
+    for key, value in expected_values.items():
+        if values.get(key) != value:
+            errors.append(
+                f"{ACTIVE_DOSSIER_MANIFEST.relative_to(ROOT)} "
+                f"has {key}: {values.get(key)!r}, expected {value!r}"
+            )
+
+    for section in REQUIRED_ACTIVE_DOSSIER_MANIFEST_SECTIONS:
+        if section not in text:
+            errors.append(
+                f"{ACTIVE_DOSSIER_MANIFEST.relative_to(ROOT)} missing {section}"
+            )
+
+    required_phrases = (
+        "evidence/cl-001-interval-sweep-source-intake.md",
+        "experiments/CL-001-phi-frame.md",
+        "No current active Interval Sweep dossier file exists yet.",
+        "Pending exact source selection.",
+        "not evidence",
+        "does not select exact sources",
+        "does not score any gate",
+        "cannot promote a CL-001 packet",
+    )
+    for phrase in required_phrases:
+        if not has_phrase(text, phrase):
+            errors.append(
+                f"{ACTIVE_DOSSIER_MANIFEST.relative_to(ROOT)} missing phrase {phrase}"
+            )
+
+    for lane in REQUIRED_ACTIVE_SOURCE_INTAKE_LANES:
+        if lane not in text:
+            errors.append(
+                f"{ACTIVE_DOSSIER_MANIFEST.relative_to(ROOT)} missing lane {lane}"
+            )
+
+    return errors
+
+
 def validate_cl001_experiment_state() -> list[str]:
     errors: list[str] = []
     if not ACTIVE_CL001_EXPERIMENT.exists():
@@ -518,6 +692,8 @@ def main() -> int:
     errors.extend(validate_source_dossier_template())
     errors.extend(validate_source_dossier_manifest(packet_paths))
     errors.extend(validate_source_dossiers(packet_paths))
+    errors.extend(validate_active_source_intake())
+    errors.extend(validate_active_source_dossier_manifest())
     errors.extend(validate_cl001_experiment_state())
 
     if errors:
@@ -528,7 +704,8 @@ def main() -> int:
     print(
         f"Validated {len(packet_paths)} CL-001 packet files, "
         "source intake, source dossier template, source dossier manifest, "
-        "source dossiers, and experiment state."
+        "source dossiers, active Interval Sweep intake/manifest, "
+        "and experiment state."
     )
     return 0
 

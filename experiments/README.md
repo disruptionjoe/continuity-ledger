@@ -11,6 +11,10 @@ Current active scaffold:
   issue a verdict.
 - `CL-001-interval-sweep.md` records the active CL-001 workspace. It cannot
   populate packets, score gates, or issue a verdict.
+- Active source intake and dossier queue contracts live at
+  `evidence/cl-001-interval-sweep-source-intake.md` and
+  `evidence/cl-001-interval-sweep-dossier-manifest.md`. They cannot populate
+  packets, score gates, or issue a verdict.
 
 Retired provenance:
 

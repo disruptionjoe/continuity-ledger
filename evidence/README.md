@@ -4,6 +4,16 @@ This directory will hold evidence owned by this repository about its eventual
 repo-independent claims. Source-repo results enter only through frozen,
 provenance-bearing packets and retain their original scope and grade.
 
+Active CL-001 Interval Sweep contracts:
+
+- `cl-001-interval-sweep-source-intake.md` defines the current intake burden
+  after the declared Phi frame and before any dollar/Bitcoin packet field is
+  populated.
+- `cl-001-interval-sweep-dossier-manifest.md` queues the active source dossier
+  work needed before current packet population can begin.
+
+No active Interval Sweep source dossier file exists yet.
+
 Retired construction contracts:
 
 - `cl-001-source-intake.md` defines the primary-source and construction-note
