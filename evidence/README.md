@@ -29,6 +29,21 @@ Current active Interval Sweep draft dossiers:
   records protocol and implementation source extraction for the Bitcoin
   enforcement mechanism queue item. It leaves packet fields, population exit
   costs, gates, and verdicts open.
+- `cl-001-interval-sweep-dossiers/dollar-evaluator-sweep-us-argentina-retail.md`
+  records evaluator-population source extraction for U.S. and Argentine retail
+  under the dollar arm. It leaves packet fields, exit-cost intervals, gates, and
+  verdicts open.
+- `cl-001-interval-sweep-dossiers/bitcoin-evaluator-sweep-us-salvador-retail.md`
+  records evaluator-population source extraction for U.S. and Salvadoran retail
+  under the Bitcoin arm. It leaves packet fields, exit-cost intervals, gates,
+  and verdicts open.
+- `cl-001-interval-sweep-dossiers/near-miss-control-admission.md` records
+  same-frame control-admission burdens and candidate pressure. It admits no
+  control and leaves packet fields, absorber scoring, gates, and verdicts open.
+- `cl-001-interval-sweep-dossiers/arm-symmetry-blinding-receipt.md` records
+  arm-symmetry and blinding process burdens, including the current absence of a
+  blinded material-field receipt. It leaves packet fields, gate 10, and verdicts
+  open.
 
 Retired construction contracts:
 

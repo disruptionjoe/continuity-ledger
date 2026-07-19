@@ -64,11 +64,15 @@ Any non-preregistered result is `KILL` on instrument failure.
 ## Current Missing Work
 
 - Current packet files for the dollar and Bitcoin arms.
-- Exact source selection and draft dossiers under
-  `evidence/cl-001-interval-sweep-source-intake.md` and
+- Packet-field selection from the active draft dossier set under
   `evidence/cl-001-interval-sweep-dossier-manifest.md`.
-- Near-miss/control admission dossiers at the same declared `R0` and `M1`.
-- Arm-symmetry and blinding receipts before any verdict.
+- Exact field-level source completion wherever the draft dossiers leave a
+  material field open.
+- A valid blinded material-field package and receipt before any unblinded
+  population of that field.
+- Final near-miss/control admission at the same declared `R0` and `M1` before
+  absorber scoring.
+- Arm-symmetry receipts before any verdict.
 
 ## No Claim Promotion
 
