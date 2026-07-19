@@ -15,6 +15,7 @@ ACTIVE_SOURCE_INTAKE = ROOT / "evidence" / "cl-001-interval-sweep-source-intake.
 ACTIVE_DOSSIER_MANIFEST = (
     ROOT / "evidence" / "cl-001-interval-sweep-dossier-manifest.md"
 )
+ACTIVE_DOSSIER_DIR = ROOT / "evidence" / "cl-001-interval-sweep-dossiers"
 ACTIVE_CL001_EXPERIMENT = ROOT / "experiments" / "CL-001-interval-sweep.md"
 ACTIVE_CL001_FRAME = ROOT / "experiments" / "CL-001-phi-frame.md"
 RETIRED_CL001_EXPERIMENT = (
@@ -136,6 +137,9 @@ REQUIRED_DOSSIER_FILE_SECTIONS = (
 )
 
 MANIFEST_DOSSIER_PATH_RE = re.compile(r"`(evidence/cl-001-dossiers/[^`]+\.md)`")
+ACTIVE_MANIFEST_DOSSIER_PATH_RE = re.compile(
+    r"`(evidence/cl-001-interval-sweep-dossiers/[^`]+\.md)`"
+)
 
 REQUIRED_ACTIVE_SOURCE_INTAKE_LANES = (
     "Frame adherence and declared-field guard",
@@ -191,6 +195,14 @@ def split_front_matter_list(value: str) -> list[str]:
     return [
         item.strip()
         for item in re.split(r"[;,]", value)
+        if item.strip()
+    ]
+
+
+def split_front_matter_semicolon_list(value: str) -> list[str]:
+    return [
+        item.strip()
+        for item in value.split(";")
         if item.strip()
     ]
 
@@ -581,8 +593,9 @@ def validate_active_source_dossier_manifest() -> list[str]:
     required_phrases = (
         "evidence/cl-001-interval-sweep-source-intake.md",
         "experiments/CL-001-phi-frame.md",
-        "No current active Interval Sweep dossier file exists yet.",
+        "Current active Interval Sweep dossier files are listed below.",
         "Pending exact source selection.",
+        "evidence/cl-001-interval-sweep-dossiers",
         "not evidence",
         "does not select exact sources",
         "does not score any gate",
@@ -599,6 +612,109 @@ def validate_active_source_dossier_manifest() -> list[str]:
             errors.append(
                 f"{ACTIVE_DOSSIER_MANIFEST.relative_to(ROOT)} missing lane {lane}"
             )
+
+    manifest_dossier_paths = {
+        (ROOT / raw_path).resolve()
+        for raw_path in ACTIVE_MANIFEST_DOSSIER_PATH_RE.findall(text)
+    }
+    dossier_paths = {
+        path.resolve() for path in ACTIVE_DOSSIER_DIR.glob("*.md")
+    } if ACTIVE_DOSSIER_DIR.exists() else set()
+
+    if not manifest_dossier_paths:
+        errors.append(
+            f"{ACTIVE_DOSSIER_MANIFEST.relative_to(ROOT)} "
+            "does not reference any active dossier files"
+        )
+
+    for path in sorted(manifest_dossier_paths):
+        if not path.exists():
+            errors.append(
+                f"{ACTIVE_DOSSIER_MANIFEST.relative_to(ROOT)} references missing "
+                f"active dossier {path.relative_to(ROOT)}"
+            )
+
+    for path in sorted(dossier_paths - manifest_dossier_paths):
+        errors.append(
+            f"{path.relative_to(ROOT)} is not referenced by "
+            f"{ACTIVE_DOSSIER_MANIFEST.relative_to(ROOT)}"
+        )
+
+    return errors
+
+
+def validate_active_source_dossiers() -> list[str]:
+    errors: list[str] = []
+    if not ACTIVE_DOSSIER_DIR.exists():
+        return [
+            "Missing active source dossier directory: "
+            f"{ACTIVE_DOSSIER_DIR.relative_to(ROOT)}"
+        ]
+
+    source_ids: dict[str, Path] = {}
+    allowed_lanes = {lane.lower() for lane in REQUIRED_ACTIVE_SOURCE_INTAKE_LANES}
+
+    for path in sorted(ACTIVE_DOSSIER_DIR.glob("*.md")):
+        text = path.read_text(encoding="utf-8")
+        keys = front_matter_keys(text)
+        values = front_matter(text)
+
+        for key in REQUIRED_DOSSIER_FRONT_MATTER:
+            if key not in keys:
+                errors.append(f"{path.relative_to(ROOT)} missing front matter key {key}")
+
+        for section in REQUIRED_DOSSIER_FILE_SECTIONS:
+            if section not in text:
+                errors.append(f"{path.relative_to(ROOT)} missing {section}")
+
+        applies_to = values.get("applies_to_packets", "")
+        applies_to_packets = split_front_matter_list(applies_to)
+        if not applies_to_packets:
+            errors.append(f"{path.relative_to(ROOT)} does not name a packet placeholder")
+        for packet_id in applies_to_packets:
+            if not packet_id.startswith("active-cl001-"):
+                errors.append(
+                    f"{path.relative_to(ROOT)} applies to non-active packet "
+                    f"placeholder {packet_id}"
+                )
+
+        source_id = values.get("source_id", "")
+        if source_id in source_ids:
+            errors.append(
+                f"{path.relative_to(ROOT)} duplicates source_id {source_id} "
+                f"from {source_ids[source_id].relative_to(ROOT)}"
+            )
+        elif source_id:
+            source_ids[source_id] = path
+
+        if values.get("status") != "draft":
+            errors.append(f"{path.relative_to(ROOT)} is not status: draft")
+
+        if values.get("claim_status") != "none":
+            errors.append(f"{path.relative_to(ROOT)} can move claim status")
+
+        if values.get("verdict") != "none":
+            errors.append(f"{path.relative_to(ROOT)} can move verdict status")
+
+        lanes = split_front_matter_semicolon_list(values.get("evidence_lanes", ""))
+        if not lanes:
+            errors.append(f"{path.relative_to(ROOT)} does not name evidence lanes")
+        for lane in lanes:
+            if lane.lower() not in allowed_lanes:
+                errors.append(
+                    f"{path.relative_to(ROOT)} uses unknown active evidence lane "
+                    f"{lane}"
+                )
+
+        required_phrases = (
+            "experiments/CL-001-phi-frame.md",
+            "does not populate",
+            "does not score any gate",
+            "cannot promote a CL-001 packet",
+        )
+        for phrase in required_phrases:
+            if not has_phrase(text, phrase):
+                errors.append(f"{path.relative_to(ROOT)} missing phrase {phrase}")
 
     return errors
 
@@ -694,6 +810,7 @@ def main() -> int:
     errors.extend(validate_source_dossiers(packet_paths))
     errors.extend(validate_active_source_intake())
     errors.extend(validate_active_source_dossier_manifest())
+    errors.extend(validate_active_source_dossiers())
     errors.extend(validate_cl001_experiment_state())
 
     if errors:
@@ -704,7 +821,7 @@ def main() -> int:
     print(
         f"Validated {len(packet_paths)} CL-001 packet files, "
         "source intake, source dossier template, source dossier manifest, "
-        "source dossiers, active Interval Sweep intake/manifest, "
+        "source dossiers, active Interval Sweep intake/manifest/dossiers, "
         "and experiment state."
     )
     return 0

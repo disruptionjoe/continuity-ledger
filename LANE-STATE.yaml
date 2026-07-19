@@ -1,22 +1,22 @@
 lane_state_version: "1.0"
 owner_id: continuity-ledger
-evaluated_at: "2026-07-19T10:42:29-05:00"
-run_ref: RUN-20260719-532-repository-work-cycle-cai-hourly
+evaluated_at: "2026-07-19T11:45:41-05:00"
+run_ref: RUN-20260719-534-repository-work-cycle-cai-hourly
 rule_ref: system/runtime/flows/derive-lane-health.md
 lanes:
   - lane_id: "1"
     work_status: moving
-    last_movement: Added active Interval Sweep source-intake and dossier manifest contracts.
-    movement_ref: evidence/cl-001-interval-sweep-source-intake.md
+    last_movement: Added first active dollar and Bitcoin enforcement-mechanism exact source dossiers.
+    movement_ref: evidence/cl-001-interval-sweep-dossiers/dollar-enforcement-mechanism-legal-operational.md
     steering_attention: watch
-    steering_prompt: Create first exact source dossiers before active dollar/Bitcoin packet field population.
+    steering_prompt: Complete evaluator, control, frame-audit, and blinding dossiers before active dollar/Bitcoin packet field population.
     steering_ref: evidence/cl-001-interval-sweep-dossier-manifest.md
     light: green
-    reason_code: interval_sweep_intake_contract_declared
-    evidence_ref: evidence/cl-001-interval-sweep-source-intake.md
-    summary: CL-001 now has active intake and manifest guardrails before packet population.
-    evaluated_at: "2026-07-19T10:42:29-05:00"
-    run_ref: RUN-20260719-532-repository-work-cycle-cai-hourly
+    reason_code: first_active_exact_source_dossiers_added
+    evidence_ref: evidence/cl-001-interval-sweep-dossier-manifest.md
+    summary: CL-001 now has first active target-arm source dossiers without packet population.
+    evaluated_at: "2026-07-19T11:45:41-05:00"
+    run_ref: RUN-20260719-534-repository-work-cycle-cai-hourly
   - lane_id: "2"
     work_status: thin
     last_movement: No current hardening lease or independent hardening movement found.
@@ -28,8 +28,8 @@ lanes:
     reason_code: lease_required_no_current_lead
     evidence_ref: LANES.yaml
     summary: Hardening remains subordinate to Lane 1 and needs a lease to lead.
-    evaluated_at: "2026-07-19T10:42:29-05:00"
-    run_ref: RUN-20260719-532-repository-work-cycle-cai-hourly
+    evaluated_at: "2026-07-19T11:45:41-05:00"
+    run_ref: RUN-20260719-534-repository-work-cycle-cai-hourly
   - lane_id: "3"
     work_status: blocked
     last_movement: Gate remains closed until CL-001 returns a verdict.
@@ -41,18 +41,18 @@ lanes:
     reason_code: admission_gated_on_cl001
     evidence_ref: LANES.yaml
     summary: Atlas synthesis remains gated on the unresolved CL-001 verdict.
-    evaluated_at: "2026-07-19T10:42:29-05:00"
-    run_ref: RUN-20260719-532-repository-work-cycle-cai-hourly
+    evaluated_at: "2026-07-19T11:45:41-05:00"
+    run_ref: RUN-20260719-534-repository-work-cycle-cai-hourly
   - lane_id: A
     work_status: moving
-    last_movement: Validator now guards active Interval Sweep intake and manifest contracts.
+    last_movement: Validator now guards active Interval Sweep dossier files as well as intake and manifest contracts.
     movement_ref: tests/validate_cltp_packets.py
     steering_attention: none
     steering_prompt: none
     steering_ref: tests/validate_cltp_packets.py
     light: green
-    reason_code: active_intake_manifest_validated
+    reason_code: active_dossier_contract_validated
     evidence_ref: tests/validate_cltp_packets.py
-    summary: Active intake and manifest guardrails are now covered by the local validator.
-    evaluated_at: "2026-07-19T10:42:29-05:00"
-    run_ref: RUN-20260719-532-repository-work-cycle-cai-hourly
+    summary: Active dossier files now have local non-promotion and manifest-link checks.
+    evaluated_at: "2026-07-19T11:45:41-05:00"
+    run_ref: RUN-20260719-534-repository-work-cycle-cai-hourly

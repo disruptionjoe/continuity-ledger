@@ -9,10 +9,22 @@ Active CL-001 Interval Sweep contracts:
 - `cl-001-interval-sweep-source-intake.md` defines the current intake burden
   after the declared Phi frame and before any dollar/Bitcoin packet field is
   populated.
-- `cl-001-interval-sweep-dossier-manifest.md` queues the active source dossier
-  work needed before current packet population can begin.
+- `cl-001-interval-sweep-dossier-manifest.md` queues and lists the active
+  source dossier work needed before current packet population can begin.
+- `cl-001-interval-sweep-dossiers/` holds active Interval Sweep draft source
+  dossiers. These records do not populate packet fields or score gates by
+  themselves.
 
-No active Interval Sweep source dossier file exists yet.
+Current active Interval Sweep draft dossiers:
+
+- `cl-001-interval-sweep-dossiers/dollar-enforcement-mechanism-legal-operational.md`
+  records legal-operational source extraction for the dollar enforcement
+  mechanism queue item. It leaves packet fields, population exit costs, gates,
+  and verdicts open.
+- `cl-001-interval-sweep-dossiers/bitcoin-enforcement-mechanism-protocol.md`
+  records protocol and implementation source extraction for the Bitcoin
+  enforcement mechanism queue item. It leaves packet fields, population exit
+  costs, gates, and verdicts open.
 
 Retired construction contracts:
 

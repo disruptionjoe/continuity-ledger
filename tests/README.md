@@ -18,4 +18,8 @@ Current checks:
   non-promotional. It also checks that the active Interval Sweep scaffold,
   declared frame, active Interval Sweep source-intake contract, and active
   Interval Sweep dossier manifest exist and remain non-promotional, and that the
-  retired Bitcoin/photosynthesis scaffold remains marked retired.
+  retired Bitcoin/photosynthesis scaffold remains marked retired. Active
+  Interval Sweep dossier checks require manifest references to resolve, every
+  active draft dossier to remain manifest-listed, source identifiers to stay
+  unique, active evidence lanes to match the intake contract, and active dossier
+  status, claim status, and verdict fields to stay non-promotional.
