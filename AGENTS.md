@@ -16,11 +16,11 @@ Joe authorized activation of Continuity Ledger on 2026-07-14. These
 instructions govern manual and scheduled work in this repository.
 
 Read `governance/CHARTER.md` before research work. When stewardship context is
-needed, load `../../../system/stewards/continuity-ledger/README.md`. Do not load `../../../system/stewards/continuity-ledger/memory-log.md` by default
+needed, load `../../private/system-operations/stewards/continuity-ledger/README.md`. Do not load `../../private/system-operations/stewards/continuity-ledger/memory-log.md` by default
 unless doing stewardship or memory work, or the steward summary is incomplete.
 
 The System-owned routing overlay is
-`../../../system/stewards/continuity-ledger/README.md` from this repo root. It does not
+`../../private/system-operations/stewards/continuity-ledger/README.md` from this repo root. It does not
 replace these local instructions or the charter.
 
 ## Repository Role
@@ -238,7 +238,7 @@ populated Lane state, domain learning, and artifacts remain repository-owned.
 A direct mount can operate from those local surfaces without CapacityOS.
 
 For a CapacityOS-routed run, the optional System-owned steward service is
-`../../../system/stewards/continuity-ledger/README.md`. It supplies integration context, process guidance,
+`../../private/system-operations/stewards/continuity-ledger/README.md`. It supplies integration context, process guidance,
 action memory, automation observations, health support, and execution history.
 It may narrow local authority and never broaden it. Current repository evidence
 defeats stale System observations.
