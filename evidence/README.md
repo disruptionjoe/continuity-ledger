@@ -84,6 +84,11 @@ Current active Interval Sweep draft dossiers:
   It keeps the blind read capsule, arm mapping, and unblinding key outside
   committed public files before return. It is a process-control protocol, not a
   blind-author receipt, packet field, gate score, or verdict.
+- `cl-001-interval-sweep-dossiers/blind-t-open-label-cycle-ineligibility-stop.md`
+  records that a standard repo-work-cycle child that has loaded open-label
+  CL-001 context cannot serve as the blind author without an isolated handoff.
+  It is a process-control stop record, not a blind-author receipt, packet field,
+  gate score, or verdict.
 
 Retired construction contracts:
 
