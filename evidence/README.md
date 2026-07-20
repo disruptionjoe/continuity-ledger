@@ -73,6 +73,12 @@ Current active Interval Sweep draft dossiers:
   the current method because material mechanism cues are also arm-class cues. It
   is a process-control stop record, not a blind-author receipt, packet field,
   gate score, or verdict.
+- `cl-001-interval-sweep-dossiers/blind-t-isolated-return-architecture.md`
+  records the changed blind-return method boundary after the public packaging
+  stop: the public repo may hold the protocol and stop codes, while the blind
+  read capsule and unblinding key stay outside committed public files until
+  after blind return. It is a process-control architecture, not a blind-author
+  receipt, packet field, gate score, or verdict.
 
 Retired construction contracts:
 
