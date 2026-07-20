@@ -79,6 +79,11 @@ Current active Interval Sweep draft dossiers:
   read capsule and unblinding key stay outside committed public files until
   after blind return. It is a process-control architecture, not a blind-author
   receipt, packet field, gate score, or verdict.
+- `cl-001-interval-sweep-dossiers/blind-t-isolated-return-protocol.md`
+  records the public protocol and receipt shape for that isolated return path.
+  It keeps the blind read capsule, arm mapping, and unblinding key outside
+  committed public files before return. It is a process-control protocol, not a
+  blind-author receipt, packet field, gate score, or verdict.
 
 Retired construction contracts:
 

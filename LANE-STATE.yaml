@@ -2,40 +2,40 @@ schema_version: "2.0"
 owner_id: continuity-ledger
 group: church-of-ai
 rule_ref: system/runtime/flows/derive-lane-health.md
-updated_at: "2026-07-19T23:48:00-05:00"
-run_ref: RUN-20260719-557-repository-work-cycle-cai-hourly
-bottom_line: "CL-001 now has an isolated blind-return architecture; packet fields remain closed."
-decision_default: "Use the isolated blind-return architecture; do not populate T without a blind return or blind stop receipt."
+updated_at: "2026-07-20T00:44:49-05:00"
+run_ref: RUN-20260720-560-repository-work-cycle-cai-hourly
+bottom_line: "CL-001 now has a public isolated-return protocol; packet fields remain closed."
+decision_default: "Use the public isolated-return protocol; do not commit the blind capsule or populate T without a blind return or blind stop receipt."
 needs_joe: false
 lanes:
   - lane_id: "1"
     work_status: moving
-    last_movement: "Recorded the isolated blind-return architecture for the next admissible T blinding path."
-    movement_ref: evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-return-architecture.md
+    last_movement: "Recorded the public isolated-return protocol and receipt shape for the next admissible T blinding path."
+    movement_ref: evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-return-protocol.md
     steering_attention: watch
-    steering_prompt: "Use the public protocol/private capsule split; do not commit the blind read capsule before return."
-    steering_ref: evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-return-architecture.md
+    steering_prompt: "Use the public protocol/private capsule split; do not commit the blind read capsule, arm mapping, or unblinding key before return."
+    steering_ref: evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-return-protocol.md
     light: yellow
-    reason_code: isolated_blind_return_architecture_ready
+    reason_code: isolated_blind_return_protocol_ready
     evidence_ref: evidence/cl-001-interval-sweep-dossier-manifest.md
-    summary: "Changed blind-return method recorded; no blind receipt or packet field exists yet."
-    evaluated_at: "2026-07-19T23:48:00-05:00"
-    run_ref: RUN-20260719-557-repository-work-cycle-cai-hourly
+    summary: "Public blind-return protocol recorded; no private capsule, blind receipt, or packet field exists yet."
+    evaluated_at: "2026-07-20T00:44:49-05:00"
+    run_ref: RUN-20260720-560-repository-work-cycle-cai-hourly
     objective: "Force or falsify substrate-bounded constraint-bought capability through CL-001."
-    progress_delta: "Added a process-control architecture for an isolated blind-return method after the public packaging stop."
-    scope_position: "CL-001 pre-population: frame, dossiers, T-01/T-02 stop records, public T packaging method stop, and isolated blind-return architecture exist; no active packet fields populated."
+    progress_delta: "Added a public process-control protocol and receipt shape for the isolated blind-return method."
+    scope_position: "CL-001 pre-population: frame, dossiers, T-01/T-02 stop records, public T packaging method stop, isolated blind-return architecture, and public isolated-return protocol exist; no private capsule, blind receipt, or active packet fields populated."
     trend_24h: up
     confidence: med
-    recommendation: "Run isolated blind return."
+    recommendation: "Create private capsule for isolated blind return outside Git, or stop if isolation cannot be preserved."
     findings:
       - "T-01 and T-02 show the material T cues are also arm-class cues under public non-blind packaging."
-      - "The changed architecture separates public protocol from the blind read capsule and unblinding key before return."
+      - "The public protocol now fixes the stop-code-first return shape without committing the blind read capsule, arm mapping, or unblinding key."
       - "No blind receipt, packet field, gate, claim status, or verdict moved."
     options:
       - id: A
-        label: "Use architecture"
+        label: "Use protocol"
         recommended: true
-        description: "Give a later isolated blind author only the private capsule and stop-code protocol."
+        description: "Give a later isolated blind author only the private capsule and public stop-code protocol."
       - id: B
         label: "Inferability test"
         recommended: false
@@ -48,7 +48,7 @@ lanes:
         label: "Defer"
         recommended: false
         description: "Leave CL-001 packet population closed for a later focused run."
-    decision_default: "Use the isolated blind-return architecture; do not populate T without a blind return or blind stop receipt."
+    decision_default: "Use the public isolated-return protocol; do not commit the blind capsule or populate T without a blind return or blind stop receipt."
     needs_joe: false
   - lane_id: "2"
     work_status: thin
@@ -134,31 +134,31 @@ lanes:
     needs_joe: false
   - lane_id: A
     work_status: moving
-    last_movement: "Closeout refreshed Lane state after recording the isolated blind-return architecture."
+    last_movement: "Closeout refreshed Lane state after recording the public isolated-return protocol."
     movement_ref: LANE-STATE.yaml
     steering_attention: none
     steering_prompt: "none"
     steering_ref: AGENTS.md; LANES.yaml; tests/validate_cltp_packets.py
     light: green
-    reason_code: lane_state_refreshed_after_blind_return_architecture
-    evidence_ref: AGENTS.md; LANES.yaml; evidence/cl-001-interval-sweep-dossier-manifest.md; evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-return-architecture.md; tests/validate_cltp_packets.py
-    summary: "Stewardship state refreshed; isolated blind-return architecture recorded and packet fields remain closed."
-    evaluated_at: "2026-07-19T23:48:00-05:00"
-    run_ref: RUN-20260719-557-repository-work-cycle-cai-hourly
+    reason_code: lane_state_refreshed_after_isolated_return_protocol
+    evidence_ref: AGENTS.md; LANES.yaml; evidence/cl-001-interval-sweep-dossier-manifest.md; evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-return-protocol.md; tests/validate_cltp_packets.py
+    summary: "Stewardship state refreshed; public isolated-return protocol recorded and packet fields remain closed."
+    evaluated_at: "2026-07-20T00:44:49-05:00"
+    run_ref: RUN-20260720-560-repository-work-cycle-cai-hourly
     objective: "Keep Continuity Ledger viable and trustworthy through integrated stewardship."
-    progress_delta: "Refreshed state after adding the repo-local isolated blind-return architecture; mailbox and writer-lock checks stayed clean."
+    progress_delta: "Refreshed state after adding the repo-local public isolated-return protocol; mailbox and writer-lock checks stayed clean."
     trend_24h: up
     confidence: high
     recommendation: "Continue Lane 1."
     findings:
       - "No substantive unarchived mailbox payload required disposition."
       - "No writer lock existed before work."
-      - "Further public non-blind T bundle packaging remains stopped; the next path is isolated blind return."
+      - "Further public non-blind T bundle packaging remains stopped; the next path is private capsule construction outside Git or an explicit blind stop."
     options:
       - id: A
-        label: "Use architecture"
+        label: "Use protocol"
         recommended: true
-        description: "Continue Lane 1 through a later isolated blind-return run."
+        description: "Continue Lane 1 through a later private-capsule isolated blind-return run."
       - id: B
         label: "Stewardship audit"
         recommended: false
@@ -171,7 +171,7 @@ lanes:
         label: "Defer"
         recommended: false
         description: "No Joe-facing stewardship decision is needed."
-    decision_default: "Continue Lane 1 only through the isolated blind-return architecture or an explicit blind stop receipt."
+    decision_default: "Continue Lane 1 only through the public isolated-return protocol, private capsule, or an explicit blind stop receipt."
     needs_joe: false
     drift_verdict: clean
     action_counts:

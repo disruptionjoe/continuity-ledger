@@ -46,6 +46,7 @@ feedback burden, open fields, falsifiers, and the no-claim-promotion boundary.
 | Revised blind bundle inferability preflight | Prepared `CL001-BLIND-T-02` coded input | process-control stop record | Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing. | Stop record: `evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-02-inferability-preflight.md`. |
 | Public `T` packaging method stop | T-01 and T-02 public non-blind bundle attempts | process-control stop record | Mechanism and transition boundary; Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing. | Stop record: `evidence/cl-001-interval-sweep-dossiers/blind-t-public-packaging-method-stop.md`. |
 | Isolated blind-return architecture | Next admissible `T` blinding method after public packaging stop | process-control architecture | Frame adherence and declared-field guard; Mechanism and transition boundary; Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing. | Draft architecture: `evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-return-architecture.md`. |
+| Isolated blind-return protocol | Public protocol and receipt shape for the next isolated blind-return attempt | process-control protocol | Frame adherence and declared-field guard; Mechanism and transition boundary; Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing. | Draft protocol: `evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-return-protocol.md`. |
 
 ## Symmetry Checks
 
@@ -79,6 +80,7 @@ feedback burden, open fields, falsifiers, and the no-claim-promotion boundary.
 | `evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-02-inferability-preflight.md` | Revised blind bundle inferability preflight | Stop record for the revised coded bundle. | Records that the current revised bundle is still likely inferable before extraction; it is not a blind-author receipt and does not populate `T`. |
 | `evidence/cl-001-interval-sweep-dossiers/blind-t-public-packaging-method-stop.md` | Public `T` packaging method stop | Draft process-control stop record for further public non-blind `T` bundle packaging. | Records a packaging-method stop; it is not a blind-author receipt, does not populate `T`, does not score gate 10, and does not issue a verdict. |
 | `evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-return-architecture.md` | Isolated blind-return architecture | Draft process-control architecture for the next admissible `T` blinding method. | Defines a public protocol/private capsule split and stop-code-first return shape; it is not a blind-author receipt, does not populate `T`, does not score gate 10, and does not issue a verdict. |
+| `evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-return-protocol.md` | Isolated blind-return protocol | Draft process-control protocol and receipt shape. | Records the public return protocol and required receipt metadata while keeping the blind read capsule, arm mapping, and unblinding key out of the public repo before return; it is not a blind-author receipt, does not populate `T`, does not score gate 10, and does not issue a verdict. |
 
 ## Completion Boundary
 
@@ -91,11 +93,12 @@ source bundle, a non-blind inferability preflight for that bundle, a T-02
 revised redacted coded source bundle with a new checksum, a non-blind
 inferability preflight stop record for the revised bundle, a process-control
 stop on further public non-blind `T` packaging under the current method, and a
-draft isolated blind-return architecture for a changed method. It is not
-complete enough to populate a packet field. Packet population remains blocked
-until a later packet-population run either obtains a valid blind author receipt
-or records a blind-author stop on a bounded read surface. The changed method
-must keep the blind read capsule and unblinding key outside the public
+draft isolated blind-return architecture for a changed method, plus a public
+isolated-return protocol and receipt shape. It is not complete enough to
+populate a packet field. Packet population remains blocked until a later
+packet-population run either obtains a valid blind author receipt or records a
+blind-author stop on a bounded read surface. The changed method must keep the
+blind read capsule, arm mapping, and unblinding key outside the public
 repository before blind return, preserve the declared frame, record the
 unblinding event outside the blind author's read scope, and keep any remaining
 field-level source need visible as `Pending exact source selection.` rather than
