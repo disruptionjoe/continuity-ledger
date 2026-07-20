@@ -68,6 +68,11 @@ Current active Interval Sweep draft dossiers:
   records a non-blind preflight finding that the revised coded bundle is still
   likely inferable before extraction. It is a process-control stop record, not a
   blind-author receipt, packet field, gate score, or verdict.
+- `cl-001-interval-sweep-dossiers/blind-t-public-packaging-method-stop.md`
+  records that further public non-blind `T` bundle packaging is stopped under
+  the current method because material mechanism cues are also arm-class cues. It
+  is a process-control stop record, not a blind-author receipt, packet field,
+  gate score, or verdict.
 
 Retired construction contracts:
 

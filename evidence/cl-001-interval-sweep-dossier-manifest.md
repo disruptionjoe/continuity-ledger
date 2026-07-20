@@ -44,6 +44,7 @@ feedback burden, open fields, falsifiers, and the no-claim-promotion boundary.
 | Blind bundle inferability preflight | Prepared `CL001-BLIND-T-01` coded input | process-control stop record | Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing. | Stop record: `evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-inferability-preflight.md`. |
 | Revised blinded material-field package | Revised first material-field selection after inferability stop | process package and coded input | Mechanism and transition boundary; Frame adherence and declared-field guard; Falsifiers, open fields, and routing. | Draft package: `evidence/cl-001-interval-sweep-dossiers/blinded-material-field-package-t-02.md`; revised redacted source bundle: `evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-02-redacted-source-bundle.md`. |
 | Revised blind bundle inferability preflight | Prepared `CL001-BLIND-T-02` coded input | process-control stop record | Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing. | Stop record: `evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-02-inferability-preflight.md`. |
+| Public `T` packaging method stop | T-01 and T-02 public non-blind bundle attempts | process-control stop record | Mechanism and transition boundary; Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing. | Stop record: `evidence/cl-001-interval-sweep-dossiers/blind-t-public-packaging-method-stop.md`. |
 
 ## Symmetry Checks
 
@@ -75,6 +76,7 @@ feedback burden, open fields, falsifiers, and the no-claim-promotion boundary.
 | `evidence/cl-001-interval-sweep-dossiers/blinded-material-field-package-t-02.md` | Revised blinded material-field package | Draft process package selecting `T` after the T-01 inferability stop and pointing to the revised coded bundle. | Does not populate `T`, complete a blind receipt, score gate 10, or issue a verdict. |
 | `evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-02-redacted-source-bundle.md` | Revised blinded material-field package | Revised redacted coded source bundle for a later blind author. | Contains no unblinding key, does not populate `T`, does not complete a blind receipt, does not score gate 10, and does not issue a verdict. |
 | `evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-02-inferability-preflight.md` | Revised blind bundle inferability preflight | Stop record for the revised coded bundle. | Records that the current revised bundle is still likely inferable before extraction; it is not a blind-author receipt and does not populate `T`. |
+| `evidence/cl-001-interval-sweep-dossiers/blind-t-public-packaging-method-stop.md` | Public `T` packaging method stop | Draft process-control stop record for further public non-blind `T` bundle packaging. | Records a packaging-method stop; it is not a blind-author receipt, does not populate `T`, does not score gate 10, and does not issue a verdict. |
 
 ## Completion Boundary
 
@@ -83,15 +85,18 @@ for the dollar and Bitcoin enforcement-mechanism surfaces, evaluator-population
 source dossiers for the dollar and Bitcoin arms, a near-miss/control admission
 dossier, an arm-symmetry/blinding process dossier, a draft package selecting
 `T` as the first blind-handled material field, the T-01 prepared redacted coded
-source bundle, a non-blind inferability preflight for that bundle, and a T-02
-revised redacted coded source bundle with a new checksum and a non-blind
-inferability preflight stop record for the revised bundle. It is not complete
-enough to populate a packet field. Packet population remains blocked until a
-later packet-population run either prepares a further revised bundle, obtains a
-valid blind author receipt, or records a blind-author stop on the revised
-bundle, preserves the declared frame, records the unblinding event outside the
-blind author's read scope, and keeps any remaining field-level source need
-visible as `Pending exact source selection.` rather than silently filling it.
+source bundle, a non-blind inferability preflight for that bundle, a T-02
+revised redacted coded source bundle with a new checksum, a non-blind
+inferability preflight stop record for the revised bundle, and a process-control
+stop on further public non-blind `T` packaging under the current method. It is
+not complete enough to populate a packet field. Packet population remains
+blocked until a later packet-population run either obtains a valid blind author
+receipt, records a blind-author stop on a bounded read surface, or explicitly
+supersedes the current public-packaging method stop with a changed blinding
+architecture. Any later path must preserve the declared frame, record the
+unblinding event outside the blind author's read scope, and keep any remaining
+field-level source need visible as `Pending exact source selection.` rather than
+silently filling it.
 
 ## No Claim Promotion
 
