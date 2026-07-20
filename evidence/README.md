@@ -56,6 +56,14 @@ Current active Interval Sweep draft dossiers:
   records a non-blind preflight finding that the current coded bundle is likely
   inferable before extraction. It is a process-control stop record, not a
   blind-author receipt, packet field, gate score, or verdict.
+- `cl-001-interval-sweep-dossiers/blinded-material-field-package-t-02.md`
+  selects the same `T` field after the T-01 inferability stop and points to a
+  revised redacted coded bundle with a new checksum. It does not populate `T`,
+  score gate 10, or issue a verdict.
+- `cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-02-redacted-source-bundle.md`
+  is the revised coded input for a later blind author. It contains no
+  unblinding key, does not complete the blind receipt, and keeps inferability as
+  the first stop condition.
 
 Retired construction contracts:
 
