@@ -139,6 +139,16 @@ What I could not reliably close from sources are mostly the same kinds of fields
 
 ### Hamming error-correcting codes
 
+**Primary-source disposition (2026-07-22):**
+`NARROWER_STRUCTURE_CODING_CONSTRAINT`. The bounded extraction at
+`literature/2026-07-22-hamming-primary-extraction.md` verifies the parity,
+checking-number, minimum-distance, redundancy, and stated error-class claims.
+It does not verify the agency-surface or recursive-growth claims below.
+Ordinary coding theory explains the source-grounded transition without a
+residual requiring an independent transduction structure. The unresolved
+private-use citation tokens below remain non-evidence; use the extraction for
+the supported Hamming claims.
+
 - `R0 / R1`: `R0` is uncoded transmission/storage under noise; `R1` is coded transmission/storage with explicit error detection and correction. Distinct regimes are justified because the latter adds structured redundancy and decoding rules that change what counts as an admissible recoverable message. citeturn22view0turn23view0
 - `K0 / K1`: `K0` admits raw bit strings under noise with no correction guarantee. `K1` admits codewords separated by parity structure and minimum-distance reasoning sufficient for single-error correction and related cases under Hamming’s assumptions. citeturn22view0turn23view0
 - `S0 / S1`: `S0` is noisy channel or computational substrate. `S1` is encoded symbols, check positions, parity checks, and decoder logic. citeturn22view0turn23view0
