@@ -189,6 +189,13 @@ absorbs the source-grounded case.
 
 ### DNS hierarchical naming
 
+**Primary-source disposition (2026-07-22):**
+`NARROWER_STRUCTURE_DISTRIBUTED_NAMING`. The bounded RFC 1034 extraction at
+`literature/2026-07-22-dns-primary-extraction.md` verifies hierarchical
+delegation, authoritative zones, typed records, resolution, caching, and
+refresh policy. It does not establish resource truth, a newly recruited agent
+class, recursive capability growth, or an independent transduction law.
+
 - `R0 / R1`: `R0` is HOSTS.TXT-style centralized name/address maintenance; `R1` is distributed hierarchical domain naming. These are distinct because DNS separates stable names from embedded addresses and distributes authority across zones and servers. citeturn14view1
 - `K0 / K1`: `K0` admits a single global file distributed to hosts; `K1` admits a tree-structured name space, resource records, authoritative zones, resolvers, caching, and refresh policies. citeturn14view1
 - `S0 / S1`: `S0` is the NIC file distribution regime. `S1` is master files, authoritative name servers, resource records, resolvers, caches, and zone transfers/refreshes. citeturn14view1
