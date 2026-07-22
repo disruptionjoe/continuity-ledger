@@ -2,8 +2,8 @@ schema_version: "2.0"
 owner_id: continuity-ledger
 group: church-of-ai
 rule_ref: system/runtime/flows/derive-lane-health.md
-updated_at: "2026-07-20T01:44:44-05:00"
-run_ref: RUN-20260720-563-repository-work-cycle-cai-hourly
+updated_at: "2026-07-21T19:44:54-05:00"
+run_ref: RUN-20260721-193959-repository-work-cycle-cai-hourly
 bottom_line: "CL-001 now has an open-label child ineligibility stop; packet fields remain closed."
 decision_default: "Use a separate isolated blind author; standard open-label repo-cycle children must not populate T."
 needs_joe: false
