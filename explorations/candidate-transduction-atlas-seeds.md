@@ -191,6 +191,15 @@ the supported Hamming claims.
 
 ### Fedwire finality as settlement surface
 
+**Primary-source disposition (2026-07-22):**
+`NARROWER_STRUCTURE_LEGAL_OPERATIONAL_SETTLEMENT`. The bounded Federal Reserve
+extraction at `literature/2026-07-22-fedwire-primary-extraction.md` verifies
+account-based real-time gross settlement, final-and-irrevocable credit,
+Regulation J's legal boundary, participant eligibility, message/security
+controls, and funds/overdraft requirements. Ordinary payment-system law and
+central-bank operations absorb the case; the sources do not establish general
+finality, recruited agency, or an independent transduction law.
+
 - `R0 / R1`: `R0` is payment instruction exchange with unsettled bilateral dependence and revocation risk; `R1` is real-time gross settlement with payment finality at credited master accounts. These are distinct because final settlement status governs what participants can safely do next. citeturn14view3turn12search6turn12search9
 - `K0 / K1`: `K0` admits payment promises or pending obligations; `K1` admits funds transfers through the Fedwire Funds Service governed by Regulation J and the Federal Reserve’s payment-system framework. citeturn14view3turn12search6turn12search14turn12search9
 - `S0 / S1`: `S0` is bank bilateral messaging and unsettled positions. `S1` is Reserve Bank master accounts, transfer messages, operating rules, and legal/regulatory infrastructure. citeturn14view3turn12search6turn12search14
