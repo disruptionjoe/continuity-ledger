@@ -169,6 +169,15 @@ the supported Hamming claims.
 
 ### TCP reliable byte stream over lossy IP transport
 
+**Primary-source disposition (2026-07-22):**
+`NARROWER_STRUCTURE_TRANSPORT_PROTOCOL`. The bounded RFC 9293 extraction at
+`literature/2026-07-22-tcp-primary-extraction.md` verifies the reliable,
+in-order byte-stream service and its endpoint state, sequencing, checksum,
+acknowledgment, retransmission, and window machinery. It does not establish
+application truth, a newly recruited agent class, recursive capability growth,
+or an independent transduction law. Ordinary transport-protocol engineering
+absorbs the source-grounded case.
+
 - `R0 / R1`: `R0` is packet transport that can drop, damage, reorder, or duplicate segments; `R1` is application-visible reliable ordered transport. These are distinct regimes because the latter presents a byte-stream service not available from raw packet delivery alone. citeturn14view0turn15view0turn15view1turn0search7
 - `K0 / K1`: `K0` admits datagrams with loss/reordering; `K1` admits connections governed by sequence numbers, acknowledgments, windowing, checksums, and retransmission logic. citeturn14view0turn15view0turn15view1turn0search7
 - `S0 / S1`: `S0` is IP datagrams on an internetwork. `S1` is TCP state variables, segment headers, retransmission queues, timers, and receiving buffers. citeturn14view0turn15view0turn15view1
