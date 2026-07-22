@@ -260,6 +260,13 @@ transduction law.
 
 ### The lac operon
 
+**Primary-source disposition (2026-07-22):**
+`NARROWER_STRUCTURE_GENE_REGULATORY_CONTROL`. The bounded Jacob-Monod
+extraction at `literature/2026-07-22-lac-operon-primary-extraction.md` verifies
+operon-level regulation, operator control, induction, and coordinated protein
+synthesis. It does not establish a new agent class, unbounded action space, or
+an independent transduction law.
+
 - `R0 / R1`: `R0` is a cell not expressing the relevant metabolizing machinery under repression; `R1` is induced expression in response to specific metabolites. These are distinct because the cell changes from a repressed regulatory state to one that actively synthesizes proteins for a different metabolic situation. citeturn26view0turn27view0
 - `K0 / K1`: `K0` admits structural-gene expression governed only as a static specification; `K1` admits regulator-operator control in which specific metabolites can inactivate or activate repressors and change rates of synthesis. citeturn26view0turn27view0
 - `S0 / S1`: `S0` is DNA plus cytoplasmic context with effective repression. `S1` is the same cellular substrate plus regulator, operator, repressor, messenger, and induced transcriptional state. citeturn26view0turn27view0
