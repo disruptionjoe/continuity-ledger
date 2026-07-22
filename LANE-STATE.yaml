@@ -2,10 +2,10 @@ schema_version: "2.0"
 owner_id: continuity-ledger
 group: church-of-ai
 rule_ref: system/runtime/flows/derive-lane-health.md
-updated_at: "2026-07-21T23:39:00-05:00"
-run_ref: RUN-20260721-233633-repository-work-cycle-cai-hourly
-bottom_line: "CL-001 remains closed to open-label population; lane-less discovery recovered the Hamming seed's primary bibliographic identity without synthesis."
-decision_default: "Keep CL-001 isolated and continue only bounded pre-release source recovery that does not generalize across cases."
+updated_at: "2026-07-22T02:38:00-05:00"
+run_ref: RUN-20260722-023536-repository-work-cycle-cai-hourly
+bottom_line: "Hamming and standardized metrology both narrow to domain-local ordinary-theory absorber controls; CL-001 remains isolated and Lane 3 synthesis closed."
+decision_default: "Retain the two resolved absorber controls and continue only bounded source recovery with no CL-001 contamination or cross-case synthesis."
 needs_joe: false
 lanes:
   - lane_id: "1"

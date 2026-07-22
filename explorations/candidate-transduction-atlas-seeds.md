@@ -95,6 +95,15 @@ What I could not reliably close from sources are mostly the same kinds of fields
 
 ### Standardized metrology under the Metre Convention
 
+**Primary-source disposition (2026-07-22):**
+`NARROWER_STRUCTURE_INSTITUTIONAL_METROLOGY`. The bounded BIPM extraction at
+`literature/2026-07-22-bipm-metre-convention-primary-extraction.md` verifies
+the treaty organization, standards comparison/calibration duties, SI defining
+constants, practical realization, and traceability architecture. It does not
+establish a newly recruited agent class, recursive capability growth, or an
+independent transduction law. Ordinary metrology and institutional design
+absorb the source-grounded case.
+
 - `R0 / R1`: `R0` is fragmented local measurement practice; `R1` is an internationally coordinated SI/metrological regime. These are genuinely distinct because the latter depends on treaty-backed institutions, globally shared definitions, and traceability to agreed standards or defining constants. citeturn16view1turn17view1turn17view0
 - `K0 / K1`: `K0` admits local unit systems with poor interjurisdiction comparability; `K1` admits measurements referenced to SI definitions and BIPM-facilitated international standardization. citeturn16view1turn17view1
 - `S0 / S1`: `S0` is local artifacts and customary practice. `S1` is the treaty organization, national metrology institutes, calibration chains, clocks, optics, and laboratory realizations. citeturn16view1turn17view1turn17view0
