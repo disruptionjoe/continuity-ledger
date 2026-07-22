@@ -115,6 +115,14 @@ absorb the source-grounded case.
 
 ### Double-entry bookkeeping in Pacioli’s codification
 
+**Primary-translation disposition (2026-07-22):**
+`NARROWER_STRUCTURE_ACCOUNTING_POSTING_DISCIPLINE`. The bounded Library of
+Congress-routed translation extraction at
+`literature/2026-07-22-pacioli-primary-translation-extraction.md` verifies the
+inventory, memorandum/journal/ledger workflow, paired posting, valuation,
+cross-reference, and balance discipline. It does not establish an independent
+transduction law or recursive agent-class growth.
+
 - `R0 / R1`: `R0` is unsystematic memorandum-style merchant recordkeeping; `R1` is a journal-and-ledger regime with debit/credit posting and cross-reference. They are distinct because the latter adds closure checks and a standardized posting discipline, not just more writing. citeturn18view0turn19view0turn19view1
 - `K0 / K1`: `K0` admits narrative or partial records; `K1` admits journal entries that become two ledger postings and must balance in debit/credit structure. citeturn19view0turn19view1
 - `S0 / S1`: `S0` is merchant memory, memoranda, loose supporting documents, and goods. `S1` is the memorandum, journal, ledger, dated entries, page references, valuations, and audit marks described in Pacioli’s text. citeturn21view1turn19view0turn19view1turn19view2
