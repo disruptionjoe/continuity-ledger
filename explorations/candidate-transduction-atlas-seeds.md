@@ -4,7 +4,7 @@ claim_status: none
 verdict: none
 lane: 3
 admission: pre_release_exploration_only
-provenance_status: broken
+provenance_status: partially_recovered
 evidence_grade: lead_only
 source_type: external_research_agent
 added_by: Joe, 2026-07-16
@@ -34,6 +34,12 @@ placement_note: Candidate material retained outside evidence, synthesis, and can
 > real and hand-checkable, so the work is recoverable. Recovering it means
 > resolving each named source to a citable reference and re-grading the claim it
 > supports. Until then this is a lead.
+>
+> One bounded recovery is now recorded at
+> `literature/2026-07-21-hamming-seed-source-recovery.md`. It resolves the
+> Hamming paper's bibliographic identity only. It does not validate the
+> document's technical extraction, repair any other citation token, or change
+> this artifact's lead-only grade.
 >
 > ## Contamination warning: do not read this while scoring CL-001
 >

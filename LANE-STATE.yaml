@@ -2,10 +2,10 @@ schema_version: "2.0"
 owner_id: continuity-ledger
 group: church-of-ai
 rule_ref: system/runtime/flows/derive-lane-health.md
-updated_at: "2026-07-21T20:39:10-05:00"
-run_ref: RUN-20260721-203600-repository-work-cycle-cai-hourly
-bottom_line: "CL-001 now has an open-label child ineligibility stop; packet fields remain closed."
-decision_default: "Use a separate isolated blind author; standard open-label repo-cycle children must not populate T."
+updated_at: "2026-07-21T23:39:00-05:00"
+run_ref: RUN-20260721-233633-repository-work-cycle-cai-hourly
+bottom_line: "CL-001 remains closed to open-label population; lane-less discovery recovered the Hamming seed's primary bibliographic identity without synthesis."
+decision_default: "Keep CL-001 isolated and continue only bounded pre-release source recovery that does not generalize across cases."
 needs_joe: false
 lanes:
   - lane_id: "1"
@@ -93,21 +93,21 @@ lanes:
     needs_joe: false
   - lane_id: "3"
     work_status: blocked
-    last_movement: "Gate remains closed until CL-001 returns a verdict."
-    movement_ref: LANES.yaml
+    last_movement: "Recovered the Hamming seed's primary bibliographic identity while preserving the pre-release synthesis gate."
+    movement_ref: literature/2026-07-21-hamming-seed-source-recovery.md
     steering_attention: none
     steering_prompt: "none"
     steering_ref: LANES.yaml
     light: not_applicable
     reason_code: admission_gated_on_cl001
     evidence_ref: LANES.yaml
-    summary: "Atlas synthesis remains gated on the unresolved CL-001 verdict."
-    evaluated_at: "2026-07-19T16:41:22-05:00"
-    run_ref: RUN-20260719-545-repository-work-cycle-cai-hourly
+    summary: "Atlas synthesis remains gated; one lead's source identity is now recoverable for a later bounded full-text extraction."
+    evaluated_at: "2026-07-21T23:39:00-05:00"
+    run_ref: RUN-20260721-233633-repository-work-cycle-cai-hourly
     objective: "Map transductions after CL-001 supplies an admissible verdict or returns for decision."
-    progress_delta: "No Lane 3 movement; the CL-001 gate remains closed."
-    scope_position: "Admission gate closed pending CL-001 verdict."
-    trend_24h: flat
+    progress_delta: "Resolved Hamming's version-of-record citation while retaining lead-only grade and all no-synthesis/noncontamination boundaries."
+    scope_position: "Admission gate closed pending CL-001 verdict; pre-release source recovery remains admissible."
+    trend_24h: up
     confidence: high
     recommendation: "Keep gated."
     findings:
