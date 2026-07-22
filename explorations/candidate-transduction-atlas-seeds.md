@@ -242,6 +242,13 @@ finality, recruited agency, or an independent transduction law.
 
 ### CRISPR spacer acquisition
 
+**Primary-source disposition (2026-07-22):**
+`NARROWER_STRUCTURE_SEQUENCE_SPECIFIC_ADAPTIVE_IMMUNITY`. The bounded Barrangou
+et al. extraction at `literature/2026-07-22-crispr-primary-extraction.md`
+verifies phage-derived spacer acquisition and sequence-specific resistance. It
+does not establish unrestricted novelty, a new agent class, or an independent
+transduction law.
+
 - `R0 / R1`: `R0` is exposure to foreign nucleic acids without archived sequence-specific memory; `R1` is CRISPR arrays bearing invader-derived spacers that alter future interference specificity. These are distinct because the substrate now contains a persistent sequence record that can guide later defense. citeturn0search0turn24view1
 - `K0 / K1`: `K0` admits innate or prior-unspecified defense; `K1` admits adaptive immunity via spacer acquisition, with later work showing targeted or interference-driven acquisition routes in some systems. citeturn0search0turn24view1
 - `S0 / S1`: `S0` is foreign phage/plasmid DNA and host cells without the relevant spacer. `S1` is CRISPR arrays, Cas proteins, and newly inserted spacers in the host genome. citeturn0search0turn24view1
