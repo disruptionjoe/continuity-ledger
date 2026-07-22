@@ -126,6 +126,13 @@ absorb the source-grounded case.
 
 ### Torrens registration of title
 
+**Primary-source disposition (2026-07-22):**
+`NARROWER_STRUCTURE_STATUTORY_TITLE_REGISTRATION`. The bounded official-statute
+extraction at `literature/2026-07-22-torrens-primary-extraction.md` verifies the
+historical Act identity and the continuing scheme's constitutive registration,
+registrar authority, notice/caveat, priority, records, exceptions, and review.
+It does not establish an independent transduction law or general agency gain.
+
 - `R0 / R1`: `R0` is deed-chain conveyancing that requires retrospective proof through prior instruments; `R1` is title-by-registration under the 1858 Act. They are distinct because registration has constitutive legal effect in the new regime rather than merely describing prior dealings. citeturn20view0turn21view0
 - `K0 / K1`: `K0` admits title claims established by accumulated deeds and encumbrance history; `K1` admits title recognition through registrar-controlled entry, notice, caveat, and certificate procedures. citeturn20view0turn21view0
 - `S0 / S1`: `S0` is deeds and dispersed legal papers. `S1` is the Registrar-General, register book, certificates, public notice, caveats, maps/plans, and court review under the statute. citeturn20view0turn21view0
