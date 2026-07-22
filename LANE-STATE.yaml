@@ -2,10 +2,10 @@ schema_version: "2.0"
 owner_id: continuity-ledger
 group: church-of-ai
 rule_ref: system/runtime/flows/derive-lane-health.md
-updated_at: "2026-07-22T02:38:00-05:00"
-run_ref: RUN-20260722-023536-repository-work-cycle-cai-hourly
-bottom_line: "Hamming and standardized metrology both narrow to domain-local ordinary-theory absorber controls; CL-001 remains isolated and Lane 3 synthesis closed."
-decision_default: "Retain the two resolved absorber controls and continue only bounded source recovery with no CL-001 contamination or cross-case synthesis."
+updated_at: "2026-07-22T16:42:35-05:00"
+run_ref: RUN-20260722-162359-continuity-ledger-stewardship
+bottom_line: "NBL-REL-006 is reconciled as non-activating relationship context: Continuity Ledger remains sovereign, CL-001 isolation is unchanged, and no Lane, claim, source verdict, or blind-author gate moved."
+decision_default: "Preserve CL-001 isolation. Continue Lane 1 only from a provenance-valid isolated blind return; keep Lane 2 subordinate without a lease and Lane 3 synthesis gated pending the CL-001 verdict."
 needs_joe: false
 lanes:
   - lane_id: "1"
@@ -134,26 +134,26 @@ lanes:
     needs_joe: false
   - lane_id: A
     work_status: moving
-    last_movement: "Closeout refreshed Lane state after recording the open-label child ineligibility stop."
-    movement_ref: LANE-STATE.yaml
+    last_movement: "Reconciled NBL-REL-006 against charter authority, sovereignty, Lane controls, source boundaries, and CL-001 isolation."
+    movement_ref: explorations/runs/RUN-20260722-162359-continuity-ledger-stewardship-nbl-reconciliation.md
     steering_attention: none
     steering_prompt: "none"
     steering_ref: AGENTS.md; LANES.yaml; tests/validate_cltp_packets.py
     light: green
-    reason_code: lane_state_refreshed_after_open_label_child_stop
-    evidence_ref: AGENTS.md; LANES.yaml; evidence/cl-001-interval-sweep-dossier-manifest.md; evidence/cl-001-interval-sweep-dossiers/blind-t-open-label-cycle-ineligibility-stop.md; tests/validate_cltp_packets.py
-    summary: "Stewardship state refreshed; standard open-label children cannot satisfy blind T."
-    evaluated_at: "2026-07-20T01:44:44-05:00"
-    run_ref: RUN-20260720-563-repository-work-cycle-cai-hourly
+    reason_code: nbl_relationship_boundary_reconciled
+    evidence_ref: AGENTS.md; governance/CHARTER.md; LANES.yaml; evidence/cl-001-interval-sweep-dossiers/blind-t-open-label-cycle-ineligibility-stop.md
+    summary: "NBL relationship context is coherent and non-activating; repository sovereignty, source boundaries, and the blind-author stop remain intact."
+    evaluated_at: "2026-07-22T16:42:35-05:00"
+    run_ref: RUN-20260722-162359-continuity-ledger-stewardship
     objective: "Keep Continuity Ledger viable and trustworthy through integrated stewardship."
-    progress_delta: "Refreshed state after adding the open-label child ineligibility stop; mailbox and writer-lock checks stayed clean."
+    progress_delta: "Recorded the post-membership policy/identity reconciliation without changing scientific or Lane truth."
     trend_24h: up
     confidence: high
-    recommendation: "Continue Lane 1."
+    recommendation: "Continue Lane 1 only through a provenance-valid isolated blind return."
     findings:
-      - "No substantive unarchived mailbox payload required disposition."
-      - "No writer lock or emergency revocation existed before work."
-      - "Standard open-label children need an isolated handoff before any T population."
+      - "NBL-REL-006 does not activate work or supply local truth."
+      - "No substantive unarchived mailbox payload, writer lock, or emergency revocation exists."
+      - "Standard open-label children still need an isolated handoff before any T population."
     options:
       - id: A
         label: "Use isolated handoff"
@@ -176,8 +176,8 @@ lanes:
     drift_verdict: clean
     action_counts:
       mail: 0
-      reconciled: 1
+      reconciled: 2
       integrity_repairs: 0
       seeds_routed: 0
       escalations: 0
-    attention_pointer: "nothing needs you; next T movement needs isolated handoff"
+    attention_pointer: "nothing needs you; NBL relationship is reconciled and next T movement still needs an isolated handoff"
