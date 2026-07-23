@@ -2,44 +2,44 @@ schema_version: "2.0"
 owner_id: continuity-ledger
 group: church-of-ai
 rule_ref: system/runtime/flows/derive-lane-health.md
-updated_at: "2026-07-22T20:24:58-05:00"
-run_ref: RUN-20260722-cl001-isolated-blind-return
-bottom_line: "The isolated CL-001 blind return stopped before extraction because the current capsule remained inferable; field T, gates, claims, and verdict remain unchanged."
-decision_default: "Do not populate T. Preserve the inferability stop and either prepare a materially sufficient, less inferable capsule or defer CL-001; keep Lane 2 subordinate and Lane 3 gated."
+updated_at: "2026-07-22T20:54:26-05:00"
+run_ref: RUN-20260722-204348-continuity-ledger-progress-cl001-t03
+bottom_line: "A cue-normalized T-03 private capsule is prepared for a later isolated return; field T, gates, claims, and verdict remain unchanged."
+decision_default: "Do not populate T. Hand only the digest-pinned T-03 capsule to a genuinely isolated author and accept inferability or insufficiency as valid stops; keep Lane 2 subordinate and Lane 3 gated."
 needs_joe: false
 lanes:
   - lane_id: "1"
     work_status: moving
-    last_movement: "An isolated blind author returned blind_failed_inferable before T extraction."
-    movement_ref: explorations/runs/RUN-20260722-cl001-isolated-blind-return.md
+    last_movement: "Prepared a digest-pinned, cue-normalized private capsule after the isolated inferability stop."
+    movement_ref: evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-capsule-t-03-preparation.md
     steering_attention: watch
     steering_prompt: "Use the public protocol/private capsule split; do not commit the blind read capsule, arm mapping, or unblinding key before return."
-    steering_ref: explorations/runs/RUN-20260722-cl001-isolated-blind-return.md
+    steering_ref: evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-capsule-t-03-preparation.md
     light: yellow
-    reason_code: isolated_blind_return_inferability_stop
-    evidence_ref: explorations/runs/RUN-20260722-cl001-isolated-blind-return.md
-    summary: "The current isolated capsule remains inferable; T stays unpopulated."
-    evaluated_at: "2026-07-22T20:24:58-05:00"
-    run_ref: RUN-20260722-cl001-isolated-blind-return
+    reason_code: t03_private_capsule_prepared
+    evidence_ref: evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-capsule-t-03-preparation.md
+    summary: "T-03 reduces arm-class cues through symmetric semantic slots; its non-inferability and material sufficiency remain untested, and T stays unpopulated."
+    evaluated_at: "2026-07-22T20:54:26-05:00"
+    run_ref: RUN-20260722-204348-continuity-ledger-progress-cl001-t03
     objective: "Force or falsify substrate-bounded constraint-bought capability through CL-001."
-    progress_delta: "Ran the authorized isolated return; the blind author stopped as inferable before extraction, confirming the current capsule is not admissible for T population."
-    scope_position: "CL-001 pre-population: frame, dossiers, prior public stops, isolated-return protocol, and one isolated inferability stop exist; no candidate T language, packet field, gate, claim, or verdict moved."
+    progress_delta: "Converted the inferability stop into a changed private packaging method with a digest-backed public receipt, while preserving the public/private boundary and all scientific stops."
+    scope_position: "CL-001 pre-population: T-03 is ready only for a later isolated inferability/sufficiency return; no candidate T language, packet field, gate, claim, or verdict moved."
     trend_24h: up
     confidence: med
-    recommendation: "Revise the capsule or preserve the method stop."
+    recommendation: "Run one genuinely isolated T-03 return."
     findings:
-      - "A genuinely isolated author still inferred an arm from the current bounded capsule."
-      - "The correct stop occurred before candidate T extraction."
-      - "No packet field, gate, claim status, or verdict moved."
+      - "T-02's source-specific prose was replaced by five symmetric semantic slots in a private T-03 capsule."
+      - "The capsule and key remain outside public history and are pinned by digest."
+      - "Only a later isolated author can determine inferability or sufficiency; no packet field, gate, claim status, or verdict moved."
     options:
       - id: A
-        label: "Revise capsule"
+        label: "Run isolated T-03 return"
         recommended: true
-        description: "Reduce arm-class cues while preserving enough material for a later isolated blind return."
+        description: "Provide only the digest-pinned T-03 capsule to an isolated author and honor the stop-code order."
       - id: B
-        label: "Preserve method stop"
+        label: "Preserve T-03 unopened"
         recommended: false
-        description: "Keep T unpopulated and treat the current inferability result as the valid outcome."
+        description: "Keep T unpopulated and defer the isolated handoff without reopening public packaging."
       - id: C
         label: "Defer CL-001"
         recommended: false
@@ -48,7 +48,7 @@ lanes:
         label: "Defer"
         recommended: false
         description: "Leave CL-001 packet population closed for a later focused run."
-    decision_default: "Do not populate T; revise the capsule only through another isolated blind-return attempt."
+    decision_default: "Do not populate T; use T-03 only through another isolated blind-return attempt."
     needs_joe: false
   - lane_id: "2"
     work_status: thin

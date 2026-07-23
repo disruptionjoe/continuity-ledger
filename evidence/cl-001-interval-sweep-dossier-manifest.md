@@ -48,6 +48,7 @@ feedback burden, open fields, falsifiers, and the no-claim-promotion boundary.
 | Isolated blind-return architecture | Next admissible `T` blinding method after public packaging stop | process-control architecture | Frame adherence and declared-field guard; Mechanism and transition boundary; Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing. | Draft architecture: `evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-return-architecture.md`. |
 | Isolated blind-return protocol | Public protocol and receipt shape for the next isolated blind-return attempt | process-control protocol | Frame adherence and declared-field guard; Mechanism and transition boundary; Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing. | Draft protocol: `evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-return-protocol.md`. |
 | Open-label repo-cycle ineligibility stop | Standard repo-work-cycle child after required context load | process-control stop record | Frame adherence and declared-field guard; Mechanism and transition boundary; Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing. | Stop record: `evidence/cl-001-interval-sweep-dossiers/blind-t-open-label-cycle-ineligibility-stop.md`. |
+| T-03 private capsule preparation | Post-inferability isolated-return packaging | process-control preparation record | Frame adherence and declared-field guard; Mechanism and transition boundary; Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing. | Digest-backed preparation record: `evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-capsule-t-03-preparation.md`; capsule and key remain ignored local artifacts until return. |
 
 ## Symmetry Checks
 
@@ -83,6 +84,7 @@ feedback burden, open fields, falsifiers, and the no-claim-promotion boundary.
 | `evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-return-architecture.md` | Isolated blind-return architecture | Draft process-control architecture for the next admissible `T` blinding method. | Defines a public protocol/private capsule split and stop-code-first return shape; it is not a blind-author receipt, does not populate `T`, does not score gate 10, and does not issue a verdict. |
 | `evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-return-protocol.md` | Isolated blind-return protocol | Draft process-control protocol and receipt shape. | Records the public return protocol and required receipt metadata while keeping the blind read capsule, arm mapping, and unblinding key out of the public repo before return; it is not a blind-author receipt, does not populate `T`, does not score gate 10, and does not issue a verdict. |
 | `evidence/cl-001-interval-sweep-dossiers/blind-t-open-label-cycle-ineligibility-stop.md` | Open-label repo-cycle ineligibility stop | Draft process-control stop record for standard repo-work-cycle children that have already loaded open-label CL-001 context. | Records that such a child cannot serve as the blind author without an isolated handoff; it is not a blind-author receipt, does not populate `T`, does not score gate 10, and does not issue a verdict. |
+| `evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-capsule-t-03-preparation.md` | T-03 private capsule preparation | Digest-backed process-control preparation record after the first isolated inferability stop. | Records a cue-normalized private capsule and key without exposing them; it is not a blind return, does not establish non-inferability or sufficiency, and does not populate `T`, score gate 10, or issue a verdict. |
 
 ## Completion Boundary
 
@@ -96,8 +98,10 @@ revised redacted coded source bundle with a new checksum, a non-blind
 inferability preflight stop record for the revised bundle, a process-control
 stop on further public non-blind `T` packaging under the current method, and a
 draft isolated blind-return architecture for a changed method, plus a public
-isolated-return protocol and receipt shape, and an open-label repo-cycle
-ineligibility stop for standard children without an isolated handoff. It is not
+isolated-return protocol and receipt shape, an open-label repo-cycle
+ineligibility stop for standard children without an isolated handoff, and a
+digest-backed T-03 private capsule preparation after the first isolated
+inferability stop. It is not
 complete enough to
 populate a packet field. Packet population remains blocked until a later
 packet-population run either obtains a valid blind author receipt or records a
