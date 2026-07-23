@@ -2,44 +2,44 @@ schema_version: "2.0"
 owner_id: continuity-ledger
 group: church-of-ai
 rule_ref: system/runtime/flows/derive-lane-health.md
-updated_at: "2026-07-22T16:42:35-05:00"
-run_ref: RUN-20260722-162359-continuity-ledger-stewardship
-bottom_line: "NBL-REL-006 is reconciled as non-activating relationship context: Continuity Ledger remains sovereign, CL-001 isolation is unchanged, and no Lane, claim, source verdict, or blind-author gate moved."
-decision_default: "Preserve CL-001 isolation. Continue Lane 1 only from a provenance-valid isolated blind return; keep Lane 2 subordinate without a lease and Lane 3 synthesis gated pending the CL-001 verdict."
+updated_at: "2026-07-22T20:24:58-05:00"
+run_ref: RUN-20260722-cl001-isolated-blind-return
+bottom_line: "The isolated CL-001 blind return stopped before extraction because the current capsule remained inferable; field T, gates, claims, and verdict remain unchanged."
+decision_default: "Do not populate T. Preserve the inferability stop and either prepare a materially sufficient, less inferable capsule or defer CL-001; keep Lane 2 subordinate and Lane 3 gated."
 needs_joe: false
 lanes:
   - lane_id: "1"
     work_status: moving
-    last_movement: "Recorded the open-label repo-cycle ineligibility stop for CL-001 T blinding."
-    movement_ref: evidence/cl-001-interval-sweep-dossiers/blind-t-open-label-cycle-ineligibility-stop.md
+    last_movement: "An isolated blind author returned blind_failed_inferable before T extraction."
+    movement_ref: explorations/runs/RUN-20260722-cl001-isolated-blind-return.md
     steering_attention: watch
     steering_prompt: "Use the public protocol/private capsule split; do not commit the blind read capsule, arm mapping, or unblinding key before return."
-    steering_ref: evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-return-protocol.md
+    steering_ref: explorations/runs/RUN-20260722-cl001-isolated-blind-return.md
     light: yellow
-    reason_code: open_label_child_ineligibility_stop_recorded
-    evidence_ref: evidence/cl-001-interval-sweep-dossier-manifest.md; evidence/cl-001-interval-sweep-dossiers/blind-t-open-label-cycle-ineligibility-stop.md
-    summary: "Open-label repo-cycle children are disqualified as blind authors; packet fields remain closed."
-    evaluated_at: "2026-07-20T01:44:44-05:00"
-    run_ref: RUN-20260720-563-repository-work-cycle-cai-hourly
+    reason_code: isolated_blind_return_inferability_stop
+    evidence_ref: explorations/runs/RUN-20260722-cl001-isolated-blind-return.md
+    summary: "The current isolated capsule remains inferable; T stays unpopulated."
+    evaluated_at: "2026-07-22T20:24:58-05:00"
+    run_ref: RUN-20260722-cl001-isolated-blind-return
     objective: "Force or falsify substrate-bounded constraint-bought capability through CL-001."
-    progress_delta: "Added a public stop record disqualifying standard open-label repo-cycle children from the blind T author role."
-    scope_position: "CL-001 pre-population: frame, dossiers, T-01/T-02 stops, public method stop, isolated-return protocol, and open-label child stop exist; no private capsule, blind receipt, or active packet fields populated."
+    progress_delta: "Ran the authorized isolated return; the blind author stopped as inferable before extraction, confirming the current capsule is not admissible for T population."
+    scope_position: "CL-001 pre-population: frame, dossiers, prior public stops, isolated-return protocol, and one isolated inferability stop exist; no candidate T language, packet field, gate, claim, or verdict moved."
     trend_24h: up
     confidence: med
-    recommendation: "Use a separate isolated blind author, or stop before T population."
+    recommendation: "Revise the capsule or preserve the method stop."
     findings:
-      - "Required repo-cycle context makes this child open-label and source-aware before selection."
-      - "No private capsule, blind receipt, packet field, gate, claim status, or verdict moved."
-      - "Future hourly runs should skip T population unless an isolated blind handoff exists."
+      - "A genuinely isolated author still inferred an arm from the current bounded capsule."
+      - "The correct stop occurred before candidate T extraction."
+      - "No packet field, gate, claim status, or verdict moved."
     options:
       - id: A
-        label: "Use isolated author"
+        label: "Revise capsule"
         recommended: true
-        description: "Give a later isolated blind author only a private capsule and the public stop-code protocol."
+        description: "Reduce arm-class cues while preserving enough material for a later isolated blind return."
       - id: B
-        label: "Blind stop"
+        label: "Preserve method stop"
         recommended: false
-        description: "Accept a blind-author stop from a bounded read surface if inferability or insufficiency fires."
+        description: "Keep T unpopulated and treat the current inferability result as the valid outcome."
       - id: C
         label: "Defer CL-001"
         recommended: false
@@ -48,7 +48,7 @@ lanes:
         label: "Defer"
         recommended: false
         description: "Leave CL-001 packet population closed for a later focused run."
-    decision_default: "Use a separate isolated blind author; do not populate T from a standard open-label repo-cycle child."
+    decision_default: "Do not populate T; revise the capsule only through another isolated blind-return attempt."
     needs_joe: false
   - lane_id: "2"
     work_status: thin
