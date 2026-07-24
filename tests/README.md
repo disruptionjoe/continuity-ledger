@@ -22,4 +22,10 @@ Current checks:
   Interval Sweep dossier checks require manifest references to resolve, every
   active draft dossier to remain manifest-listed, source identifiers to stay
   unique, active evidence lanes to match the intake contract, and active dossier
-  status, claim status, and verdict fields to stay non-promotional.
+  status, claim status, and verdict fields to stay non-promotional. Active
+  manifest coverage is recursive, so nested blind-bundle records cannot
+  silently fall outside the queue. The validator also binds the public T-03
+  isolation chain: isolated-return protocol, open-label-cycle ineligibility
+  stop, preparation identity and SHA-256 pins, private `_local/` placement,
+  stop-code ordering, and no-claim-promotion posture. It does not inspect the
+  private capsule or unblinding key.

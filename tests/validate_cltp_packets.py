@@ -21,6 +21,15 @@ ACTIVE_CL001_FRAME = ROOT / "experiments" / "CL-001-phi-frame.md"
 RETIRED_CL001_EXPERIMENT = (
     ROOT / "experiments" / "CL-001-bitcoin-photosynthesis-pair-and-null.md"
 )
+BLIND_RETURN_PROTOCOL = (
+    ACTIVE_DOSSIER_DIR / "blind-t-isolated-return-protocol.md"
+)
+OPEN_LABEL_INELIGIBILITY_STOP = (
+    ACTIVE_DOSSIER_DIR / "blind-t-open-label-cycle-ineligibility-stop.md"
+)
+T03_PREPARATION = (
+    ACTIVE_DOSSIER_DIR / "blind-t-isolated-capsule-t-03-preparation.md"
+)
 
 REQUIRED_FRONT_MATTER = (
     "packet_id",
@@ -618,7 +627,7 @@ def validate_active_source_dossier_manifest() -> list[str]:
         for raw_path in ACTIVE_MANIFEST_DOSSIER_PATH_RE.findall(text)
     }
     dossier_paths = {
-        path.resolve() for path in ACTIVE_DOSSIER_DIR.glob("*.md")
+        path.resolve() for path in ACTIVE_DOSSIER_DIR.rglob("*.md")
     } if ACTIVE_DOSSIER_DIR.exists() else set()
 
     if not manifest_dossier_paths:
@@ -719,6 +728,154 @@ def validate_active_source_dossiers() -> list[str]:
     return errors
 
 
+def validate_active_blind_control_chain() -> list[str]:
+    """Bind the public T-03 isolation controls without reading private inputs."""
+    errors: list[str] = []
+    required_paths = (
+        BLIND_RETURN_PROTOCOL,
+        OPEN_LABEL_INELIGIBILITY_STOP,
+        T03_PREPARATION,
+    )
+
+    for path in required_paths:
+        if not path.exists():
+            errors.append(
+                f"Missing active blind-control artifact: {path.relative_to(ROOT)}"
+            )
+    if errors:
+        return errors
+
+    manifest_text = ACTIVE_DOSSIER_MANIFEST.read_text(encoding="utf-8")
+    for path in required_paths:
+        relative_path = str(path.relative_to(ROOT)).replace("\\", "/")
+        if f"`{relative_path}`" not in manifest_text:
+            errors.append(
+                f"{ACTIVE_DOSSIER_MANIFEST.relative_to(ROOT)} does not bind "
+                f"blind-control artifact {relative_path}"
+            )
+
+    neutral_values = {
+        "status": "draft",
+        "claim_status": "none",
+        "verdict": "none",
+    }
+    for path in required_paths:
+        text = path.read_text(encoding="utf-8")
+        values = front_matter(text)
+        for key, expected in neutral_values.items():
+            if values.get(key) != expected:
+                errors.append(
+                    f"{path.relative_to(ROOT)} has {key}: "
+                    f"{values.get(key)!r}, expected {expected!r}"
+                )
+        if values.get("selected_field") not in (None, "T"):
+            errors.append(
+                f"{path.relative_to(ROOT)} selects a blind field other than T"
+            )
+        if "## No Claim Promotion" not in text:
+            errors.append(
+                f"{path.relative_to(ROOT)} missing ## No Claim Promotion"
+            )
+
+    protocol_text = BLIND_RETURN_PROTOCOL.read_text(encoding="utf-8")
+    protocol_required = (
+        "must remain outside committed public files until after a blind author returns",
+        "receive only a bounded task capsule",
+        "Any outside context read before return voids the blind result",
+        "does not populate any active CL-001 packet field",
+    )
+    for phrase in protocol_required:
+        if not has_phrase(protocol_text, phrase):
+            errors.append(
+                f"{BLIND_RETURN_PROTOCOL.relative_to(ROOT)} missing isolation "
+                f"phrase {phrase!r}"
+            )
+
+    stop_codes = (
+        "blind_failed_inferable",
+        "blind_failed_insufficient_material",
+        "candidate_t_returned",
+    )
+    stop_positions = [protocol_text.find(code) for code in stop_codes]
+    if any(position == -1 for position in stop_positions):
+        errors.append(
+            f"{BLIND_RETURN_PROTOCOL.relative_to(ROOT)} does not name every "
+            "blind-return stop code"
+        )
+    elif stop_positions != sorted(stop_positions):
+        errors.append(
+            f"{BLIND_RETURN_PROTOCOL.relative_to(ROOT)} does not preserve "
+            "inferability -> insufficiency -> candidate stop-code order"
+        )
+
+    ineligibility_text = OPEN_LABEL_INELIGIBILITY_STOP.read_text(encoding="utf-8")
+    ineligibility_required = (
+        "cannot serve as the isolated blind author",
+        "cannot return a valid blind-author stop code",
+        "cannot populate `T`",
+        "does not populate any active CL-001 packet field",
+    )
+    for phrase in ineligibility_required:
+        if not has_phrase(ineligibility_text, phrase):
+            errors.append(
+                f"{OPEN_LABEL_INELIGIBILITY_STOP.relative_to(ROOT)} missing "
+                f"open-label stop phrase {phrase!r}"
+            )
+
+    preparation_text = T03_PREPARATION.read_text(encoding="utf-8")
+    preparation_values = front_matter(preparation_text)
+    expected_preparation_values = {
+        "package_id": "CL001-BLIND-T-03",
+        "selected_field": "T",
+    }
+    for key, expected in expected_preparation_values.items():
+        if preparation_values.get(key) != expected:
+            errors.append(
+                f"{T03_PREPARATION.relative_to(ROOT)} has {key}: "
+                f"{preparation_values.get(key)!r}, expected {expected!r}"
+            )
+
+    for digest_key in (
+        "private_capsule_sha256",
+        "private_unblinding_key_sha256",
+    ):
+        digest = preparation_values.get(digest_key, "")
+        if not re.fullmatch(r"[0-9A-F]{64}", digest):
+            errors.append(
+                f"{T03_PREPARATION.relative_to(ROOT)} has invalid {digest_key}"
+            )
+
+    preparation_required = (
+        "_local/cl001-blind-t-03-private-capsule.md",
+        "_local/cl001-blind-t-03-unblinding-key.md",
+        "ignored; do not commit before return",
+        "A digest mismatch invalidates the handoff identity",
+        "does not populate `T`",
+    )
+    for phrase in preparation_required:
+        if not has_phrase(preparation_text, phrase):
+            errors.append(
+                f"{T03_PREPARATION.relative_to(ROOT)} missing preparation "
+                f"phrase {phrase!r}"
+            )
+
+    preparation_stop_positions = [
+        preparation_text.find(code) for code in stop_codes
+    ]
+    if any(position == -1 for position in preparation_stop_positions):
+        errors.append(
+            f"{T03_PREPARATION.relative_to(ROOT)} does not name every "
+            "blind-return stop code"
+        )
+    elif preparation_stop_positions != sorted(preparation_stop_positions):
+        errors.append(
+            f"{T03_PREPARATION.relative_to(ROOT)} does not preserve "
+            "inferability -> insufficiency -> candidate stop-code order"
+        )
+
+    return errors
+
+
 def validate_cl001_experiment_state() -> list[str]:
     errors: list[str] = []
     if not ACTIVE_CL001_EXPERIMENT.exists():
@@ -811,6 +968,7 @@ def main() -> int:
     errors.extend(validate_active_source_intake())
     errors.extend(validate_active_source_dossier_manifest())
     errors.extend(validate_active_source_dossiers())
+    errors.extend(validate_active_blind_control_chain())
     errors.extend(validate_cl001_experiment_state())
 
     if errors:
@@ -822,7 +980,7 @@ def main() -> int:
         f"Validated {len(packet_paths)} CL-001 packet files, "
         "source intake, source dossier template, source dossier manifest, "
         "source dossiers, active Interval Sweep intake/manifest/dossiers, "
-        "and experiment state."
+        "public blind-control chain, and experiment state."
     )
     return 0
 
