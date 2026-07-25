@@ -10,6 +10,8 @@ evidence_lanes: Frame adherence and declared-field guard; Evaluator sweep and po
 provenance: governance/CHARTER.md; experiments/CL-001-phi-frame.md; experiments/CL-001-interval-sweep.md; evidence/cl-001-interval-sweep-dossiers/dollar-evaluator-sweep-us-argentina-retail.md; evidence/cl-001-interval-sweep-dossiers/bitcoin-evaluator-sweep-us-salvador-retail.md; inspected 2026-07-24
 extracted_by: Codex child run RUN-20260724-230909-continuity-ledger-progress-fixed-s0-evaluator-audit
 extracted_on: 2026-07-24
+updated_by: Codex child run RUN-20260725-031112-continuity-ledger-progress
+updated_on: 2026-07-25
 claim_status: none
 verdict: none
 ---
@@ -24,10 +26,12 @@ Salvadoran retail, changes more than the evaluator index: the active dossiers
 explicitly import different jurisdictional rules, policy states, financial
 infrastructure, access paths, subsidies, wallets, and exchange conditions.
 
-No construction witness currently shows that `S0`, `T`, `B`, and the relevant
-institutional imports remain fixed while only evaluator `i` changes. CL-001
-therefore stops before packet population. This is a design-identification stop,
-not a CL-001 gate score, claim result, or verdict.
+The bounded construction-space screen in
+`fixed-s0-construction-space-screen.md` found no current-contract witness that
+keeps the named population pairs while holding `S0`, `T`, `B`, and the relevant
+institutional imports fixed as only evaluator `i` changes. CL-001 therefore
+stops before packet population. This is a design-identification stop, not a
+CL-001 gate score, claim result, or verdict.
 
 Repo-local surfaces used:
 
@@ -37,6 +41,7 @@ Repo-local surfaces used:
 - `experiments/CL-001-interval-sweep.md`.
 - `evidence/cl-001-interval-sweep-dossiers/dollar-evaluator-sweep-us-argentina-retail.md`.
 - `evidence/cl-001-interval-sweep-dossiers/bitcoin-evaluator-sweep-us-salvador-retail.md`.
+- `evidence/cl-001-interval-sweep-dossiers/fixed-s0-construction-space-screen.md`.
 
 This construction audit uses current repo-local evidence and does not score any
 gate and does not populate any active CL-001 packet field. It did not read the
@@ -114,8 +119,8 @@ would manufacture the experiment's first lethal branch rather than test it.
 
 | Loss or import | Applies to field | Source support | Open burden |
 |---|---|---|---|
-| The dollar evaluator change imports a different jurisdiction, exchange regime, banking infrastructure, and policy date. | `S0`, `T`, `B`, `I`, `L`, `N`, `V` | Active dollar evaluator dossier. | No construction isolates evaluator variation from those mechanisms. |
-| The Bitcoin evaluator change imports different legal status, tax treatment, policy implementation, wallet/subsidy context, and access conditions. | `B`, `I`, `L`, `N`, `P`, `V` | Active Bitcoin evaluator dossier. | No construction isolates evaluator variation from those mechanisms. |
+| The dollar evaluator change imports a different jurisdiction, exchange regime, banking infrastructure, and policy date. | `S0`, `T`, `B`, `I`, `L`, `N`, `V` | Active dollar evaluator dossier and construction-space screen. | No current-contract construction isolates evaluator variation from those mechanisms. |
+| The Bitcoin evaluator change imports different legal status, tax treatment, policy implementation, wallet/subsidy context, and access conditions. | `B`, `I`, `L`, `N`, `P`, `V` | Active Bitcoin evaluator dossier and construction-space screen. | No current-contract construction isolates evaluator variation from those mechanisms. |
 | Calling the imported differences "context" does not make them inert if they affect the binding constraint or exit cost. | `I`, `N`, `V` | Charter causal attribution plus both dossier burden tables. | A positive fixed-field witness or new preregistration is required. |
 
 Until a separately governed run supplies one of the admissible wakes below:
@@ -154,9 +159,10 @@ fixed-`S0` intervention the preregistered causal interpretation requires.
 
 This stop can be superseded only by one of:
 
-1. a positive construction witness showing, for both named evaluator pairs,
-   that `S0`, `T`, `B`, and all outcome-relevant institutional imports remain
-   fixed while only `i` changes;
+1. new evidence that overturns the construction-space screen by showing, for
+   both named evaluator pairs, common jurisdictional and operational
+   enforcement surfaces with `S0`, `T`, `B`, policy time, access, and all
+   outcome-relevant institutional imports fixed while only `i` changes;
 2. a new preregistered CL-001 design that changes the evaluator pairs while
    preserving the charter's causal question; or
 3. a new preregistered frame that explicitly types the jurisdictional and
@@ -174,13 +180,14 @@ Stable awareness pointer:
 Decision needed from the frame holder:
 
 - **A — Recommended:** keep CL-001 stopped and preregister a replacement
-  evaluator design whose populations differ in evaluator characteristics
-  without changing jurisdictional or institutional enforcement surfaces.
+  evaluator design using within-context matched retail strata so evaluator
+  characteristics can vary without changing the institutional enforcement
+  surface.
 - **B:** preregister a typed frame that makes jurisdictional and institutional
   variation explicit, accepting that this changes the present experiment.
-- **C:** commission a bounded construction attempt to produce the missing
-  fixed-field witness for the named pairs; packet population remains closed
-  unless it succeeds.
+- **C:** preregister an analytic-panel evaluator design, explicitly retyping
+  `i` and treating it as a measurement-bias test rather than a retail binding-
+  constraint comparison.
 - **D:** defer; the current CL-001 scaffold remains stopped.
 
 This route is decision-ready evidence, not authority to choose or implement a

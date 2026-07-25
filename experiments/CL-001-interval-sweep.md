@@ -37,12 +37,15 @@ boundary by
 `evidence/cl-001-interval-sweep-dossiers/fixed-s0-evaluator-confound-stop.md`.
 The current US/Argentina and US/El Salvador evaluator pairs co-vary
 jurisdictional, institutional, policy, wallet, subsidy, and access surfaces.
-No construction witness yet shows that `S0`, `T`, `B`, and outcome-relevant
-imports remain fixed while only evaluator `i` changes.
+The bounded screen at
+`evidence/cl-001-interval-sweep-dossiers/fixed-s0-construction-space-screen.md`
+found no current-contract witness that keeps the named populations while
+holding `S0`, `T`, `B`, and outcome-relevant imports fixed as only evaluator
+`i` changes.
 
 This is not a gate score or CL-001 verdict. Frame Discipline requires a
-separately preregistered replacement or a positive fixed-field construction
-witness; this scaffold cannot repair the committed frame.
+separately preregistered replacement unless new evidence overturns the screen
+for the named pairs; this scaffold cannot repair the committed frame.
 
 ## Required Frame Discipline
 
@@ -78,8 +81,8 @@ Any non-preregistered result is `KILL` on instrument failure.
 ## Current Missing Work
 
 - A frame-holder disposition of the fixed-`S0` evaluator-confound stop.
-- A separately preregistered evaluator design or positive construction witness
-  that keeps the causal fields fixed while only evaluator `i` changes.
+- A separately preregistered replacement evaluator design, unless new evidence
+  overturns the construction-space screen for the named pairs.
 - Current packet files for the dollar and Bitcoin arms, only after the stop is
   cleared.
 - Packet-field selection from the active draft dossier set under

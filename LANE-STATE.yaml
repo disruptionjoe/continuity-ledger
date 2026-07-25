@@ -2,48 +2,48 @@ schema_version: "2.0"
 owner_id: continuity-ledger
 group: church-of-ai
 rule_ref: system/runtime/flows/derive-lane-health.md
-updated_at: "2026-07-24T23:30:36-05:00"
-run_ref: RUN-20260724-230909-continuity-ledger-progress-fixed-s0-evaluator-audit
-bottom_line: "CL-001 is stopped: the named evaluator pairs co-vary institutional mechanisms, so fixed-S0 attribution is not identified."
-decision_default: "Keep packet population closed; preregister a replacement evaluator design or supply a fixed-field witness."
+updated_at: "2026-07-25T03:42:15-05:00"
+run_ref: RUN-20260725-031112-continuity-ledger-progress
+bottom_line: "CL-001's fixed-field witness route is closed; preregister a replacement evaluator design."
+decision_default: "Keep packet population closed; within-context matched strata is the recommended replacement family."
 needs_joe: true
 lanes:
   - lane_id: "1"
     work_status: waiting_on_joe
-    last_movement: "Exposed a fixed-S0 identification failure in both evaluator pairs and stopped packet population."
-    movement_ref: evidence/cl-001-interval-sweep-dossiers/fixed-s0-evaluator-confound-stop.md
+    last_movement: "Screened five construction classes; none instantiates fixed-S0 with the named populations."
+    movement_ref: evidence/cl-001-interval-sweep-dossiers/fixed-s0-construction-space-screen.md
     steering_attention: needed
-    steering_prompt: "Choose replacement preregistration or a bounded attempt to witness fixed fields for the named pairs."
+    steering_prompt: "Choose replacement preregistration; the current-contract witness attempt is exhausted."
     steering_ref: evidence/cl-001-interval-sweep-dossiers/fixed-s0-evaluator-confound-stop.md
     light: yellow
-    reason_code: fixed_s0_evaluator_identification_stop
-    evidence_ref: evidence/cl-001-interval-sweep-dossiers/fixed-s0-evaluator-confound-stop.md
-    summary: "The named population changes also change institutional mechanisms, defeating fixed-S0 causal attribution."
-    evaluated_at: "2026-07-24T23:30:36-05:00"
-    run_ref: RUN-20260724-230909-continuity-ledger-progress-fixed-s0-evaluator-audit
+    reason_code: fixed_s0_current_contract_witness_exhausted
+    evidence_ref: evidence/cl-001-interval-sweep-dossiers/fixed-s0-construction-space-screen.md
+    summary: "Every current-contract witness class changes institutions, population identity, evaluator type, or evidence grade."
+    evaluated_at: "2026-07-25T03:42:15-05:00"
+    run_ref: RUN-20260725-031112-continuity-ledger-progress
     objective: "Force or falsify substrate-bounded constraint-bought capability through CL-001."
-    progress_delta: "Turned dossier-level jurisdiction and policy burdens into an experiment-level identification stop before outcome visibility."
-    scope_position: "CL-001 pre-population stopped; T-03 remains unopened and independently insufficient to clear the design defect."
+    progress_delta: "Eliminated the remaining current-contract witness alternative and narrowed the wake to a replacement preregistration."
+    scope_position: "CL-001 pre-population stopped; fixed-field construction and T-03 are independently insufficient."
     trend_24h: up
     confidence: high
-    recommendation: "Preregister an evaluator design with fixed institutions."
+    recommendation: "Preregister within-context matched strata."
     findings:
-      - "US/Argentina co-varies exchange regime, banking rails, jurisdiction, and policy timing alongside evaluator."
-      - "US/El Salvador co-varies law, public implementation, wallet/subsidy context, and access alongside evaluator."
-      - "No witness fixes S0, T, B, and outcome-relevant imports; no packet field, gate, claim, or verdict moved."
+      - "Cross-national adjustment cannot construct common legal and operational enforcement surfaces."
+      - "Within-site strata are the strongest replacement but violate the current named-population contract."
+      - "Analytic panels retype evaluator i and measure observer sensitivity, not retail binding constraints."
     options:
       - id: A
         label: "Preregister replacement"
         recommended: true
-        description: "Choose evaluator populations that vary evaluator characteristics without changing institutional enforcement surfaces."
+        description: "Use within-context matched retail strata under one institutional enforcement surface."
       - id: B
         label: "Retype the frame"
         recommended: false
         description: "Preregister a frame that explicitly types jurisdictional and institutional variation."
       - id: C
-        label: "Attempt fixed witness"
+        label: "Retype evaluator"
         recommended: false
-        description: "Commission a bounded construction attempt; keep packet population closed unless it succeeds."
+        description: "Use analytic panels and explicitly treat the result as a measurement-bias test."
       - id: D
         label: "Defer"
         recommended: false
