@@ -2,54 +2,54 @@ schema_version: "2.0"
 owner_id: continuity-ledger
 group: church-of-ai
 rule_ref: system/runtime/flows/derive-lane-health.md
-updated_at: "2026-07-22T20:54:26-05:00"
-run_ref: RUN-20260722-204348-continuity-ledger-progress-cl001-t03
-bottom_line: "A cue-normalized T-03 private capsule is prepared for a later isolated return; field T, gates, claims, and verdict remain unchanged."
-decision_default: "Do not populate T. Hand only the digest-pinned T-03 capsule to a genuinely isolated author and accept inferability or insufficiency as valid stops; keep Lane 2 subordinate and Lane 3 gated."
-needs_joe: false
+updated_at: "2026-07-24T23:30:36-05:00"
+run_ref: RUN-20260724-230909-continuity-ledger-progress-fixed-s0-evaluator-audit
+bottom_line: "CL-001 is stopped: the named evaluator pairs co-vary institutional mechanisms, so fixed-S0 attribution is not identified."
+decision_default: "Keep packet population closed; preregister a replacement evaluator design or supply a fixed-field witness."
+needs_joe: true
 lanes:
   - lane_id: "1"
-    work_status: moving
-    last_movement: "Prepared a digest-pinned, cue-normalized private capsule after the isolated inferability stop."
-    movement_ref: evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-capsule-t-03-preparation.md
-    steering_attention: watch
-    steering_prompt: "Use the public protocol/private capsule split; do not commit the blind read capsule, arm mapping, or unblinding key before return."
-    steering_ref: evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-capsule-t-03-preparation.md
+    work_status: waiting_on_joe
+    last_movement: "Exposed a fixed-S0 identification failure in both evaluator pairs and stopped packet population."
+    movement_ref: evidence/cl-001-interval-sweep-dossiers/fixed-s0-evaluator-confound-stop.md
+    steering_attention: needed
+    steering_prompt: "Choose replacement preregistration or a bounded attempt to witness fixed fields for the named pairs."
+    steering_ref: evidence/cl-001-interval-sweep-dossiers/fixed-s0-evaluator-confound-stop.md
     light: yellow
-    reason_code: t03_private_capsule_prepared
-    evidence_ref: evidence/cl-001-interval-sweep-dossiers/blind-t-isolated-capsule-t-03-preparation.md
-    summary: "T-03 reduces arm-class cues through symmetric semantic slots; its non-inferability and material sufficiency remain untested, and T stays unpopulated."
-    evaluated_at: "2026-07-22T20:54:26-05:00"
-    run_ref: RUN-20260722-204348-continuity-ledger-progress-cl001-t03
+    reason_code: fixed_s0_evaluator_identification_stop
+    evidence_ref: evidence/cl-001-interval-sweep-dossiers/fixed-s0-evaluator-confound-stop.md
+    summary: "The named population changes also change institutional mechanisms, defeating fixed-S0 causal attribution."
+    evaluated_at: "2026-07-24T23:30:36-05:00"
+    run_ref: RUN-20260724-230909-continuity-ledger-progress-fixed-s0-evaluator-audit
     objective: "Force or falsify substrate-bounded constraint-bought capability through CL-001."
-    progress_delta: "Converted the inferability stop into a changed private packaging method with a digest-backed public receipt, while preserving the public/private boundary and all scientific stops."
-    scope_position: "CL-001 pre-population: T-03 is ready only for a later isolated inferability/sufficiency return; no candidate T language, packet field, gate, claim, or verdict moved."
+    progress_delta: "Turned dossier-level jurisdiction and policy burdens into an experiment-level identification stop before outcome visibility."
+    scope_position: "CL-001 pre-population stopped; T-03 remains unopened and independently insufficient to clear the design defect."
     trend_24h: up
-    confidence: med
-    recommendation: "Run one genuinely isolated T-03 return."
+    confidence: high
+    recommendation: "Preregister an evaluator design with fixed institutions."
     findings:
-      - "T-02's source-specific prose was replaced by five symmetric semantic slots in a private T-03 capsule."
-      - "The capsule and key remain outside public history and are pinned by digest."
-      - "Only a later isolated author can determine inferability or sufficiency; no packet field, gate, claim status, or verdict moved."
+      - "US/Argentina co-varies exchange regime, banking rails, jurisdiction, and policy timing alongside evaluator."
+      - "US/El Salvador co-varies law, public implementation, wallet/subsidy context, and access alongside evaluator."
+      - "No witness fixes S0, T, B, and outcome-relevant imports; no packet field, gate, claim, or verdict moved."
     options:
       - id: A
-        label: "Run isolated T-03 return"
+        label: "Preregister replacement"
         recommended: true
-        description: "Provide only the digest-pinned T-03 capsule to an isolated author and honor the stop-code order."
+        description: "Choose evaluator populations that vary evaluator characteristics without changing institutional enforcement surfaces."
       - id: B
-        label: "Preserve T-03 unopened"
+        label: "Retype the frame"
         recommended: false
-        description: "Keep T unpopulated and defer the isolated handoff without reopening public packaging."
+        description: "Preregister a frame that explicitly types jurisdictional and institutional variation."
       - id: C
-        label: "Defer CL-001"
+        label: "Attempt fixed witness"
         recommended: false
-        description: "Hold packet population closed until a focused blind-return run is available."
+        description: "Commission a bounded construction attempt; keep packet population closed unless it succeeds."
       - id: D
         label: "Defer"
         recommended: false
-        description: "Leave CL-001 packet population closed for a later focused run."
-    decision_default: "Do not populate T; use T-03 only through another isolated blind-return attempt."
-    needs_joe: false
+        description: "Leave CL-001 packet population closed without choosing a replacement."
+    decision_default: "Keep CL-001 packet population closed pending a frame-holder decision."
+    needs_joe: true
   - lane_id: "2"
     work_status: thin
     last_movement: "No current hardening lease or independent hardening movement found."

@@ -38,6 +38,7 @@ feedback burden, open fields, falsifiers, and the no-claim-promotion boundary.
 | Dollar Argentine retail evaluator dossier | Dollar evaluator sweep | primary, statistical, or construction-supported | Evaluator sweep and population boundary; Constraint class and exit-cost interval; Typed measurement family. | Draft dossier: `evidence/cl-001-interval-sweep-dossiers/dollar-evaluator-sweep-us-argentina-retail.md`. |
 | Bitcoin US retail evaluator dossier | Bitcoin evaluator sweep | primary, statistical, protocol-operational, or construction-supported | Evaluator sweep and population boundary; Constraint class and exit-cost interval; Typed measurement family. | Draft dossier: `evidence/cl-001-interval-sweep-dossiers/bitcoin-evaluator-sweep-us-salvador-retail.md`. |
 | Bitcoin Salvadoran retail evaluator dossier | Bitcoin evaluator sweep | primary, statistical, protocol-operational, or construction-supported | Evaluator sweep and population boundary; Constraint class and exit-cost interval; Typed measurement family. | Draft dossier: `evidence/cl-001-interval-sweep-dossiers/bitcoin-evaluator-sweep-us-salvador-retail.md`. |
+| Fixed-`S0` evaluator-confound audit | Dollar and Bitcoin evaluator sweeps | construction/provenance audit | Frame adherence and declared-field guard; Evaluator sweep and population boundary; Constraint class and exit-cost interval; Falsifiers, open fields, and routing. | Active pre-population stop: `evidence/cl-001-interval-sweep-dossiers/fixed-s0-evaluator-confound-stop.md`. |
 | Near-miss/control admission dossier | Near-miss/control admission | absorber/control or construction | Absorber, near-miss null, and arm-symmetry pressure; Settlement regime and class definition; Frame adherence and declared-field guard. | Draft dossier: `evidence/cl-001-interval-sweep-dossiers/near-miss-control-admission.md`. |
 | Arm-symmetry and blinding receipt dossier | Arm-symmetry and blinding receipts | process receipt | Absorber, near-miss null, and arm-symmetry pressure; Falsifiers, open fields, and routing. | Draft dossier: `evidence/cl-001-interval-sweep-dossiers/arm-symmetry-blinding-receipt.md`. |
 | Blinded material-field package | First active material-field selection | process package and coded input | Mechanism and transition boundary; Frame adherence and declared-field guard; Falsifiers, open fields, and routing. | Draft package: `evidence/cl-001-interval-sweep-dossiers/blinded-material-field-package-t-01.md`; prepared redacted source bundle: `evidence/cl-001-interval-sweep-dossiers/blind-bundles/cl001-blind-t-01-redacted-source-bundle.md`. |
@@ -72,6 +73,7 @@ feedback burden, open fields, falsifiers, and the no-claim-promotion boundary.
 | `evidence/cl-001-interval-sweep-dossiers/bitcoin-enforcement-mechanism-protocol.md` | Bitcoin enforcement-mechanism dossier | Draft exact source dossier. | Does not populate active Bitcoin packet fields or establish the Bitcoin arm's candidate posture. |
 | `evidence/cl-001-interval-sweep-dossiers/dollar-evaluator-sweep-us-argentina-retail.md` | Dollar US and Argentine retail evaluator dossiers | Draft evaluator source dossier. | Does not populate active dollar packet fields or establish fixed-`S0` evaluator movement. |
 | `evidence/cl-001-interval-sweep-dossiers/bitcoin-evaluator-sweep-us-salvador-retail.md` | Bitcoin US and Salvadoran retail evaluator dossiers | Draft evaluator source dossier. | Does not populate active Bitcoin packet fields or establish fixed-`S0` evaluator movement. |
+| `evidence/cl-001-interval-sweep-dossiers/fixed-s0-evaluator-confound-stop.md` | Fixed-`S0` evaluator-confound audit | Active construction-audit stop. | Stops packet population because the named evaluator pairs co-vary outcome-relevant jurisdictional and institutional surfaces; does not score a gate, change claim status, or issue a verdict. |
 | `evidence/cl-001-interval-sweep-dossiers/near-miss-control-admission.md` | Near-miss/control admission dossier | Draft control-admission construction dossier. | Does not admit a control, populate active packet fields, score absorber pressure, or establish that any control shares the frame. |
 | `evidence/cl-001-interval-sweep-dossiers/arm-symmetry-blinding-receipt.md` | Arm-symmetry and blinding receipt dossier | Draft process receipt dossier. | Records that blinding remains unsatisfied; it does not satisfy the blinded-field requirement, score gate 10, or issue a verdict. |
 | `evidence/cl-001-interval-sweep-dossiers/blinded-material-field-package-t-01.md` | Blinded material-field package | Draft process package selecting `T` as the first blind-handled material field. | Does not populate `T`, contain the blind author's read surface, complete a blind receipt, score gate 10, or issue a verdict. |
@@ -101,11 +103,12 @@ draft isolated blind-return architecture for a changed method, plus a public
 isolated-return protocol and receipt shape, an open-label repo-cycle
 ineligibility stop for standard children without an isolated handoff, and a
 digest-backed T-03 private capsule preparation after the first isolated
-inferability stop. It is not
-complete enough to
-populate a packet field. Packet population remains blocked until a later
-packet-population run either obtains a valid blind author receipt or records a
-blind-author stop on a bounded read surface. The changed method must keep the
+inferability stop, and an active fixed-`S0` evaluator-confound stop. It is not
+complete enough to populate a packet field. Packet population remains blocked
+independently by both the blind-return burden and the evaluator-identification
+stop. A later run must clear the fixed-field stop through a positive
+construction witness or separately preregistered replacement; a T-03 return
+alone is insufficient. The changed blind method must keep the
 blind read capsule, arm mapping, and unblinding key outside the public
 repository before blind return, preserve the declared frame, record the
 unblinding event outside the blind author's read scope, and keep any remaining

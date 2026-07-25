@@ -43,8 +43,8 @@ dossiers, active packet fields remain closed.
 | Shared frame audit | Guard that later population preserves declared Phi. | Construction/provenance record showing each later dossier keeps `R0`, `M1`, `Omega`, and boundary role fixed. | Pending exact source pass. |
 | Dollar enforcement mechanism | Target arm `T` candidate. | Primary, legal-operational, or institutionally authoritative support for discretionary and appealable exclusion in the declared retail settlement domain. | Pending exact source pass. |
 | Bitcoin enforcement mechanism | Target arm `T` candidate. | Protocol-level and operational support for rule-constant and unappealable exclusion in the declared retail settlement domain. | Pending exact source pass. |
-| Dollar evaluator sweep | Fixed-`S0` evaluator comparison. | Sources sufficient to bound constraint class and exit-cost interval for US retail and Argentine retail without changing the substrate role. | Pending exact source pass. |
-| Bitcoin evaluator sweep | Fixed-`S0` evaluator comparison. | Sources sufficient to bound constraint class and exit-cost interval for US retail and Salvadoran retail without changing the substrate role. | Pending exact source pass. |
+| Dollar evaluator sweep | Fixed-`S0` evaluator comparison. | Sources sufficient to bound constraint class and exit-cost interval for US retail and Argentine retail without changing the substrate role. | Stopped: current dossiers co-vary jurisdictional enforcement, exchange access, banking rails, and policy timing; no fixed-field construction witness. See `fixed-s0-evaluator-confound-stop.md`. |
+| Bitcoin evaluator sweep | Fixed-`S0` evaluator comparison. | Sources sufficient to bound constraint class and exit-cost interval for US retail and Salvadoran retail without changing the substrate role. | Stopped: current dossiers co-vary legal status, public-policy implementation, wallet/subsidy context, and access conditions; no fixed-field construction witness. See `fixed-s0-evaluator-confound-stop.md`. |
 | Near-miss/control admission | Same-frame pressure against target arms. | Any control must be positively specified at the same declared `R0` and `M1`, and may not be selected by stipulating absence of an agency surface. | Pending exact source pass. |
 | Arm-symmetry and blinding receipts | Gate-10 and frame-discipline process burden. | Process evidence that at least one material field was populated blind and that label-swap/no-merit-ordering checks are possible before verdict. | Pending exact source pass. |
 
@@ -94,9 +94,9 @@ dossiers, active packet fields remain closed.
 
 | Evidence lane | Minimum source burden | Current intake status |
 |---|---|---|
-| Evaluator sweep and population boundary | Source or construction support for US and Argentine retail under the dollar substrate, and US and Salvadoran retail under the Bitcoin substrate. | Pending exact source pass. |
-| Constraint class and exit-cost interval | Evidence sufficient to test whether the binding constraint class moves with evaluator population at fixed `S0`. | Pending exact source pass. |
-| Typed measurement family | Explicit separation of quoted prices, legal constraints, market access, volatility, fees, balances, and legitimacy claims. | Pending exact source pass. |
+| Evaluator sweep and population boundary | Source or construction support for US and Argentine retail under the dollar substrate, and US and Salvadoran retail under the Bitcoin substrate. | Stopped pending a construction witness that the named population changes do not also change `S0`, `T`, `B`, or outcome-relevant institutional imports. |
+| Constraint class and exit-cost interval | Evidence sufficient to test whether the binding constraint class moves with evaluator population at fixed `S0`. | Stopped because the current design cannot attribute movement to evaluator preference while jurisdictional and institutional mechanisms co-vary. |
+| Typed measurement family | Explicit separation of quoted prices, legal constraints, market access, volatility, fees, balances, and legitimacy claims. | Remains open; typed separation alone cannot clear the fixed-`S0` identification stop. |
 
 ### Near-Miss And Control Admission
 

@@ -30,6 +30,20 @@ Frame `Phi` is declared in `experiments/CL-001-phi-frame.md`. It fixes the
 shared comparison frame for the active dollar/Bitcoin Interval Sweep and leaves
 `T` as the only free field before any current arm packet is populated.
 
+## Current Execution Stop
+
+Packet population and the evaluator sweep are stopped at the pre-population
+boundary by
+`evidence/cl-001-interval-sweep-dossiers/fixed-s0-evaluator-confound-stop.md`.
+The current US/Argentina and US/El Salvador evaluator pairs co-vary
+jurisdictional, institutional, policy, wallet, subsidy, and access surfaces.
+No construction witness yet shows that `S0`, `T`, `B`, and outcome-relevant
+imports remain fixed while only evaluator `i` changes.
+
+This is not a gate score or CL-001 verdict. Frame Discipline requires a
+separately preregistered replacement or a positive fixed-field construction
+witness; this scaffold cannot repair the committed frame.
+
 ## Required Frame Discipline
 
 - Declare and commit frame `Phi` before any arm is populated.
@@ -63,7 +77,11 @@ Any non-preregistered result is `KILL` on instrument failure.
 
 ## Current Missing Work
 
-- Current packet files for the dollar and Bitcoin arms.
+- A frame-holder disposition of the fixed-`S0` evaluator-confound stop.
+- A separately preregistered evaluator design or positive construction witness
+  that keeps the causal fields fixed while only evaluator `i` changes.
+- Current packet files for the dollar and Bitcoin arms, only after the stop is
+  cleared.
 - Packet-field selection from the active draft dossier set under
   `evidence/cl-001-interval-sweep-dossier-manifest.md`.
 - Exact field-level source completion wherever the draft dossiers leave a
