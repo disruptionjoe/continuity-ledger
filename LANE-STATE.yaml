@@ -51,47 +51,6 @@ lanes:
     decision_default: "Keep CL-001 packet population closed pending a frame-holder decision."
     needs_joe: true
   - lane_id: "2"
-    work_status: thin
-    last_movement: "No current hardening lease or independent hardening movement found."
-    movement_ref: LANES.yaml
-    steering_attention: none
-    steering_prompt: "none"
-    steering_ref: LANES.yaml
-    light: yellow
-    reason_code: lease_required_no_current_lead
-    evidence_ref: LANES.yaml
-    summary: "Hardening remains subordinate to Lane 1 and needs a lease to lead."
-    evaluated_at: "2026-07-19T16:41:22-05:00"
-    run_ref: RUN-20260719-545-repository-work-cycle-cai-hourly
-    objective: "Harden what Lane 1 establishes without outrunning evidence."
-    progress_delta: "No Lane 2 movement this run; work stayed on Lane 1 CL-001 pre-population."
-    scope_position: "No current hardening lease."
-    trend_24h: flat
-    confidence: high
-    recommendation: "Keep subordinate."
-    findings:
-      - "No lease was found or created for hardening to lead."
-      - "Current CL-001 evidence does not justify independent hardening priority."
-    options:
-      - id: A
-        label: "Keep subordinate"
-        recommended: true
-        description: "Let Lane 1 continue until a result or lease justifies hardening work."
-      - id: B
-        label: "Request lease"
-        recommended: false
-        description: "Ask Joe only if hardening must lead before CL-001 advances."
-      - id: C
-        label: "Audit artifacts"
-        recommended: false
-        description: "Run a later integrity pass if evidence surfaces drift."
-      - id: D
-        label: "Defer"
-        recommended: false
-        description: "No Lane 2 action is needed now."
-    decision_default: "Keep Lane 2 subordinate to Lane 1."
-    needs_joe: false
-  - lane_id: "3"
     work_status: blocked
     last_movement: "Recovered the Hamming seed's primary bibliographic identity while preserving the pre-release synthesis gate."
     movement_ref: literature/2026-07-21-hamming-seed-source-recovery.md
@@ -129,8 +88,8 @@ lanes:
       - id: D
         label: "Defer"
         recommended: false
-        description: "No Lane 3 action is needed now."
-    decision_default: "Keep Lane 3 gated pending CL-001."
+        description: "No Lane 2 action is needed now."
+    decision_default: "Keep Lane 2 gated pending CL-001."
     needs_joe: false
   - lane_id: A
     work_status: moving

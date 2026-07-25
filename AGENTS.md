@@ -144,10 +144,12 @@ control state, and pointers to authoritative work. It never holds run history,
 derived health, automation cadence, or a duplicate backlog.
 
 - Lane 1: Ledger force-or-falsify (`LEDGER-FORCE-OR-FALSIFY`).
-- Lane 2: Ledger hardening (`LEDGER-HARDENING`). Supports Lane 1; lease required
-  to lead scheduling.
-- Lane 3: Transduction atlas. Admission-gated on the CL-001 verdict.
+- Lane 2: Transduction atlas. Admission-gated on the CL-001 verdict.
 - Lane A: Continuity Ledger stewardship.
+
+Ledger hardening is a Lane 1 treatment. It remains subordinate to the North
+Star and requires the existing recorded lease whenever it would lead
+scheduling.
 
 The charter's Audacious North Star is a theory of evolutionary agency escape.
 The charter calls it the highest-ceiling target, **not a premise**, and it sits
@@ -161,9 +163,9 @@ into one hypothesis tested by one ten-gate experiment. Do not split it into a
 continuity lane and an escape lane; an earlier revision of the manifest did
 exactly that and cut CL-001 in half.
 
-Lane 3 is gated because this repository already forbids generalizing from the
+Lane 2 is gated because this repository already forbids generalizing from the
 memorable pair before the controls pass, and CL-001 is unresolved. Before the
-gate releases, Lane 3 admits exploration-grade candidate gathering, null and
+gate releases, Lane 2 admits exploration-grade candidate gathering, null and
 absorber candidates, and negative results. It does not admit cross-case
 generalization, atlas synthesis, or promotion of a candidate to repo-owned
 structure. The gate releases when CL-001 returns a verdict.

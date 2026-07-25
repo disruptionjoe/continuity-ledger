@@ -47,3 +47,16 @@ verdict is one of:
 
 No packet may pass by filling a field with a metaphor or by naming a hidden
 import after the outcome.
+
+## Operating path and return
+
+CL work moves through frame, design, execution, matched-null validation,
+hardening, and comparison. Hardening is a Lane 1 treatment and may lead only
+under its North-Star lease. The Transduction Atlas remains a separate,
+admission-gated Lane 2.
+
+Each result returns to the owning hypothesis and packet with frame,
+construction, evidence grade, absorber or null, verdict, and live uncertainty.
+Lane A keeps leases, provenance, gate state, and unresolved decisions coherent.
+Historical Lane 2 hardening and Lane 3 atlas receipts retain their original
+meaning.
