@@ -3,7 +3,7 @@ artifact_type: agent_instruction
 status: active
 governance_role: repo_agent_start
 constitutional: true
-activation_package: standard_repo_steward_package
+execution_contract: generic_system_execution
 ratified_by: Joe
 ratified_date: 2026-07-14
 ---
@@ -16,11 +16,11 @@ Joe authorized activation of Continuity Ledger on 2026-07-14. These
 instructions govern manual and scheduled work in this repository.
 
 Read `governance/CHARTER.md` before research work. When stewardship context is
-needed, load `../../private/system-operations/stewards/continuity-ledger/README.md`. Do not load `../../private/system-operations/stewards/continuity-ledger/memory-log.md` by default
+needed, load `../../private/system-operations/stewards/README.md`. Do not load the Runtime migration archive by default
 unless doing stewardship or memory work, or the steward summary is incomplete.
 
-The System-owned routing overlay is
-`../../private/system-operations/stewards/continuity-ledger/README.md` from this repo root. It does not
+The generic System execution-steward contract is
+`../../private/system-operations/stewards/README.md` from this repo root. It does not
 replace these local instructions or the charter.
 
 ## Repository Role
@@ -242,23 +242,33 @@ question. Do not resolve ambiguity by absorbing the work.
 - Active Lane-bearing NBL membership receives regular Repository Work Cycle
   service under this repository's current governance, Lane/control, and
   writer-safety acceptance. Membership does not broaden repository authority.
-- A direct mount remains fully operable from local instructions and truth without loading private NBL context or CapacityOS.
+- A direct mount remains a repository-state surface; governed CapacityOS execution follows the System boundary below.
 
-## CapacityOS Integration Boundary
+## System Execution Boundary
 
-This repository's `AGENTS.md`, governance, orientation, authoritative work,
-populated Lane state, domain learning, and artifacts remain repository-owned.
-A direct mount can operate from those local surfaces without CapacityOS.
+This repository owns its purpose, governance, authoritative work and Lane
+state, domain methods, code and artifacts, evidence, validation, and acceptance
+decisions. Those surfaces are repository state; System execution does not copy
+or overrule their truth.
 
-For a CapacityOS-routed run, the optional System-owned steward service is
-`../../private/system-operations/stewards/continuity-ledger/README.md`. It supplies integration context, process guidance,
-action memory, automation observations, health support, and execution history.
-It may narrow local authority and never broaden it. Current repository evidence
-defeats stale System observations.
+A governed CapacityOS execution starts from the Brain or CapacityOS entrypoint.
+System Runtime owns its complete execution envelope, working Run Plan,
+lifecycle trace, central owner claim, receipt, execution history, and transport
+under `repos/private/system-runtime/`. Before the first owner write, validate
+the closed envelope and acquire the owner key through
+`repository-execution-claim.sh`; hold it through owner commit and push
+verification, then release it before final Runtime integration.
 
-Before repository writes, resolve `git rev-parse --git-path
-capacityos-writer.lock`. If that path exists, stop unless the active approved
-run owns the lock. Never remove, replace, or bypass another writer's lock.
+A direct repository mount may inspect state or perform explicitly
+human-directed non-System work under this repository's governance. It is not a
+governed CapacityOS Run and must not create repository-local CapacityOS plans,
+receipts, claims, or execution memory. Runtime records execution and returns a
+result to the named owner; it cannot decide domain truth, method validity, or
+acceptance.
+
+Pre-cutover execution-like files retained in this repository are frozen domain
+or publication evidence only when listed by checksum in the Runtime migration
+manifest. New or changed CapacityOS execution records belong in Runtime.
 
 ## First-Class Lanes
 
@@ -266,9 +276,9 @@ Load root `LANES.yaml` after this repository's governance and before selecting
 work. It is the owner-authoritative source for durable Lane definitions,
 admission, and normal control state; authoritative work remains at the paths it
 references. Numbered Lanes are Progress, lettered Lanes are Stewardship, and
-Discovery is Lane-less. A direct mount uses these local surfaces without
-CapacityOS. System observations, health, schedules, and execution history are
-not Lane truth.
+Discovery is Lane-less. System execution reads these local surfaces without
+relocating their truth. System observations, health, schedules, and execution
+history are not Lane truth.
 
 ## Purpose, Passion, and Practice
 
@@ -287,7 +297,7 @@ not Lane truth.
 
 After any coherent batch of repository changes that Joe has authorized, commit
 and push the current branch by default. Do not wait for a separate commit or
-push request. Do not commit or push when an active writer lock, a
+push request. Do not commit or push when a conflicting central owner claim or live writer, a
 repository-specific rule, failed verification, unrelated dirty changes, or
 Joe's explicit hold blocks it. GitHub push is routine versioning, not external
 publication; all other external-action rules remain in force.
