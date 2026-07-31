@@ -2,21 +2,21 @@ schema_version: "2.0"
 owner_id: continuity-ledger
 group: church-of-ai
 rule_ref: system/runtime/flows/derive-lane-health.md
-updated_at: "2026-07-25T03:42:15-05:00"
+updated_at: "2026-07-31T07:45:00-05:00"
 run_ref: RUN-20260725-031112-continuity-ledger-progress
-bottom_line: "CL-001's fixed-field witness route is closed; preregister a replacement evaluator design."
-decision_default: "Keep packet population closed; within-context matched strata is the recommended replacement family."
-needs_joe: true
+bottom_line: "Joe authorized Option A on 2026-07-29; preregister within-context matched retail strata as the replacement CL-001 evaluation frame."
+decision_default: "Keep packet population closed; build the authorized within-context matched-strata preregistration."
+needs_joe: false
 lanes:
   - lane_id: "1"
-    work_status: waiting_on_joe
-    last_movement: "Screened five construction classes; none instantiates fixed-S0 with the named populations."
+    work_status: moving
+    last_movement: "Joe authorized Option A on 2026-07-29: preregister within-context matched retail strata; analytic panels remain measurement-bias controls."
     movement_ref: evidence/cl-001-interval-sweep-dossiers/fixed-s0-construction-space-screen.md
-    steering_attention: needed
-    steering_prompt: "Choose replacement preregistration; the current-contract witness attempt is exhausted."
+    steering_attention: none
+    steering_prompt: none
     steering_ref: evidence/cl-001-interval-sweep-dossiers/fixed-s0-evaluator-confound-stop.md
-    light: yellow
-    reason_code: fixed_s0_current_contract_witness_exhausted
+    light: green
+    reason_code: replacement_preregistration_authorized
     evidence_ref: evidence/cl-001-interval-sweep-dossiers/fixed-s0-construction-space-screen.md
     summary: "Every current-contract witness class changes institutions, population identity, evaluator type, or evidence grade."
     evaluated_at: "2026-07-25T03:42:15-05:00"
@@ -26,7 +26,7 @@ lanes:
     scope_position: "CL-001 pre-population stopped; fixed-field construction and T-03 are independently insufficient."
     trend_24h: up
     confidence: high
-    recommendation: "Preregister within-context matched strata."
+    recommendation: "Build the authorized within-context matched-strata preregistration; no further Joe decision is required."
     findings:
       - "Cross-national adjustment cannot construct common legal and operational enforcement surfaces."
       - "Within-site strata are the strongest replacement but violate the current named-population contract."
@@ -49,7 +49,7 @@ lanes:
         recommended: false
         description: "Leave CL-001 packet population closed without choosing a replacement."
     decision_default: "Keep CL-001 packet population closed pending a frame-holder decision."
-    needs_joe: true
+    needs_joe: false
   - lane_id: "2"
     work_status: blocked
     last_movement: "Recovered the Hamming seed's primary bibliographic identity while preserving the pre-release synthesis gate."
